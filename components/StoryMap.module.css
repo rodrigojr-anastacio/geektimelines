@@ -82,17 +82,6 @@
 }
 
 /* ---------- cards ---------- */
-/* The bar that shows a story running across several years. */
-.span { position: absolute; z-index: 2; pointer-events: none; height: 0;
-  border-top: 1px solid var(--ink-25); transition: opacity .2s; }
-.span::before, .span::after { content: ''; position: absolute; top: -4px; width: 1px; height: 9px;
-  background: var(--ink-25); }
-.span::before { left: 0; }
-.span::after { right: 0; }
-.spanLabel { position: absolute; top: 4px; right: 0; font-family: var(--font-mono), monospace;
-  font-size: 9px; letter-spacing: 0.08em; color: var(--ink-25); white-space: nowrap; }
-.spanDimmed { opacity: .12; }
-
 .nodeWrap { position: absolute; top: 0; left: 0; width: 250px; z-index: 3; transition: transform .5s cubic-bezier(.4,0,.2,1); }
 .node {
   position: relative;

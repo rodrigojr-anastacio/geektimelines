@@ -537,25 +537,6 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
 
             {entries.map((entry) => {
               const spot = layout.placed.get(entry.id);
-              if (!spot || spot.spanEnd === null) return null;
-              return (
-                <div
-                  key={`span-${entry.id}`}
-                  className={`${styles.span} ${isDimmed(entry) ? styles.spanDimmed : ''}`}
-                  style={{
-                    left: spot.x + NODE_W,
-                    top: spot.y + NODE_H - 14,
-                    width: Math.max(0, spot.spanEnd - (spot.x + NODE_W)),
-                  }}
-                  aria-hidden="true"
-                >
-                  <span className={styles.spanLabel}>{entry.inUniverseEnd}</span>
-                </div>
-              );
-            })}
-
-            {entries.map((entry) => {
-              const spot = layout.placed.get(entry.id);
               if (!spot) return null;
               const poster = posters[entry.id];
               const confidence = CONFIDENCE[entry.confidence];

@@ -251,17 +251,6 @@ await check('no event ever renders without provenance', async () => {
   if (!shown.length) throw new Error('the Eternals page shows no source labels at all');
 });
 
-await check('span bars reach the right year on the map', async () => {
-  const body = await expectOk('/');
-  const spanning = universe.entries.filter((e) => e.inUniverseEnd > e.inUniverseStart);
-  if (!spanning.length) throw new Error('no spanning entries in the data');
-  for (const entry of spanning) {
-    if (!body.includes(`>${entry.inUniverseEnd}<`)) {
-      throw new Error(`the map never prints the end year ${entry.inUniverseEnd} for ${entry.slug}`);
-    }
-  }
-});
-
 await check('pages declare a canonical url', async () => {
   const body = await expectOk('/mcu/avengers-endgame');
   if (!body.includes('rel="canonical"')) throw new Error('entry page has no canonical link');

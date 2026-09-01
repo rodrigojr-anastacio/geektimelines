@@ -117,47 +117,18 @@ test('Endgame reaches every heist destination', () => {
   assert.deepEqual(years, [1970, 2012, 2013, 2014], `heist years are ${years}`);
 });
 
-test('the span bar is only drawn when the story really spans years', () => {
+test('the span is data only: it never widens an entry on the map', () => {
+  // Spans are kept in the dataset (they anchor and order entries, and the card
+  // label shows the range) but are deliberately not drawn, so the map stays
+  // clean and the chronology lives inside the entry instead.
   const layout = computeLayout(entries, tracks, 'story');
-  for (const entry of entries) {
-    const spot = layout.placed.get(entry.id);
-    if (entry.inUniverseEnd === entry.inUniverseStart) {
-      assert.equal(spot.spanEnd, null, `${entry.id} draws a bar for a single year`);
-    }
+  for (const [, spot] of layout.placed) {
+    assert.equal(Object.hasOwn(spot, 'spanEnd'), false, 'a span bar leaked back into the layout');
   }
-});
-
-test('span bars never run backwards', () => {
-  const layout = computeLayout(entries, tracks, 'story');
-  for (const [id, spot] of layout.placed) {
-    if (spot.spanEnd === null) continue;
-    assert.ok(spot.spanEnd > spot.x + NODE_W, `${id}: bar ends before the card does`);
-  }
-});
-
-test('release mode never draws span bars', () => {
-  const layout = computeLayout(entries, tracks, 'release');
-  for (const [id, spot] of layout.placed) {
-    assert.equal(spot.spanEnd, null, `${id} drew a span bar in release mode`);
-  }
-});
-
-test('cards still do not overlap once bars take up room', () => {
-  const layout = computeLayout(entries, tracks, 'story');
-  const rows = new Map();
-  for (const entry of entries) {
-    const spot = layout.placed.get(entry.id);
-    const key = `${entry.track}:${spot.y}`;
-    if (!rows.has(key)) rows.set(key, []);
-    rows.get(key).push({ id: entry.id, x: spot.x, right: Math.max(spot.x + NODE_W, spot.spanEnd ?? 0) });
-  }
-  for (const [key, list] of rows) {
-    list.sort((a, b) => a.x - b.x);
-    for (let i = 1; i < list.length; i++) {
-      assert.ok(
-        list[i].x - list[i - 1].right > MIN_GAP - 1,
-        `${key}: ${list[i - 1].id} bar runs into ${list[i].id}`,
-      );
-    }
+  const spanning = entries.filter((e) => e.inUniverseEnd > e.inUniverseStart);
+  assert.ok(spanning.length > 0, 'spans vanished from the data');
+  const columns = layout.columns.map((c) => c.key);
+  for (const entry of spanning) {
+    assert.ok(columns.includes(entry.inUniverseStart), `${entry.id} has no column for its start`);
   }
 });

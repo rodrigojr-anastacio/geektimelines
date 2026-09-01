@@ -45,7 +45,8 @@ export default function SourcesPage() {
       </p>
       <p>
         Flashbacks are deliberately not moved on the map. Scattering a single film across six points
-        would make the timeline unreadable and would misrepresent where the story actually sits.
+        would make the timeline unreadable and would misrepresent where the story actually sits, so the
+        depth lives one click away instead.
       </p>
       <p>
         <strong>Every dated event carries its source, printed next to it.</strong> Three are in use:{' '}

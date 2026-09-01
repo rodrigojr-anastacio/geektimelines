@@ -16,8 +16,6 @@ export interface PlacedEntry {
   x: number;
   y: number;
   row: number;
-  /** Right edge of the span bar, or null when the story sits on a single year. */
-  spanEnd: number | null;
 }
 export interface Band {
   id: string;
@@ -63,14 +61,7 @@ function columnLabels(key: number, mode: Mode): { label: string; sublabel: strin
  * each band a greedy row packing so cards never overlap.
  */
 export function computeLayout(entries: Entry[], tracks: Track[], mode: Mode): Layout {
-  // In story mode the axis also needs a column for every year a span *ends* on,
-  // otherwise a bar has no gridline to terminate against (1945, 1947, 1995...).
-  const keys = [
-    ...new Set([
-      ...entries.map((e) => columnKey(e, mode)),
-      ...(mode === 'story' ? entries.map((e) => e.inUniverseEnd) : []),
-    ]),
-  ].sort((a, b) => a - b);
+  const keys = [...new Set(entries.map((e) => columnKey(e, mode)))].sort((a, b) => a - b);
   const xByKey = new Map(keys.map((key, index) => [key, PAD_X + index * COL_W]));
 
   const placed = new Map<string, PlacedEntry>();
@@ -85,22 +76,13 @@ export function computeLayout(entries: Entry[], tracks: Track[], mode: Mode): La
 
     for (const entry of inTrack) {
       const x = xByKey.get(columnKey(entry, mode))! - NODE_W / 2;
-      // A story that runs across years is drawn as a bar reaching its end year,
-      // so the footprint used for packing has to include the bar, not just the card.
-      const endX =
-        mode === 'story' && entry.inUniverseEnd > entry.inUniverseStart
-          ? xByKey.get(entry.inUniverseEnd) ?? null
-          : null;
-      const spanEnd = endX !== null && endX > x + NODE_W ? endX : null;
-      const footprint = Math.max(x + NODE_W, spanEnd ?? Number.NEGATIVE_INFINITY);
-
       let row = rowEnds.findIndex((end) => x - end > MIN_GAP);
       if (row < 0) {
         row = rowEnds.length;
         rowEnds.push(Number.NEGATIVE_INFINITY);
       }
-      rowEnds[row] = footprint;
-      placed.set(entry.id, { id: entry.id, x, y: cursorY + row * ROW_H, row, spanEnd });
+      rowEnds[row] = x + NODE_W;
+      placed.set(entry.id, { id: entry.id, x, y: cursorY + row * ROW_H, row });
     }
 
     const rows = Math.max(1, rowEnds.length);
