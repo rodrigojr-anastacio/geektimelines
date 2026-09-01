@@ -165,6 +165,30 @@ await check('the home page has a social share image', async () => {
   if (!type.startsWith('image/')) throw new Error(`og:image is ${type}, not an image`);
 });
 
+await check('the site ships a favicon that actually resolves', async () => {
+  const body = await expectOk('/');
+  const match = body.match(/<link rel="icon"[^>]*href="([^"]+)"/);
+  if (!match) throw new Error('no icon link in the head');
+  const res = await fetch(`${base}${match[1].replace(/^https?:\/\/[^/]+/, '')}`);
+  if (!res.ok) throw new Error(`icon returned ${res.status}`);
+  if (!(res.headers.get('content-type') ?? '').startsWith('image/')) {
+    throw new Error('icon is not an image');
+  }
+});
+
+await check('the tab title leads with the brand on the home page', async () => {
+  const body = await expectOk('/');
+  const title = body.match(/<title>([^<]+)<\/title>/)?.[1] ?? '';
+  if (!title.startsWith('GeekTimelines')) {
+    throw new Error(`home title does not lead with the brand: ${title}`);
+  }
+  const entry = await expectOk('/mcu/avengers-endgame');
+  const entryTitle = entry.match(/<title>([^<]+)<\/title>/)?.[1] ?? '';
+  if (!entryTitle.startsWith('Avengers: Endgame')) {
+    throw new Error(`entry title should lead with the title: ${entryTitle}`);
+  }
+});
+
 await check('pages declare a canonical url', async () => {
   const body = await expectOk('/mcu/avengers-endgame');
   if (!body.includes('rel="canonical"')) throw new Error('entry page has no canonical link');

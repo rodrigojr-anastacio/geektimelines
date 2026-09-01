@@ -6,7 +6,7 @@ import { SITE } from '@/lib/site';
 import { JsonLd, siteJsonLd } from '@/lib/structured-data';
 
 export const metadata: Metadata = {
-  title: 'Marvel Cinematic Universe — interactive story map',
+  title: { absolute: `${SITE.name} — Marvel Cinematic Universe story map` },
   description:
     'Every MCU film, series, one-shot and special on one pan-and-zoom map, in in-universe or release order, with the connections between them traced to published sources.',
   alternates: { canonical: '/' },
