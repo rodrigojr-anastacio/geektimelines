@@ -8,8 +8,8 @@ export const SITE = {
     'Interactive, source-checked story maps for fictional universes. Every in-universe year and every connection is traced to a published source.',
   tmdbAttribution:
     'This product uses the TMDB API but is not endorsed or certified by TMDB.',
-  /** Flip to false only when the launch is approved. */
-  noindex: true,
+  /** Launched: search engines are free to crawl and index. */
+  noindex: false,
 } as const;
 
 export const UNIVERSES = [

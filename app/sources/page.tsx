@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { SITE } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Sources & method',
@@ -81,7 +80,7 @@ export default function SourcesPage() {
       <h2>Found a mistake?</h2>
       <p>
         Send it in through the <Link href="/contact">contact page</Link> with the source, and it gets
-        fixed. {SITE.tmdbAttribution}
+        fixed.
       </p>
     </main>
   );

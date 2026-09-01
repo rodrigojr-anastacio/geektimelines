@@ -117,14 +117,23 @@ await check('an unknown entry 404s instead of rendering an empty page', async ()
   if (res.status !== 404) throw new Error(`expected 404, got ${res.status}`);
 });
 
-await check('robots.txt keeps the site closed while noindex is on', async () => {
+await check('robots.txt lets search engines in and points at the sitemap', async () => {
   const { body } = await get('/robots.txt');
-  if (!body.includes('Disallow: /')) throw new Error(`robots.txt is not locked down:\n${body}`);
+  if (/Disallow:\s*\/\s*$/m.test(body)) throw new Error(`robots.txt still blocks everything:\n${body}`);
+  if (!body.includes('Allow: /')) throw new Error(`robots.txt does not allow crawling:\n${body}`);
+  if (!body.includes('sitemap.xml')) throw new Error('robots.txt does not reference the sitemap');
 });
 
-await check('pages carry the noindex directive', async () => {
-  const body = await expectOk('/');
-  if (!/noindex/.test(body)) throw new Error('no noindex meta on the home page');
+await check('no page carries a noindex directive', async () => {
+  for (const path of ['/', '/about', '/sources', '/mcu/avengers-endgame']) {
+    const body = await expectOk(path);
+    if (/noindex/i.test(body)) throw new Error(`${path} is still marked noindex`);
+  }
+});
+
+await check('pages declare a canonical url', async () => {
+  const body = await expectOk('/mcu/avengers-endgame');
+  if (!body.includes('rel="canonical"')) throw new Error('entry page has no canonical link');
 });
 
 await check('sitemap lists the entry pages', async () => {
@@ -144,20 +153,16 @@ await check('security headers are set', async () => {
   }
 });
 
-await check('the TMDB attribution lives on the credits pages', async () => {
-  for (const path of ['/about', '/sources']) {
-    const body = await expectOk(path);
-    if (!body.includes('not endorsed or certified by TMDB')) {
-      throw new Error(`${path} is missing the TMDB attribution`);
-    }
+await check('credits live on the about page and nowhere else', async () => {
+  const about = await expectOk('/about');
+  if (!about.includes('not endorsed or certified by TMDB')) {
+    throw new Error('/about is missing the attribution');
   }
-});
-
-await check('the footer does not carry the TMDB boilerplate', async () => {
-  const body = await expectOk('/');
-  const footer = body.slice(body.lastIndexOf('<footer'));
-  if (footer.includes('not endorsed or certified by TMDB')) {
-    throw new Error('TMDB boilerplate is still in the footer');
+  for (const path of ['/', '/sources', '/contact', '/privacy', '/mcu/avengers-endgame']) {
+    const body = await expectOk(path);
+    if (body.includes('not endorsed or certified by TMDB')) {
+      throw new Error(`${path} repeats the credits boilerplate`);
+    }
   }
 });
 

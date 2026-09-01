@@ -32,9 +32,9 @@ export default function ContactPage() {
       <h2>Rights holders</h2>
       <p>
         {SITE.name} is an unofficial fan project and is not affiliated with Marvel, The Walt Disney
-        Company or any other rights holder. Artwork is served from TMDB. {SITE.tmdbAttribution} If you
-        represent a rights holder and want something removed, write to the address above and it will be
-        handled.
+        Company or any other rights holder. If you represent a rights holder and want something
+        removed, write to the address above and it will be handled. Credits for the data and artwork
+        used here are on the <Link href="/about">about page</Link>.
       </p>
 
       <h2>Method</h2>

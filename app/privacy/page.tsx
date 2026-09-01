@@ -46,9 +46,10 @@ export default function PrivacyPage() {
 
       <h2>Third parties</h2>
       <p>
-        Poster artwork is served from TMDB&rsquo;s image CDN, which receives the request for the image
-        as any image host would. {SITE.tmdbAttribution} The site is hosted on Vercel, whose servers
-        process requests to deliver these pages.
+        Poster artwork is loaded from an external image host, which receives the request for the image
+        as any image host would, and the site itself is hosted by a third-party platform that processes
+        requests to deliver these pages. Neither receives anything that identifies you beyond what a
+        normal web request carries.
       </p>
 
       <h2>Your choices</h2>
