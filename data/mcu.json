@@ -35,7 +35,7 @@
       "id": "eow",
       "slug": "eyes-of-wakanda",
       "title": "Eyes of Wakanda",
-      "inUniverseYear": 1260,
+      "inUniverseYear": -1260,
       "inUniverseLabel": "from 1260 BC",
       "releaseDate": "2025-08-01",
       "track": "wakanda",
@@ -44,7 +44,10 @@
       "confidence": "ok",
       "summary": "An animated anthology about the War Dogs — Wakandan agents sent abroad to recover vibranium across millennia. It is the earliest-set entry on the official Disney+ timeline.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": -1260,
+      "inUniverseEnd": -1260,
+      "events": []
     },
     {
       "id": "cap1",
@@ -59,7 +62,46 @@
       "confidence": "ok",
       "summary": "Steve Rogers is transformed by the super-soldier serum and fights Red Skull and HYDRA, who use the Tesseract as a power source. It ends with Steve frozen in the Arctic and waking up 70 years later.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 1943,
+      "inUniverseEnd": 1945,
+      "events": [
+        {
+          "year": 1942,
+          "label": "1942",
+          "what": "Johann Schmidt takes the Tesseract from Tønsberg",
+          "kind": "flashback",
+          "source": "Popverse MCU timeline"
+        },
+        {
+          "year": 1943,
+          "label": "June 1943",
+          "what": "Steve Rogers undergoes the super-soldier procedure",
+          "kind": "main",
+          "source": "Popverse MCU timeline"
+        },
+        {
+          "year": 1943,
+          "label": "November 1943",
+          "what": "The rescue of the 107th in Italy",
+          "kind": "main",
+          "source": "Popverse MCU timeline"
+        },
+        {
+          "year": 1945,
+          "label": "1945",
+          "what": "Bucky Barnes falls from the train and Steve puts the Valkyrie into the ice",
+          "kind": "main",
+          "source": "Popverse MCU timeline"
+        },
+        {
+          "year": 2011,
+          "label": "2011",
+          "what": "Steve wakes up seventy years later in New York",
+          "kind": "epilogue",
+          "source": "Popverse MCU timeline"
+        }
+      ]
     },
     {
       "id": "osac",
@@ -74,7 +116,10 @@
       "confidence": "ok",
       "summary": "A year after Steve’s crash, Peggy Carter runs an SSR mission alone and is invited by Howard Stark to lead the new S.H.I.E.L.D.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 1946,
+      "inUniverseEnd": 1946,
+      "events": []
     },
     {
       "id": "ac",
@@ -89,7 +134,10 @@
       "confidence": "tv",
       "summary": "Peggy works at the SSR after the war, covers Howard Stark’s operations with Edwin Jarvis, and helps found S.H.I.E.L.D.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 1946,
+      "inUniverseEnd": 1947,
+      "events": []
     },
     {
       "id": "cm",
@@ -104,7 +152,25 @@
       "confidence": "ok",
       "summary": "Vers/Carol Danvers learns she is human, that the Kree manipulated her, and that the Skrulls are refugees. Fury loses an eye and keeps her pager; the Avengers Initiative is named after her call sign.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 1989,
+      "inUniverseEnd": 1995,
+      "events": [
+        {
+          "year": 1989,
+          "label": "1989",
+          "what": "Wendy Lawson is killed and Carol absorbs the light-speed engine",
+          "kind": "main",
+          "source": "Popverse MCU timeline"
+        },
+        {
+          "year": 1995,
+          "label": "Summer 1995",
+          "what": "Carol learns the Kree lied, frees the Skrulls, and leaves Fury the pager",
+          "kind": "main",
+          "source": "Popverse MCU timeline"
+        }
+      ]
     },
     {
       "id": "im",
@@ -119,7 +185,25 @@
       "confidence": "ok",
       "summary": "Kidnapped in Afghanistan with shrapnel near his heart, Tony Stark builds the first armor, kills Obadiah Stane and publicly claims the identity. In the post-credits scene Nick Fury pitches the Avengers Initiative.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2008,
+      "inUniverseEnd": 2008,
+      "events": [
+        {
+          "year": 2008,
+          "label": "Early 2008",
+          "what": "Tony Stark is taken in Afghanistan and builds the first suit in a cave",
+          "kind": "main",
+          "source": "Popverse MCU timeline"
+        },
+        {
+          "year": 2008,
+          "label": "Spring 2008",
+          "what": "He kills Obadiah Stane and tells the world who he is",
+          "kind": "main",
+          "source": "Popverse MCU timeline"
+        }
+      ]
     },
     {
       "id": "hulk",
@@ -134,7 +218,25 @@
       "confidence": "ok",
       "summary": "Bruce Banner runs from General Ross and from Emil Blonsky, who becomes the Abomination in Harlem. Samuel Sterns is contaminated by Banner’s blood. Stark appears at the end talking about \"a team\".",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2010,
+      "inUniverseEnd": 2010,
+      "events": [
+        {
+          "year": 2006,
+          "label": "Mid-2000s",
+          "what": "The gamma experiment that turns Bruce Banner into the Hulk",
+          "kind": "flashback",
+          "source": "Popverse MCU timeline"
+        },
+        {
+          "year": 2010,
+          "label": "2010",
+          "what": "Blonsky becomes the Abomination and Sterns is contaminated",
+          "kind": "main",
+          "source": "Marvel official timeline (2023)"
+        }
+      ]
     },
     {
       "id": "im2",
@@ -149,7 +251,25 @@
       "confidence": "ok",
       "summary": "Tony faces palladium poisoning, Ivan Vanko and Justin Hammer. Natasha Romanoff debuts and Rhodey becomes War Machine; the post-credits scene reveals Mjolnir in New Mexico.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2010,
+      "inUniverseEnd": 2010,
+      "events": [
+        {
+          "year": 1973,
+          "label": "September 1973",
+          "what": "Howard Stark records the message that hides the new element",
+          "kind": "flashback",
+          "source": "Popverse MCU timeline"
+        },
+        {
+          "year": 2010,
+          "label": "2010",
+          "what": "Tony beats the palladium poisoning and Vanko",
+          "kind": "main",
+          "source": "Marvel official timeline (2023)"
+        }
+      ]
     },
     {
       "id": "thor",
@@ -164,7 +284,25 @@
       "confidence": "ok",
       "summary": "Thor is banished to Earth and stripped of his power while Loki discovers his Jotun origin and seizes Asgard. In the post-credits scene Fury shows the Tesseract to Erik Selvig under Loki’s influence.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2010,
+      "inUniverseEnd": 2010,
+      "events": [
+        {
+          "year": 965,
+          "label": "965 AD",
+          "what": "Odin defeats the Frost Giants and takes the infant Loki",
+          "kind": "flashback",
+          "source": "Popverse MCU timeline"
+        },
+        {
+          "year": 2010,
+          "label": "2010",
+          "what": "Thor is banished to Earth and Loki seizes Asgard",
+          "kind": "main",
+          "source": "Marvel official timeline (2023)"
+        }
+      ]
     },
     {
       "id": "cons",
@@ -179,7 +317,10 @@
       "confidence": "ok",
       "summary": "Coulson and Sitwell explain how S.H.I.E.L.D. blocked Blonsky’s release by sending Tony Stark to annoy General Ross into refusing.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2010,
+      "inUniverseEnd": 2010,
+      "events": []
     },
     {
       "id": "hammer",
@@ -194,7 +335,10 @@
       "confidence": "ok",
       "summary": "A short following Coulson on his way to the Mjolnir crater, during the same period as Thor.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2010,
+      "inUniverseEnd": 2010,
+      "events": []
     },
     {
       "id": "avengers",
@@ -209,7 +353,10 @@
       "confidence": "ok",
       "summary": "Loki steals the Tesseract and opens a Chitauri portal over New York. Fury assembles Stark, Rogers, Thor, Banner, Natasha and Clint; the Battle of New York becomes the founding event of the hero era. Thanos is revealed as the backer.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2012,
+      "inUniverseEnd": 2012,
+      "events": []
     },
     {
       "id": "item47",
@@ -224,7 +371,10 @@
       "confidence": "ok",
       "summary": "A couple uses a Chitauri weapon left behind by the Battle of New York; S.H.I.E.L.D. recovers the gun and recruits them both.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2012,
+      "inUniverseEnd": 2012,
+      "events": []
     },
     {
       "id": "im3",
@@ -239,7 +389,25 @@
       "confidence": "ok",
       "summary": "Tony lives with post-traumatic stress from the Battle of New York. Aldrich Killian and Extremis hide behind a fabricated \"Mandarin\"; in the end Tony destroys his armors and removes the shrapnel.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2013,
+      "inUniverseEnd": 2013,
+      "events": [
+        {
+          "year": 1999,
+          "label": "December 1999",
+          "what": "Tony brushes off Aldrich Killian in Bern on New Year’s Eve",
+          "kind": "flashback",
+          "source": "Shown on screen"
+        },
+        {
+          "year": 2013,
+          "label": "December 2013",
+          "what": "Killian and Extremis, and the Mandarin turns out to be a performance",
+          "kind": "main",
+          "source": "Popverse MCU timeline"
+        }
+      ]
     },
     {
       "id": "tdw",
@@ -254,7 +422,10 @@
       "confidence": "ok",
       "summary": "Jane Foster hosts the Aether (the Reality Stone) and Malekith wants it for the Convergence. Loki fakes his death and takes the throne disguised as Odin; the Aether is handed to the Collector.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2013,
+      "inUniverseEnd": 2013,
+      "events": []
     },
     {
       "id": "allhail",
@@ -269,7 +440,10 @@
       "confidence": "ok",
       "summary": "Trevor Slattery is interviewed in prison and abducted by the Ten Rings, revealing that a real Mandarin exists.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2013,
+      "inUniverseEnd": 2014,
+      "events": []
     },
     {
       "id": "ws",
@@ -284,7 +458,18 @@
       "confidence": "ok",
       "summary": "HYDRA is exposed as having grown inside S.H.I.E.L.D. since its founding; Project Insight is destroyed and the agency dismantled. Bucky Barnes returns as the Winter Soldier.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2014,
+      "inUniverseEnd": 2014,
+      "events": [
+        {
+          "year": 2014,
+          "label": "2014",
+          "what": "HYDRA is exposed inside S.H.I.E.L.D. and Project Insight is destroyed",
+          "kind": "main",
+          "source": "Marvel official timeline (2023)"
+        }
+      ]
     },
     {
       "id": "gotg",
@@ -299,7 +484,25 @@
       "confidence": "ok",
       "summary": "Peter Quill and an unlikely crew stop Ronan from using the Power Stone against Xandar. The Stone is left with the Nova Corps and the group becomes the Guardians.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2014,
+      "inUniverseEnd": 2014,
+      "events": [
+        {
+          "year": 1988,
+          "label": "1988",
+          "what": "Meredith Quill dies and Peter is taken from Earth by the Ravagers",
+          "kind": "flashback",
+          "source": "Shown on screen"
+        },
+        {
+          "year": 2014,
+          "label": "2014",
+          "what": "Ronan is stopped on Xandar and the Power Stone goes to the Nova Corps",
+          "kind": "main",
+          "source": "Marvel official timeline (2023)"
+        }
+      ]
     },
     {
       "id": "gotg2",
@@ -314,7 +517,25 @@
       "confidence": "ok",
       "summary": "A few months later Quill meets his father, the Celestial Ego, and kills him with Yondu’s sacrifice. Mantis and Nebula join the crew; the Sovereign create Adam Warlock.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2014,
+      "inUniverseEnd": 2014,
+      "events": [
+        {
+          "year": 1980,
+          "label": "1980",
+          "what": "Ego meets Meredith Quill on Earth",
+          "kind": "flashback",
+          "source": "Popverse MCU timeline"
+        },
+        {
+          "year": 2014,
+          "label": "2014",
+          "what": "Ego is destroyed and Yondu sacrifices himself",
+          "kind": "main",
+          "source": "Marvel official timeline (2023)"
+        }
+      ]
     },
     {
       "id": "aou",
@@ -329,7 +550,10 @@
       "confidence": "ok",
       "summary": "The AI Ultron is born from the Mind Stone in Loki’s scepter and tries to wipe out humanity in Sokovia. Vision is created, Wanda and Pietro Maximoff arrive and Pietro dies. Thanos picks up the Gauntlet.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2015,
+      "inUniverseEnd": 2015,
+      "events": []
     },
     {
       "id": "antman",
@@ -344,7 +568,32 @@
       "confidence": "ok",
       "summary": "Scott Lang inherits Hank Pym’s suit and stops Darren Cross from selling the Yellowjacket tech. First trip into the Quantum Realm — and the first return from it.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2015,
+      "inUniverseEnd": 2015,
+      "events": [
+        {
+          "year": 1987,
+          "label": "1987",
+          "what": "Janet van Dyne goes subatomic and is lost in the Quantum Realm",
+          "kind": "flashback",
+          "source": "Popverse MCU timeline"
+        },
+        {
+          "year": 1989,
+          "label": "1989",
+          "what": "Hank Pym resigns from S.H.I.E.L.D. rather than hand over the Pym Particle",
+          "kind": "flashback",
+          "source": "Shown on screen"
+        },
+        {
+          "year": 2015,
+          "label": "2015",
+          "what": "Scott Lang inherits the suit and stops the Yellowjacket sale",
+          "kind": "main",
+          "source": "Marvel official timeline (2023)"
+        }
+      ]
     },
     {
       "id": "cw",
@@ -359,7 +608,25 @@
       "confidence": "ok",
       "summary": "The Sokovia Accords split the Avengers in two, and Zemo uses Bucky’s past to break Tony and Steve apart. Black Panther and the MCU Spider-Man debut.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2016,
+      "inUniverseEnd": 2016,
+      "events": [
+        {
+          "year": 1991,
+          "label": "December 1991",
+          "what": "The Winter Soldier murders Howard and Maria Stark",
+          "kind": "flashback",
+          "source": "Shown on screen"
+        },
+        {
+          "year": 2016,
+          "label": "2016",
+          "what": "The Sokovia Accords split the Avengers and Zemo sets Tony against Steve",
+          "kind": "main",
+          "source": "Marvel official timeline (2023)"
+        }
+      ]
     },
     {
       "id": "bw",
@@ -374,7 +641,10 @@
       "confidence": "ok",
       "summary": "A fugitive after the Accords, Natasha returns to her Red Room past, brings down Dreykov and frees the Widows alongside Yelena Belova, Melina and Alexei. The official chronology places it between Civil War and Infinity War.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2016,
+      "inUniverseEnd": 2016,
+      "events": []
     },
     {
       "id": "bp",
@@ -389,7 +659,25 @@
       "confidence": "ok",
       "summary": "T’Challa takes the throne of Wakanda and is challenged by Killmonger, a cousin raised in the United States. In the end Wakanda decides to share its technology with the world.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2016,
+      "inUniverseEnd": 2016,
+      "events": [
+        {
+          "year": 1992,
+          "label": "1992",
+          "what": "T’Chaka kills his brother N’Jobu in Oakland, leaving Erik behind",
+          "kind": "flashback",
+          "source": "Shown on screen"
+        },
+        {
+          "year": 2016,
+          "label": "2016",
+          "what": "T’Challa takes the throne and Wakanda opens itself to the world",
+          "kind": "main",
+          "source": "Marvel official timeline (2023)"
+        }
+      ]
     },
     {
       "id": "hc",
@@ -404,7 +692,25 @@
       "confidence": "ok",
       "summary": "Peter Parker tries to prove himself to Tony Stark while Adrian Toomes becomes the Vulture by recycling Battle of New York salvage. Famous friction point: the film says \"8 years\" since 2012, which contradicts the official chronology.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2016,
+      "inUniverseEnd": 2016,
+      "events": [
+        {
+          "year": 2012,
+          "label": "2012",
+          "what": "Adrian Toomes loses the Battle of New York salvage contract",
+          "kind": "flashback",
+          "source": "Popverse MCU timeline"
+        },
+        {
+          "year": 2016,
+          "label": "2016",
+          "what": "Peter stops the Vulture and turns down a place on the Avengers",
+          "kind": "main",
+          "source": "Marvel official timeline (2023)"
+        }
+      ]
     },
     {
       "id": "ds",
@@ -419,7 +725,25 @@
       "confidence": "ok",
       "summary": "A neurosurgeon loses the use of his hands, finds Kamar-Taj, and beats Kaecilius and Dormammu using the Time Stone. Wong and Mordo enter the picture and Strange takes the New York Sanctum.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2016,
+      "inUniverseEnd": 2017,
+      "events": [
+        {
+          "year": 2016,
+          "label": "February 2016",
+          "what": "The crash that ends Stephen Strange’s surgical career",
+          "kind": "main",
+          "source": "Popverse MCU timeline"
+        },
+        {
+          "year": 2017,
+          "label": "2017",
+          "what": "Dormammu is bargained away and Strange takes the New York Sanctum",
+          "kind": "main",
+          "source": "Popverse MCU timeline"
+        }
+      ]
     },
     {
       "id": "rag",
@@ -434,7 +758,10 @@
       "confidence": "ok",
       "summary": "Hela destroys Mjolnir and Asgard; Thor and Hulk escape Sakaar with Valkyrie and Loki. Asgard is sacrificed to defeat Hela and the survivors leave on a ship — intercepted by Thanos.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2017,
+      "inUniverseEnd": 2017,
+      "events": []
     },
     {
       "id": "amw",
@@ -449,7 +776,10 @@
       "confidence": "ok",
       "summary": "Scott, Hope and Hank rescue Janet van Dyne from the Quantum Realm while dealing with Ava Starr (Ghost). In the post-credits scene the Snap erases the Pym family, stranding Scott in the Quantum Realm.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2018,
+      "inUniverseEnd": 2018,
+      "events": []
     },
     {
       "id": "iw",
@@ -464,7 +794,25 @@
       "confidence": "ok",
       "summary": "Thanos gathers all six Infinity Stones, kills Gamora and Vision, and the Snap erases half of all life in the universe. Fury triggers Carol’s pager as he fades.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2018,
+      "inUniverseEnd": 2018,
+      "events": [
+        {
+          "year": 1998,
+          "label": "Late 1990s",
+          "what": "Thanos takes Gamora from her homeworld as a child",
+          "kind": "flashback",
+          "source": "Popverse MCU timeline"
+        },
+        {
+          "year": 2018,
+          "label": "2018",
+          "what": "The six Stones are gathered and half of all life is erased",
+          "kind": "main",
+          "source": "Marvel official timeline (2023)"
+        }
+      ]
     },
     {
       "id": "endgame",
@@ -479,7 +827,60 @@
       "confidence": "ok",
       "summary": "Five years after the Snap the Quantum Realm makes the Time Heist possible. Hulk undoes the Snap, Tony Stark dies defeating Thanos and Steve returns the Stones — but the time travel creates branches, including the escape of the 2012 Loki.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2018,
+      "inUniverseEnd": 2023,
+      "events": [
+        {
+          "year": 2018,
+          "label": "May 2018",
+          "what": "The Snap, and the twenty-two days Tony and Nebula spend adrift",
+          "kind": "main",
+          "source": "Popverse MCU timeline"
+        },
+        {
+          "year": 2023,
+          "label": "October 2023",
+          "what": "Five years on, the Quantum Realm makes the Time Heist possible",
+          "kind": "main",
+          "source": "Popverse MCU timeline"
+        },
+        {
+          "year": 2012,
+          "label": "2012",
+          "what": "The heist returns to the Battle of New York for the Space, Mind and Time Stones",
+          "kind": "timeTravel",
+          "source": "Shown on screen"
+        },
+        {
+          "year": 2013,
+          "label": "2013",
+          "what": "Asgard, during The Dark World, for the Reality Stone",
+          "kind": "timeTravel",
+          "source": "Shown on screen"
+        },
+        {
+          "year": 2014,
+          "label": "2014",
+          "what": "Morag and Vormir, for the Power and Soul Stones",
+          "kind": "timeTravel",
+          "source": "Shown on screen"
+        },
+        {
+          "year": 1970,
+          "label": "1970",
+          "what": "Camp Lehigh, for the Tesseract and more Pym Particles",
+          "kind": "timeTravel",
+          "source": "Shown on screen"
+        },
+        {
+          "year": 2023,
+          "label": "2023",
+          "what": "Thanos is defeated, Tony Stark dies, and Steve returns the Stones",
+          "kind": "main",
+          "source": "Popverse MCU timeline"
+        }
+      ]
     },
     {
       "id": "loki1",
@@ -494,7 +895,25 @@
       "confidence": "ok",
       "summary": "The 2012 Loki is captured by the TVA (Time Variance Authority). With Sylvie he reaches the Citadel at the End of Time; killing He Who Remains releases the branching multiverse.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2023,
+      "inUniverseEnd": 2023,
+      "events": [
+        {
+          "year": 1971,
+          "label": "November 1971",
+          "what": "The D.B. Cooper hijacking, which was Loki settling a bet",
+          "kind": "flashback",
+          "source": "Shown on screen"
+        },
+        {
+          "year": 2012,
+          "label": "2012",
+          "what": "The Loki who escapes with the Tesseract is arrested by the TVA",
+          "kind": "timeTravel",
+          "source": "Popverse MCU timeline"
+        }
+      ]
     },
     {
       "id": "wv",
@@ -509,7 +928,32 @@
       "confidence": "ok",
       "summary": "Weeks after Endgame, Wanda builds the Westview reality rather than face her grief. Agatha Harkness names her the Scarlet Witch; White Vision is created and Wanda keeps the Darkhold.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2023,
+      "inUniverseEnd": 2023,
+      "events": [
+        {
+          "year": 1693,
+          "label": "1693",
+          "what": "Agatha Harkness survives her coven at the Salem witch trials",
+          "kind": "flashback",
+          "source": "Shown on screen"
+        },
+        {
+          "year": 1999,
+          "label": "March 1999",
+          "what": "The Stark shell that kills Wanda and Pietro’s parents in Sokovia",
+          "kind": "flashback",
+          "source": "Popverse MCU timeline"
+        },
+        {
+          "year": 2023,
+          "label": "2023",
+          "what": "Wanda raises the Westview anomaly and becomes the Scarlet Witch",
+          "kind": "main",
+          "source": "Marvel official timeline (2023)"
+        }
+      ]
     },
     {
       "id": "whatif",
@@ -524,7 +968,10 @@
       "confidence": "alt",
       "summary": "An anthology in which the Watcher observes realities that diverged from the main timeline. Each episode is its own universe rather than the Sacred Timeline, though the Guardians of the Multiverse carry across seasons.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2023,
+      "inUniverseEnd": 2023,
+      "events": []
     },
     {
       "id": "loki2",
@@ -539,13 +986,16 @@
       "confidence": "ok",
       "summary": "The TVA collapses as timelines multiply. Loki takes on the role of holding the branching timelines together, becoming the axis that keeps them alive.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2023,
+      "inUniverseEnd": 2023,
+      "events": []
     },
     {
       "id": "tfatws",
       "slug": "the-falcon-and-the-winter-soldier",
       "title": "The Falcon and the Winter Soldier",
-      "inUniverseYear": 2024,
+      "inUniverseYear": 2023,
       "inUniverseLabel": "2023–2024 ≈",
       "releaseDate": "2021-03-19",
       "track": "shield",
@@ -554,7 +1004,10 @@
       "confidence": "approx",
       "summary": "Six months after Endgame: Sam gives up the shield, John Walker is appointed and stripped of the title, and the Flag Smashers react to the chaos of half the population returning. Sam takes up the Captain America mantle.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2023,
+      "inUniverseEnd": 2024,
+      "events": []
     },
     {
       "id": "shang",
@@ -569,7 +1022,32 @@
       "confidence": "ok",
       "summary": "Shang-Chi confronts his father Xu Wenwu, millennia-old leader of the Ten Rings, and the Dweller-in-Darkness in Ta Lo. In the post-credits scene Wong, Banner and Carol find the rings predate any record.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2024,
+      "inUniverseEnd": 2024,
+      "events": [
+        {
+          "year": 1996,
+          "label": "1996",
+          "what": "Wenwu meets Ying Li and gives up the Ten Rings",
+          "kind": "flashback",
+          "source": "Shown on screen"
+        },
+        {
+          "year": 2007,
+          "label": "2007",
+          "what": "Ying Li is killed and Wenwu takes the rings back up",
+          "kind": "flashback",
+          "source": "Popverse MCU timeline"
+        },
+        {
+          "year": 2024,
+          "label": "2024",
+          "what": "Shang-Chi faces his father and the Dweller-in-Darkness in Ta Lo",
+          "kind": "main",
+          "source": "Marvel official timeline (2023)"
+        }
+      ]
     },
     {
       "id": "ffh",
@@ -584,7 +1062,10 @@
       "confidence": "ok",
       "summary": "Eight months after Endgame, Peter grieves Stark and is played by Quentin Beck/Mysterio, who fakes threats with holograms. In the end Peter’s identity is exposed to the world.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2024,
+      "inUniverseEnd": 2024,
+      "events": []
     },
     {
       "id": "eternals",
@@ -599,7 +1080,53 @@
       "confidence": "ok",
       "summary": "Eternals created by Arishem have lived on Earth for thousands of years to contain the Deviants — and learn their real purpose is to allow the Emergence of the Celestial Tiamut. They stop the birth and Tiamut’s body is left petrified in the ocean.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2024,
+      "inUniverseEnd": 2024,
+      "events": [
+        {
+          "year": -5000,
+          "label": "5000 BC",
+          "what": "Ten Eternals land in Mesopotamia aboard the Domo to fight the Deviants",
+          "kind": "flashback",
+          "source": "Shown on screen"
+        },
+        {
+          "year": -575,
+          "label": "575 BC",
+          "what": "The team defends Babylon, and Phastos pushes humanity toward technology",
+          "kind": "flashback",
+          "source": "Shown on screen"
+        },
+        {
+          "year": 400,
+          "label": "400 AD",
+          "what": "Sersi and Ikaris marry during the Gupta Empire",
+          "kind": "flashback",
+          "source": "Shown on screen"
+        },
+        {
+          "year": 1521,
+          "label": "1521",
+          "what": "Tenochtitlan falls to the Spanish invasion and the Eternals break apart",
+          "kind": "flashback",
+          "source": "Shown on screen"
+        },
+        {
+          "year": 1945,
+          "label": "August 1945",
+          "what": "Phastos walks through the aftermath of Hiroshima",
+          "kind": "flashback",
+          "source": "Shown on screen"
+        },
+        {
+          "year": 2024,
+          "label": "2024",
+          "what": "The Emergence of the Celestial Tiamut is stopped and his body is left petrified",
+          "kind": "main",
+          "source": "Marvel official timeline (2023)"
+        }
+      ]
     },
     {
       "id": "hawkeye",
@@ -614,7 +1141,10 @@
       "confidence": "approx",
       "summary": "Clint Barton tries to bury the Ronin trail and ends up training Kate Bishop. Yelena Belova, Maya Lopez and Wilson Fisk/Kingpin come into play.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2024,
+      "inUniverseEnd": 2024,
+      "events": []
     },
     {
       "id": "msm",
@@ -629,7 +1159,32 @@
       "confidence": "approx",
       "summary": "Kamala Khan activates a Noor bangle linked to the Clandestines and the Djinn, tied to the history of the Partition of India. In the finale a mutation in her DNA is revealed.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2024,
+      "inUniverseEnd": 2024,
+      "events": [
+        {
+          "year": 1942,
+          "label": "1942",
+          "what": "Aisha arrives in British India",
+          "kind": "flashback",
+          "source": "Popverse MCU timeline"
+        },
+        {
+          "year": 1947,
+          "label": "1947",
+          "what": "The family is separated during the Partition",
+          "kind": "flashback",
+          "source": "Shown on screen"
+        },
+        {
+          "year": 2024,
+          "label": "2024",
+          "what": "Kamala activates the Noor bangle and faces the Clandestines",
+          "kind": "main",
+          "source": "Popverse MCU timeline"
+        }
+      ]
     },
     {
       "id": "mk",
@@ -644,7 +1199,25 @@
       "confidence": "approx",
       "summary": "Marc Spector and Steven Grant share one body in service of the Egyptian god Khonshu, against Arthur Harrow and Ammit. Layla becomes the Scarlet Scarab and a third alter, Jake Lockley, is revealed.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2024,
+      "inUniverseEnd": 2024,
+      "events": [
+        {
+          "year": 1996,
+          "label": "1996",
+          "what": "Randall Spector drowns, and Marc is blamed for it",
+          "kind": "flashback",
+          "source": "Popverse MCU timeline"
+        },
+        {
+          "year": 2024,
+          "label": "2024",
+          "what": "Marc and Steven face Arthur Harrow and Ammit for Khonshu",
+          "kind": "main",
+          "source": "Popverse MCU timeline"
+        }
+      ]
     },
     {
       "id": "nwh",
@@ -659,7 +1232,10 @@
       "confidence": "ok",
       "summary": "A botched spell by Strange pulls in villains and two other Spider-Men from neighbouring universes. May dies; to close the rift, the entire world forgets who Peter Parker is.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2024,
+      "inUniverseEnd": 2024,
+      "events": []
     },
     {
       "id": "mom",
@@ -674,7 +1250,10 @@
       "confidence": "ok",
       "summary": "Corrupted by the Darkhold, Wanda hunts America Chavez to take her power to travel between universes. Strange meets the Illuminati of Earth-838 and learns what an incursion is.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2024,
+      "inUniverseEnd": 2024,
+      "events": []
     },
     {
       "id": "dpw",
@@ -689,7 +1268,10 @@
       "confidence": "ok",
       "summary": "The TVA recruits Wade Wilson when his timeline starts to die without its anchor being. With a Logan from another reality he faces Cassandra Nova in the Void — the film formally stitches the Fox library into the MCU multiverse.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2024,
+      "inUniverseEnd": 2024,
+      "events": []
     },
     {
       "id": "shulk",
@@ -704,7 +1286,10 @@
       "confidence": "approx",
       "summary": "Jennifer Walters gains her cousin Bruce’s powers and practises law for superhuman clients. Abomination and Titania return, Skaar is introduced, and the show plays with the fourth wall.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2024,
+      "inUniverseEnd": 2024,
+      "events": []
     },
     {
       "id": "wbn",
@@ -719,7 +1304,10 @@
       "confidence": "approx",
       "summary": "A black-and-white special: monster hunters compete for the Bloodstone and Jack Russell reveals his werewolf nature, siding with Elsa Bloodstone and Man-Thing.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2024,
+      "inUniverseEnd": 2024,
+      "events": []
     },
     {
       "id": "wf",
@@ -734,7 +1322,25 @@
       "confidence": "ok",
       "summary": "Wakanda mourns T’Challa while facing Namor and the underwater nation of Talokan. Shuri takes up the Black Panther mantle; Riri Williams enters the story.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2025,
+      "inUniverseEnd": 2025,
+      "events": [
+        {
+          "year": 1571,
+          "label": "1571",
+          "what": "Namor is born as his people become Talokan",
+          "kind": "flashback",
+          "source": "Popverse MCU timeline"
+        },
+        {
+          "year": 2025,
+          "label": "2025",
+          "what": "Wakanda mourns T’Challa and Shuri takes the mantle",
+          "kind": "main",
+          "source": "Marvel official timeline (2023)"
+        }
+      ]
     },
     {
       "id": "lt",
@@ -749,7 +1355,10 @@
       "confidence": "ok",
       "summary": "Gorr the God Butcher uses the Necrosword to kill gods. Jane Foster wields the reforged Mjolnir as the Mighty Thor and dies; Thor adopts Gorr’s daughter, Love.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2025,
+      "inUniverseEnd": 2025,
+      "events": []
     },
     {
       "id": "ghs",
@@ -764,7 +1373,10 @@
       "confidence": "ok",
       "summary": "Mantis and Drax kidnap Kevin Bacon as a Christmas present for Quill. The Guardians now live on Knowhere, bought from the Collector; Mantis reveals she is Quill’s half-sister.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2025,
+      "inUniverseEnd": 2025,
+      "events": []
     },
     {
       "id": "marvels",
@@ -779,7 +1391,10 @@
       "confidence": "ok",
       "summary": "Carol Danvers, Kamala Khan and Monica Rambeau have their powers entangled and face Dar-Benn, who tears holes in space to save Hala. In the end Monica crosses into a reality with mutants.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2025,
+      "inUniverseEnd": 2025,
+      "events": []
     },
     {
       "id": "quant",
@@ -794,13 +1409,16 @@
       "confidence": "ok",
       "summary": "The Lang family is pulled into the Quantum Realm and finds Kang the Conqueror exiled there. Cassie and Hope help stop him; in the extra scenes a Council of Kangs gathers over the multiverse threat.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2025,
+      "inUniverseEnd": 2025,
+      "events": []
     },
     {
       "id": "si",
       "slug": "secret-invasion",
       "title": "Secret Invasion",
-      "inUniverseYear": 2026,
+      "inUniverseYear": 2025,
       "inUniverseLabel": "2025–2026 ≈",
       "releaseDate": "2023-06-21",
       "track": "shield",
@@ -809,7 +1427,10 @@
       "confidence": "approx",
       "summary": "Skrulls led by Gravik, tired of waiting for a home, infiltrate governments to provoke a war. Fury and Talos push back; G’iah ends up the most powerful being on the planet.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2025,
+      "inUniverseEnd": 2026,
+      "events": []
     },
     {
       "id": "gotg3",
@@ -824,7 +1445,10 @@
       "confidence": "ok",
       "summary": "Rocket’s origin as a test subject of the High Evolutionary drives the final rescue. The original team disbands and a new roster stays on Knowhere with Rocket in charge.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2026,
+      "inUniverseEnd": 2026,
+      "events": []
     },
     {
       "id": "echo",
@@ -839,7 +1463,10 @@
       "confidence": "approx",
       "summary": "Maya Lopez returns to Oklahoma and to her Choctaw roots while breaking away from Wilson Fisk, her crime-boss uncle. Matt Murdock and the Kingpin carry over from the earlier street-level shows.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2026,
+      "inUniverseEnd": 2026,
+      "events": []
     },
     {
       "id": "agatha",
@@ -854,7 +1481,10 @@
       "confidence": "approx",
       "summary": "Powerless after Westview, Agatha Harkness walks the Witches’ Road with a teenager who turns out to be Billy Maximoff. Rio Vidal is introduced as Death.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2026,
+      "inUniverseEnd": 2026,
+      "events": []
     },
     {
       "id": "ironheart",
@@ -869,7 +1499,10 @@
       "confidence": "approx",
       "summary": "Riri Williams builds armor in Chicago and gets entangled with Parker Robbins/The Hood, setting technology against magic.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2026,
+      "inUniverseEnd": 2026,
+      "events": []
     },
     {
       "id": "ddba",
@@ -884,7 +1517,10 @@
       "confidence": "approx",
       "summary": "Matt Murdock returns to the courtroom and to the mask while Wilson Fisk is elected mayor of New York, turning their feud into a fight for the city.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2026,
+      "inUniverseEnd": 2026,
+      "events": []
     },
     {
       "id": "zomb",
@@ -899,7 +1535,10 @@
       "confidence": "alt",
       "summary": "A spin-off of What If…?: a reality where a quantum virus turns heroes into zombies and the survivors try to contain the outbreak.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2026,
+      "inUniverseEnd": 2026,
+      "events": []
     },
     {
       "id": "bnw",
@@ -914,7 +1553,10 @@
       "confidence": "ok",
       "summary": "Sam Wilson is already Captain America when Thaddeus Ross becomes President. The fight over adamantium taken from the Celestial Tiamut and the return of Samuel Sterns/The Leader pull threads from The Incredible Hulk and Eternals.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2027,
+      "inUniverseEnd": 2027,
+      "events": []
     },
     {
       "id": "thunder",
@@ -929,13 +1571,16 @@
       "confidence": "ok",
       "summary": "Valentina Allegra de Fontaine throws Yelena, Bucky, John Walker, Ghost and Red Guardian together as a disposable team, and the Sentry project gets away from her through Bob. The team is re-branded to the public as the \"New Avengers\".",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2027,
+      "inUniverseEnd": 2027,
+      "events": []
     },
     {
       "id": "wman",
       "slug": "wonder-man",
       "title": "Wonder Man",
-      "inUniverseYear": 2027,
+      "inUniverseYear": 2026,
       "inUniverseLabel": "2026–2027 ≈",
       "releaseDate": "2026-01-27",
       "track": "mystic",
@@ -944,7 +1589,10 @@
       "confidence": "approx",
       "summary": "A series centred on Simon Williams inside the Hollywood machine, picking up the character name-dropped in Guardians Vol. 2 and She-Hulk. It closes the complete timeline published by Disney+.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2026,
+      "inUniverseEnd": 2027,
+      "events": []
     },
     {
       "id": "ff4",
@@ -959,7 +1607,10 @@
       "confidence": "alt",
       "summary": "Reed Richards, Sue Storm, Johnny Storm and Ben Grimm are already public heroes when Galactus and the Silver Surfer threaten the planet. It takes place in its own universe, not on the MCU’s main Earth.",
       "context": null,
-      "contextSource": null
+      "contextSource": null,
+      "inUniverseStart": 2027,
+      "inUniverseEnd": 2027,
+      "events": []
     },
     {
       "id": "bnd",
@@ -974,7 +1625,10 @@
       "confidence": "pending",
       "summary": null,
       "context": "Directed by Destin Daniel Cretton, with Tom Holland and Zendaya returning alongside Sadie Sink, Jon Bernthal as the Punisher, Mark Ruffalo as Bruce Banner and Michael Mando. No verified account of the plot has been written here yet.",
-      "contextSource": "reported"
+      "contextSource": "reported",
+      "inUniverseStart": 2027,
+      "inUniverseEnd": 2027,
+      "events": []
     },
     {
       "id": "vq",
@@ -989,7 +1643,10 @@
       "confidence": "future",
       "summary": null,
       "context": "Marvel's premise: Vision, rebooted and escaped from those who wanted to weaponise him, is in hiding and consults the AI personas inside his own programming — F.R.I.D.A.Y., E.D.I.T.H., J.A.R.V.I.S. and Ultron. A bounty on his head puts him on the run with Thomas Shepard, a boy who may be his son. Paul Bettany returns, with James Spader as Ultron; Terry Matalas showruns. It closes the arc begun in WandaVision and continued in Agatha All Along.",
-      "contextSource": "official"
+      "contextSource": "official",
+      "inUniverseStart": 2027,
+      "inUniverseEnd": 2027,
+      "events": []
     },
     {
       "id": "ddba2",
@@ -1004,7 +1661,10 @@
       "confidence": "pending",
       "summary": null,
       "context": "Charlie Cox and Vincent D'Onofrio return as Matt Murdock and Wilson Fisk, joined by Krysten Ritter reprising Jessica Jones and Matthew Lillard. No verified account of the season's events has been written here yet.",
-      "contextSource": "reported"
+      "contextSource": "reported",
+      "inUniverseStart": 2027,
+      "inUniverseEnd": 2027,
+      "events": []
     },
     {
       "id": "doom",
@@ -1019,7 +1679,10 @@
       "confidence": "future",
       "summary": null,
       "context": "Marvel's own logline: heroes from three distinct universes are set on a deadly collision course against an existential threat. Directed by Joe and Anthony Russo, with Robert Downey Jr. as Doctor Doom and Chris Evans returning for the first time since Endgame.",
-      "contextSource": "official"
+      "contextSource": "official",
+      "inUniverseStart": 2028,
+      "inUniverseEnd": 2028,
+      "events": []
     },
     {
       "id": "sw",
@@ -1034,7 +1697,10 @@
       "confidence": "future",
       "summary": null,
       "context": "Announced as the direct follow-up to Doomsday, again directed by the Russo brothers, with Robert Downey Jr. continuing as Doctor Doom. No story details have been released.",
-      "contextSource": "reported"
+      "contextSource": "reported",
+      "inUniverseStart": 2029,
+      "inUniverseEnd": 2029,
+      "events": []
     }
   ],
   "connections": [

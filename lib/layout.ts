@@ -41,14 +41,14 @@ const releaseYear = (entry: Entry) => (entry.releaseDate ? Number(entry.releaseD
 const releaseMonth = (entry: Entry) =>
   entry.releaseDate && entry.releaseDate.length > 4 ? Number(entry.releaseDate.slice(5, 7)) : 13;
 
-const columnKey = (entry: Entry, mode: Mode) => (mode === 'story' ? entry.inUniverseYear : releaseYear(entry));
+const columnKey = (entry: Entry, mode: Mode) =>
+  mode === 'story' ? entry.inUniverseStart : releaseYear(entry);
 const sortKey = (entry: Entry, mode: Mode) =>
-  mode === 'story' ? entry.inUniverseYear * 100 : releaseYear(entry) * 100 + releaseMonth(entry);
+  mode === 'story' ? entry.inUniverseStart * 100 : releaseYear(entry) * 100 + releaseMonth(entry);
 
 function columnLabels(key: number, mode: Mode): { label: string; sublabel: string } {
   if (mode === 'story') {
-    if (key < 0) return { label: `${Math.abs(key)} BC`, sublabel: 'antiquity' };
-    if (key === 1260) return { label: 'Antiquity', sublabel: 'pre-history' };
+    if (key <= -1000) return { label: `${Math.abs(key)} BC`, sublabel: 'antiquity' };
     if (key >= 2028) return { label: 'Announced', sublabel: 'no in-universe date' };
     return { label: String(key), sublabel: 'in-universe year' };
   }

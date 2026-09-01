@@ -34,6 +34,28 @@ export default function SourcesPage() {
         TMDB. Dates from 2026 onward are scheduled and may shift.
       </p>
 
+      <h2>Chronology inside an entry</h2>
+      <p>
+        A story is rarely a single year. <em>The First Avenger</em> runs from 1943 to 1945 and then
+        wakes up in 2011; <em>Endgame</em> lives in 2018 and 2023 and reaches back into 1970, 2012,
+        2013 and 2014; <em>Eternals</em> crosses seven thousand years. On the map an entry is drawn as
+        a bar covering the years its story mainly occupies, and everything outside that span is listed
+        as a chronology on the entry itself, labelled as a flashback, a piece of time travel, or an
+        epilogue.
+      </p>
+      <p>
+        Flashbacks are deliberately not moved on the map. Scattering a single film across six points
+        would make the timeline unreadable and would misrepresent where the story actually sits, so the
+        depth lives one click away instead.
+      </p>
+      <p>
+        <strong>Every dated event carries its source, printed next to it.</strong> Three are in use:{' '}
+        <em>Shown on screen</em> for dates the film or series states outright in a title card,{' '}
+        <em>Marvel official timeline (2023)</em> for Marvel&rsquo;s own published book, and{' '}
+        <em>Popverse MCU timeline</em> for the dated chronology published by Popverse. An event with no
+        source does not get written down.
+      </p>
+
       <h2>What is never invented</h2>
       <p>
         Summaries describe only what happens on screen. A title that has been announced but has no
@@ -63,6 +85,12 @@ export default function SourcesPage() {
         <li>Rotten Tomatoes Editorial and Vandal — chronological order, updated 2026</li>
         <li>GamesRadar / TechRadar — confirmed anchors (2012, 2018, 2023) and ambiguous placements</li>
         <li>TMDB — release dates, titles and artwork</li>
+        <li>
+          <a href="https://www.thepopverse.com/marvel-mcu-timeline-cinematic-universe-studios-order-phase-6-5-4-3-2-1-order" rel="noreferrer noopener" target="_blank">
+            Popverse
+          </a>{' '}
+          — the dated event-by-event MCU chronology, including flashbacks and time travel
+        </li>
         <li>
           Structure cross-checked against the <em>Marvel Story Map</em> (DeviantArt), the multiverse
           infographic covered by ScreenRant, Lucen Software&rsquo;s phase chart, Letterboxd watch-order

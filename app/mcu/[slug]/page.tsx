@@ -6,6 +6,7 @@ import {
   TYPE_LABEL, KIND_LABEL, CONFIDENCE_NOTE, CONTEXT_LABEL, tracks,
 } from '@/lib/data';
 import { SITE } from '@/lib/site';
+import { EVENT_KIND_LABEL } from '@/lib/data';
 import { JsonLd, entryJsonLd, breadcrumbJsonLd } from '@/lib/structured-data';
 import styles from './entry.module.css';
 
@@ -89,6 +90,32 @@ export default async function EntryPage({ params }: { params: Promise<{ slug: st
           <p className={styles.caveat}>
             <b>{caveat.mark} {caveat.label}.</b> {caveat.note}
           </p>
+        )}
+
+        {entry.events.length > 0 && (
+          <section>
+            <h2 className={styles.section}>Chronology</h2>
+            <ol className={styles.chrono}>
+              {[...entry.events].sort((a, b) => a.year - b.year).map((event) => (
+                <li key={`${event.year}-${event.what}`}>
+                  <span className={styles.chronoWhen}>{event.label}</span>
+                  <span className={styles.chronoWhat}>
+                    {EVENT_KIND_LABEL[event.kind] && (
+                      <span className={styles.chronoTag} data-kind={event.kind}>
+                        {EVENT_KIND_LABEL[event.kind]}
+                      </span>
+                    )}
+                    {event.what}
+                    <span className={styles.chronoSource}>Source: {event.source}</span>
+                  </span>
+                </li>
+              ))}
+            </ol>
+            <p className={styles.chronoFoot}>
+              Flashbacks and time travel are listed here rather than moved on the map, so the entry
+              keeps a single honest position on the timeline.
+            </p>
+          </section>
         )}
 
         {outbound.length > 0 && (
