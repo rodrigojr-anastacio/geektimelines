@@ -189,6 +189,28 @@ await check('the tab title leads with the brand on the home page', async () => {
   }
 });
 
+await check('analytics is wired up', async () => {
+  // The component injects its tag on the client, so the server HTML never
+  // mentions it. On a real deployment the proof is that the endpoint the tag
+  // points at is served; locally that route does not exist, so fall back to
+  // checking the component actually shipped in the page bundle.
+  const local = /localhost|127\.0\.0\.1/.test(base);
+  if (!local) {
+    const res = await fetch(`${base}/_vercel/insights/script.js`);
+    if (!res.ok) throw new Error(`/_vercel/insights/script.js returned ${res.status}`);
+    const type = res.headers.get('content-type') ?? '';
+    if (!/javascript/.test(type)) throw new Error(`analytics script served as ${type}`);
+    return;
+  }
+  const body = await expectOk('/');
+  const chunks = [...body.matchAll(/src="(\/_next\/static\/chunks\/[^"]+)"/g)].map((m) => m[1]);
+  for (const chunk of chunks) {
+    const js = await (await fetch(`${base}${chunk}`)).text();
+    if (js.includes('/_vercel/insights/script.js')) return;
+  }
+  throw new Error('the analytics component is not in any page bundle');
+});
+
 await check('pages declare a canonical url', async () => {
   const body = await expectOk('/mcu/avengers-endgame');
   if (!body.includes('rel="canonical"')) throw new Error('entry page has no canonical link');

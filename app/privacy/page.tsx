@@ -40,8 +40,9 @@ export default function PrivacyPage() {
 
       <h2>Analytics</h2>
       <p>
-        Aggregate traffic measurement may be used to understand which pages are read. It is never
-        combined with anything that identifies you individually.
+        Aggregate, cookieless traffic measurement is used to see which pages are read. It sets no
+        cookies, does not follow you across other sites, and is never combined with anything that
+        identifies you individually.
       </p>
 
       <h2>Third parties</h2>

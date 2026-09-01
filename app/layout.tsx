@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/next';
 import { Fraunces, IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google';
 import Link from 'next/link';
 import { SITE, UNIVERSES } from '@/lib/site';
@@ -94,6 +95,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </footer>
 
         <CookieNotice />
+        <Analytics />
       </body>
     </html>
   );
