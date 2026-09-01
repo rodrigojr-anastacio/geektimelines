@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import styles from './StoryMap.module.css';
 import { computeLayout, edgePath, NODE_H, NODE_W, type Mode } from '@/lib/layout';
+import { centroid, clampZoom, flickVelocity, glideStep, pinchZoom, zoomAround } from '@/lib/gesture';
 import type { Connection, Entry, Track } from '@/lib/schema';
 import { IconBack, IconChevron, IconClose, IconExitFull, IconFit, IconFull, IconMinus, IconPlus } from './icons';
 
@@ -60,9 +61,17 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
   const stageRef = useRef<HTMLDivElement>(null);
   const worldRef = useRef<HTMLDivElement>(null);
   const viewRef = useRef({ x: 26, y: 34, k: 0.62 });
-  const dragRef = useRef<{ x: number; y: number; vx: number; vy: number } | null>(null);
+  const pointersRef = useRef(new Map<number, { x: number; y: number }>());
+  const gestureRef = useRef<
+    | { kind: 'pan'; x: number; y: number; vx: number; vy: number }
+    | { kind: 'pinch'; distance: number; midX: number; midY: number; k: number; x: number; y: number }
+    | null
+  >(null);
   const movedRef = useRef(false);
   const rafRef = useRef<number | null>(null);
+  const glideRef = useRef<number | null>(null);
+  /** Recent move samples, used to carry a flick into a short glide. */
+  const flickRef = useRef<{ t: number; x: number; y: number }[]>([]);
 
   const byId = useMemo(() => new Map(entries.map((e) => [e.id, e])), [entries]);
   const layout = useMemo(() => computeLayout(entries, tracks, mode), [entries, tracks, mode]);
@@ -87,6 +96,7 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
     const start = { ...viewRef.current };
     const t0 = performance.now();
     if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    if (glideRef.current) { cancelAnimationFrame(glideRef.current); glideRef.current = null; }
     const step = (now: number) => {
       const p = Math.min(1, (now - t0) / ms);
       const e = p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
@@ -107,7 +117,7 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
     const box = frameBox();
     if (box.width < 40 || box.height < 40) return;
     const raw = Math.min((box.width - 60) / layout.width, (box.height - 170) / layout.height);
-    const k = Math.min(2.4, Math.max(0.14, raw));
+    const k = clampZoom(raw);
     animateTo(k, (box.width - layout.width * k) / 2, 100 + (box.height - 170 - layout.height * k) / 2);
   }, [animateTo, layout.width, layout.height]);
 
@@ -178,46 +188,141 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
       event.preventDefault();
       const box = stage.getBoundingClientRect();
       const factor = Math.exp(-event.deltaY * (event.ctrlKey ? 0.01 : 0.0016));
-      const next = Math.min(2.4, Math.max(0.14, viewRef.current.k * factor));
-      const px = event.clientX - box.left;
-      const py = event.clientY - box.top;
-      viewRef.current = {
-        k: next,
-        x: px - (px - viewRef.current.x) * (next / viewRef.current.k),
-        y: py - (py - viewRef.current.y) * (next / viewRef.current.k),
-      };
+      viewRef.current = zoomAround(
+        viewRef.current,
+        viewRef.current.k * factor,
+        event.clientX - box.left,
+        event.clientY - box.top,
+      );
       applyView();
     };
     stage.addEventListener('wheel', onWheel, { passive: false });
     return () => stage.removeEventListener('wheel', onWheel);
   }, [applyView]);
 
+  const stopGlide = () => {
+    if (glideRef.current) cancelAnimationFrame(glideRef.current);
+    glideRef.current = null;
+  };
+
+  const startGlide = useCallback(() => {
+    let velocity = flickVelocity(flickRef.current, performance.now());
+    if (!velocity) return;
+    const step = () => {
+      const next = glideStep(velocity!);
+      if (!next) { glideRef.current = null; return; }
+      velocity = next;
+      viewRef.current = {
+        ...viewRef.current,
+        x: viewRef.current.x + next.vx,
+        y: viewRef.current.y + next.vy,
+      };
+      applyView();
+      glideRef.current = requestAnimationFrame(step);
+    };
+    glideRef.current = requestAnimationFrame(step);
+  }, [applyView]);
+
   useEffect(() => {
+    const centreOf = () => centroid([...pointersRef.current.values()]);
+
+    const rebase = () => {
+      const stage = stageRef.current;
+      if (!stage) return;
+      const box = stage.getBoundingClientRect();
+      const { midX, midY, distance } = centreOf();
+      if (pointersRef.current.size >= 2) {
+        gestureRef.current = {
+          kind: 'pinch',
+          distance,
+          midX: midX - box.left,
+          midY: midY - box.top,
+          k: viewRef.current.k,
+          x: viewRef.current.x,
+          y: viewRef.current.y,
+        };
+      } else {
+        gestureRef.current = { kind: 'pan', x: midX, y: midY, vx: viewRef.current.x, vy: viewRef.current.y };
+      }
+    };
+
     const onMove = (event: PointerEvent) => {
-      const drag = dragRef.current;
-      if (!drag) return;
-      if (Math.abs(event.clientX - drag.x) + Math.abs(event.clientY - drag.y) > 4) movedRef.current = true;
+      if (!pointersRef.current.has(event.pointerId)) return;
+      pointersRef.current.set(event.pointerId, { x: event.clientX, y: event.clientY });
+      const gesture = gestureRef.current;
+      if (!gesture || !stageRef.current) return;
+
+      if (gesture.kind === 'pinch') {
+        movedRef.current = true;
+        const { distance } = centreOf();
+        const next = pinchZoom(gesture.k, gesture.distance, distance);
+        viewRef.current = zoomAround({ k: gesture.k, x: gesture.x, y: gesture.y }, next, gesture.midX, gesture.midY);
+        applyView();
+        return;
+      }
+
+      const { midX, midY } = centreOf();
+      if (Math.abs(midX - gesture.x) + Math.abs(midY - gesture.y) > 4) movedRef.current = true;
       if (!movedRef.current) return;
-      viewRef.current = { ...viewRef.current, x: drag.vx + (event.clientX - drag.x), y: drag.vy + (event.clientY - drag.y) };
+      const x = gesture.vx + (midX - gesture.x);
+      const y = gesture.vy + (midY - gesture.y);
+      flickRef.current.push({ t: performance.now(), x, y });
+      if (flickRef.current.length > 5) flickRef.current.shift();
+      viewRef.current = { ...viewRef.current, x, y };
       applyView();
     };
-    const onUp = () => {
-      dragRef.current = null;
-      stageRef.current?.classList.remove(styles.grabbing);
+
+    const onUp = (event: PointerEvent) => {
+      if (!pointersRef.current.delete(event.pointerId)) return;
+      if (pointersRef.current.size === 0) {
+        const wasPan = gestureRef.current?.kind === 'pan';
+        gestureRef.current = null;
+        stageRef.current?.classList.remove(styles.grabbing);
+        if (wasPan && movedRef.current) startGlide();
+        flickRef.current = [];
+      } else {
+        // A finger lifted mid-pinch: rebase the gesture on whatever is still down.
+        rebase();
+        flickRef.current = [];
+      }
     };
+
     window.addEventListener('pointermove', onMove);
     window.addEventListener('pointerup', onUp);
+    window.addEventListener('pointercancel', onUp);
     return () => {
       window.removeEventListener('pointermove', onMove);
       window.removeEventListener('pointerup', onUp);
+      window.removeEventListener('pointercancel', onUp);
     };
-  }, [applyView]);
+  }, [applyView, startGlide]);
 
   const onPointerDown = (event: React.PointerEvent) => {
-    if (event.button !== 0) return;
-    dragRef.current = { x: event.clientX, y: event.clientY, vx: viewRef.current.x, vy: viewRef.current.y };
-    movedRef.current = false;
-    stageRef.current?.classList.add(styles.grabbing);
+    if (event.pointerType === 'mouse' && event.button !== 0) return;
+    stopGlide();
+    if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    pointersRef.current.set(event.pointerId, { x: event.clientX, y: event.clientY });
+    if (pointersRef.current.size === 1) movedRef.current = false;
+    flickRef.current = [];
+    const stage = stageRef.current;
+    if (!stage) return;
+    const box = stage.getBoundingClientRect();
+    const points = [...pointersRef.current.values()];
+    const { midX, midY, distance } = centroid(points);
+    if (points.length >= 2) {
+      gestureRef.current = {
+        kind: 'pinch',
+        distance,
+        midX: midX - box.left,
+        midY: midY - box.top,
+        k: viewRef.current.k,
+        x: viewRef.current.x,
+        y: viewRef.current.y,
+      };
+    } else {
+      gestureRef.current = { kind: 'pan', x: midX, y: midY, vx: viewRef.current.x, vy: viewRef.current.y };
+      stage.classList.add(styles.grabbing);
+    }
   };
 
   const onStageClick = (event: React.MouseEvent) => {
@@ -260,14 +365,7 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
       }
       const box = frameBox();
       const zoomBy = (factor: number) => {
-        const next = Math.min(2.4, Math.max(0.14, viewRef.current.k * factor));
-        const px = box.width / 2;
-        const py = box.height / 2;
-        viewRef.current = {
-          k: next,
-          x: px - (px - viewRef.current.x) * (next / viewRef.current.k),
-          y: py - (py - viewRef.current.y) * (next / viewRef.current.k),
-        };
+        viewRef.current = zoomAround(viewRef.current, viewRef.current.k * factor, box.width / 2, box.height / 2);
         applyView();
       };
       if (event.key === '+' || event.key === '=') zoomBy(1.2);
@@ -300,14 +398,7 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
 
   const zoomBtn = (factor: number) => () => {
     const box = frameBox();
-    const next = Math.min(2.4, Math.max(0.14, viewRef.current.k * factor));
-    const px = box.width / 2;
-    const py = box.height / 2;
-    viewRef.current = {
-      k: next,
-      x: px - (px - viewRef.current.x) * (next / viewRef.current.k),
-      y: py - (py - viewRef.current.y) * (next / viewRef.current.k),
-    };
+    viewRef.current = zoomAround(viewRef.current, viewRef.current.k * factor, box.width / 2, box.height / 2);
     applyView();
   };
 

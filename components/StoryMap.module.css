@@ -27,7 +27,16 @@
   border: 0;
 }
 
-.stage { position: absolute; inset: 0; cursor: grab; overflow: hidden; }
+.stage {
+  position: absolute;
+  inset: 0;
+  cursor: grab;
+  overflow: hidden;
+  /* The pointer handlers own every gesture here; without this the browser
+     hijacks horizontal drags for page scrolling and cancels the stream. */
+  touch-action: none;
+  overscroll-behavior: contain;
+}
 .stage.grabbing { cursor: grabbing; }
 .world { position: absolute; top: 0; left: 0; transform-origin: 0 0; will-change: transform; }
 .edges { position: absolute; top: 0; left: 0; overflow: visible; pointer-events: none; transition: opacity .2s; }
