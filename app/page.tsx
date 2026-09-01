@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import StoryMap from '@/components/StoryMap';
+import TitleIndex from '@/components/TitleIndex';
 import { entries, tracks, connections, posterUrl } from '@/lib/data';
 import { SITE } from '@/lib/site';
+import { JsonLd, siteJsonLd } from '@/lib/structured-data';
 
 export const metadata: Metadata = {
   title: 'Marvel Cinematic Universe — interactive story map',
@@ -15,10 +17,12 @@ export default function HomePage() {
 
   return (
     <main>
+      <JsonLd data={siteJsonLd(entries)} />
       {/* AdSense slot — top leaderboard, reserved space only */}
       <div className="ad-slot ad-leaderboard" data-ad-slot="leaderboard" />
       <h1 className="visually-hidden">{SITE.name} — Marvel Cinematic Universe story map</h1>
       <StoryMap entries={entries} tracks={tracks} connections={connections} posters={posters} />
+      <TitleIndex entries={entries} />
     </main>
   );
 }

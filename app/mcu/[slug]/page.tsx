@@ -6,6 +6,7 @@ import {
   TYPE_LABEL, KIND_LABEL, CONFIDENCE_NOTE, CONTEXT_LABEL, tracks,
 } from '@/lib/data';
 import { SITE } from '@/lib/site';
+import { JsonLd, entryJsonLd, breadcrumbJsonLd } from '@/lib/structured-data';
 import styles from './entry.module.css';
 
 export function generateStaticParams() {
@@ -47,6 +48,7 @@ export default async function EntryPage({ params }: { params: Promise<{ slug: st
 
   return (
     <main className={styles.wrap}>
+      <JsonLd data={[entryJsonLd(entry), breadcrumbJsonLd(entry)]} />
       {/* AdSense slot — top leaderboard, reserved space only */}
       <div className="ad-slot ad-leaderboard" data-ad-slot="leaderboard" />
 

@@ -1,0 +1,19 @@
+.index { max-width: 1180px; margin: 0 auto; padding: 46px 22px 10px; }
+.heading { font-size: clamp(24px, 3vw, 32px); margin: 0 0 8px; }
+.intro { color: var(--ink-45); font-size: 14px; max-width: 58ch; margin: 0 0 30px; }
+.group { margin-bottom: 30px; }
+.phase {
+  font-family: var(--font-mono), monospace; font-size: 9.5px; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--ink-45); font-weight: 400;
+  padding-bottom: 7px; border-bottom: 1px solid var(--rule); margin: 0 0 4px;
+}
+.list { list-style: none; padding: 0; margin: 0; columns: 1; column-gap: 34px; }
+@media (min-width: 700px) { .list { columns: 2; } }
+@media (min-width: 1080px) { .list { columns: 3; } }
+.list li { break-inside: avoid; border-bottom: 1px solid var(--rule-soft); }
+.list a { display: block; padding: 9px 2px; text-decoration: none; }
+.list a:hover .title { color: var(--accent); }
+.title { display: block; font-family: var(--font-display), Georgia, serif; font-size: 15px;
+  font-weight: 500; font-variation-settings: 'WONK' 1, 'opsz' 20; line-height: 1.2; transition: color .14s; }
+.meta { display: block; font-family: var(--font-mono), monospace; font-size: 9.5px;
+  letter-spacing: 0.06em; color: var(--ink-45); margin-top: 3px; }

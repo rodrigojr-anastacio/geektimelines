@@ -131,6 +131,40 @@ await check('no page carries a noindex directive', async () => {
   }
 });
 
+await check('the home page links to every entry so crawlers can reach them', async () => {
+  const body = await expectOk('/');
+  const missing = universe.entries.filter((e) => !body.includes(`href="/mcu/${e.slug}"`));
+  if (missing.length) {
+    throw new Error(`${missing.length} entries have no link from the home page: ${missing.slice(0, 3).map((m) => m.slug)}`);
+  }
+});
+
+await check('structured data is present and parses', async () => {
+  for (const path of ['/', '/mcu/avengers-endgame']) {
+    const body = await expectOk(path);
+    const blocks = [...body.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs)];
+    if (!blocks.length) throw new Error(`${path} has no JSON-LD`);
+    for (const [, json] of blocks) {
+      const parsed = JSON.parse(json.replace(/&quot;/g, '"'));
+      if (!parsed['@context'] || !parsed['@type']) throw new Error(`${path} has malformed JSON-LD`);
+    }
+  }
+});
+
+await check('the home page has a social share image', async () => {
+  const body = await expectOk('/');
+  if (!/og:image/.test(body)) throw new Error('no og:image on the home page');
+  const match = body.match(/property="og:image"[^>]*content="([^"]+)"/);
+  if (!match) return;
+  // The tag is absolute against metadataBase, so resolve it against whichever
+  // deployment is under test rather than always hitting the live domain.
+  const path = match[1].replace(/^https?:\/\/[^/]+/, '');
+  const res = await fetch(`${base}${path}`);
+  if (!res.ok) throw new Error(`og:image returned ${res.status}`);
+  const type = res.headers.get('content-type') ?? '';
+  if (!type.startsWith('image/')) throw new Error(`og:image is ${type}, not an image`);
+});
+
 await check('pages declare a canonical url', async () => {
   const body = await expectOk('/mcu/avengers-endgame');
   if (!body.includes('rel="canonical"')) throw new Error('entry page has no canonical link');
