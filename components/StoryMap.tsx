@@ -25,6 +25,9 @@ const KIND_STYLE: Record<Connection['kind'], { color: string; dash: string; widt
 const TYPE_LABEL: Record<Entry['type'], string> = {
   film: 'Film', series: 'Series', special: 'Special', oneshot: 'One-Shot', anim: 'Animation',
 };
+const EVENT_KIND_LABEL: Record<string, string> = {
+  main: '', flashback: 'Flashback', timeTravel: 'Time travel', epilogue: 'Epilogue',
+};
 const CONTEXT_LABEL: Record<'official' | 'reported', string> = {
   official: 'Studio premise — not a summary of the finished work',
   reported: 'Reported production details — unofficial, not a plot summary',
@@ -534,6 +537,25 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
 
             {entries.map((entry) => {
               const spot = layout.placed.get(entry.id);
+              if (!spot || spot.spanEnd === null) return null;
+              return (
+                <div
+                  key={`span-${entry.id}`}
+                  className={`${styles.span} ${isDimmed(entry) ? styles.spanDimmed : ''}`}
+                  style={{
+                    left: spot.x + NODE_W,
+                    top: spot.y + NODE_H - 14,
+                    width: Math.max(0, spot.spanEnd - (spot.x + NODE_W)),
+                  }}
+                  aria-hidden="true"
+                >
+                  <span className={styles.spanLabel}>{entry.inUniverseEnd}</span>
+                </div>
+              );
+            })}
+
+            {entries.map((entry) => {
+              const spot = layout.placed.get(entry.id);
               if (!spot) return null;
               const poster = posters[entry.id];
               const confidence = CONFIDENCE[entry.confidence];
@@ -706,6 +728,28 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
                     <b>{CONFIDENCE[selectedEntry.confidence].mark}</b> {CONFIDENCE[selectedEntry.confidence].note}
                   </p>
                 )}
+                {selectedEntry.events.length > 0 && (
+                  <>
+                    <div className={styles.sectionLabel}>Chronology ({selectedEntry.events.length})</div>
+                    <ul className={styles.chrono}>
+                      {[...selectedEntry.events].sort((a, b) => a.year - b.year).map((event) => (
+                        <li key={`${event.year}-${event.what}`}>
+                          <span className={styles.chronoWhen}>{event.label}</span>
+                          <span className={styles.chronoWhat}>
+                            {EVENT_KIND_LABEL[event.kind] && (
+                              <span className={styles.chronoTag} data-kind={event.kind}>
+                                {EVENT_KIND_LABEL[event.kind]}
+                              </span>
+                            )}
+                            {event.what}
+                            <span className={styles.chronoSource}>{event.source}</span>
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+
                 {outbound.length > 0 && (
                   <>
                     <div className={styles.sectionLabel}>Leads to ({outbound.length})</div>

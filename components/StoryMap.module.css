@@ -82,6 +82,17 @@
 }
 
 /* ---------- cards ---------- */
+/* The bar that shows a story running across several years. */
+.span { position: absolute; z-index: 2; pointer-events: none; height: 0;
+  border-top: 1px solid var(--ink-25); transition: opacity .2s; }
+.span::before, .span::after { content: ''; position: absolute; top: -4px; width: 1px; height: 9px;
+  background: var(--ink-25); }
+.span::before { left: 0; }
+.span::after { right: 0; }
+.spanLabel { position: absolute; top: 4px; right: 0; font-family: var(--font-mono), monospace;
+  font-size: 9px; letter-spacing: 0.08em; color: var(--ink-25); white-space: nowrap; }
+.spanDimmed { opacity: .12; }
+
 .nodeWrap { position: absolute; top: 0; left: 0; width: 250px; z-index: 3; transition: transform .5s cubic-bezier(.4,0,.2,1); }
 .node {
   position: relative;
@@ -231,6 +242,20 @@
   font-family: var(--font-mono), monospace; font-size: 9px; letter-spacing: 0.14em;
   text-transform: uppercase; color: var(--ink-45); clear: both; }
 .sectionLabel::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+
+/* ---------- chronology inside an entry ---------- */
+.chrono { list-style: none; margin: 0; padding: 0; }
+.chrono li { display: grid; grid-template-columns: 76px 1fr; gap: 12px; padding: 9px 0;
+  border-bottom: 1px solid var(--rule-soft); }
+.chronoWhen { font-family: var(--font-mono), monospace; font-size: 9.5px; letter-spacing: 0.06em;
+  color: var(--ink-45); padding-top: 2px; }
+.chronoWhat { font-size: 12.5px; line-height: 1.45; color: var(--ink-70); }
+.chronoTag { display: inline-block; font-family: var(--font-mono), monospace; font-size: 8px;
+  letter-spacing: 0.1em; text-transform: uppercase; padding: 1px 5px; margin-right: 6px;
+  border: 1px solid var(--rule); color: var(--ink-45); vertical-align: 1px; }
+.chronoTag[data-kind='timeTravel'] { border-color: var(--accent); color: var(--accent); }
+.chronoSource { display: block; font-family: var(--font-mono), monospace; font-size: 8.5px;
+  letter-spacing: 0.05em; color: var(--ink-25); margin-top: 4px; }
 .link {
   display: flex; gap: 10px; align-items: stretch; width: 100%; text-align: left; font: inherit; color: inherit;
   padding: 9px 4px 9px 0; background: none; border: 0; border-bottom: 1px solid var(--rule-soft); cursor: pointer;

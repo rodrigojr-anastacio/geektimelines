@@ -77,6 +77,13 @@ export const CONFIDENCE_NOTE: Record<string, { mark: string; label: string; note
   },
 };
 
+export const EVENT_KIND_LABEL: Record<string, string> = {
+  main: '',
+  flashback: 'Flashback',
+  timeTravel: 'Time travel',
+  epilogue: 'Epilogue',
+};
+
 export const CONTEXT_LABEL: Record<'official' | 'reported', string> = {
   official: 'Studio premise — not a summary of the finished work',
   reported: 'Reported production details — unofficial, not a plot summary',

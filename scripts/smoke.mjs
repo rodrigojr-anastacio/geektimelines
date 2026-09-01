@@ -211,6 +211,57 @@ await check('analytics is wired up', async () => {
   throw new Error('the analytics component is not in any page bundle');
 });
 
+await check('entries with a chronology render every event, in order, with its source', async () => {
+  const withEvents = universe.entries.filter((e) => e.events.length);
+  if (!withEvents.length) throw new Error('no entries carry events');
+  for (const entry of withEvents) {
+    const body = await expectOk(`/mcu/${entry.slug}`);
+    if (!body.includes('Chronology')) throw new Error(`${entry.slug} has no chronology section`);
+    const sorted = [...entry.events].sort((a, b) => a.year - b.year);
+    let cursor = -1;
+    for (const event of sorted) {
+      const needle = event.what.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+      const at = body.indexOf(needle);
+      if (at < 0) throw new Error(`${entry.slug} is missing event "${event.what}"`);
+      if (at < cursor) throw new Error(`${entry.slug} renders "${event.what}" out of order`);
+      cursor = at;
+      if (!body.includes(event.source)) {
+        throw new Error(`${entry.slug} shows an event without its source (${event.source})`);
+      }
+    }
+  }
+});
+
+await check('the time-travel entries surface every destination', async () => {
+  const endgame = await expectOk('/mcu/avengers-endgame');
+  for (const year of ['1970', '2012', '2013', '2014']) {
+    if (!endgame.includes(year)) throw new Error(`Endgame page does not mention ${year}`);
+  }
+  if (!endgame.includes('Time travel')) throw new Error('Endgame does not label its time travel');
+});
+
+await check('no event ever renders without provenance', async () => {
+  const sources = new Set(universe.entries.flatMap((e) => e.events.map((v) => v.source)));
+  const allowed = ['Shown on screen', 'Popverse MCU timeline', 'Marvel official timeline (2023)'];
+  for (const source of sources) {
+    if (!allowed.includes(source)) throw new Error(`unvetted source in the data: ${source}`);
+  }
+  const body = await expectOk('/mcu/eternals');
+  const shown = allowed.filter((s) => body.includes(s));
+  if (!shown.length) throw new Error('the Eternals page shows no source labels at all');
+});
+
+await check('span bars reach the right year on the map', async () => {
+  const body = await expectOk('/');
+  const spanning = universe.entries.filter((e) => e.inUniverseEnd > e.inUniverseStart);
+  if (!spanning.length) throw new Error('no spanning entries in the data');
+  for (const entry of spanning) {
+    if (!body.includes(`>${entry.inUniverseEnd}<`)) {
+      throw new Error(`the map never prints the end year ${entry.inUniverseEnd} for ${entry.slug}`);
+    }
+  }
+});
+
 await check('pages declare a canonical url', async () => {
   const body = await expectOk('/mcu/avengers-endgame');
   if (!body.includes('rel="canonical"')) throw new Error('entry page has no canonical link');
