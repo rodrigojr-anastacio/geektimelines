@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import styles from './StoryMap.module.css';
 import { computeLayout, edgePath, NODE_H, NODE_W, type Mode } from '@/lib/layout';
-import { centroid, clampZoom, flickVelocity, glideStep, pinchZoom, zoomAround } from '@/lib/gesture';
+import { centroid, clampView, clampZoom, EDGE_MARGIN, flickVelocity, glideStep, isPinned, pinchZoom, zoomAround } from '@/lib/gesture';
 import type { Connection, Entry, Track } from '@/lib/schema';
 import { IconBack, IconChevron, IconClose, IconExitFull, IconFit, IconFull, IconMinus, IconPlus } from './icons';
 
@@ -61,6 +61,7 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
   const stageRef = useRef<HTMLDivElement>(null);
   const worldRef = useRef<HTMLDivElement>(null);
   const viewRef = useRef({ x: 26, y: 34, k: 0.62 });
+  const layoutRef = useRef({ width: 0, height: 0 });
   const pointersRef = useRef(new Map<number, { x: number; y: number }>());
   const gestureRef = useRef<
     | { kind: 'pan'; x: number; y: number; vx: number; vy: number }
@@ -75,6 +76,7 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
 
   const byId = useMemo(() => new Map(entries.map((e) => [e.id, e])), [entries]);
   const layout = useMemo(() => computeLayout(entries, tracks, mode), [entries, tracks, mode]);
+  layoutRef.current = { width: layout.width, height: layout.height };
 
   const neighbours = useMemo(() => {
     const map = new Map<string, Set<string>>();
@@ -86,7 +88,12 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
     return map;
   }, [entries, connections]);
 
+  /** Writes the view out, but never past the edges of the canvas. */
   const applyView = useCallback(() => {
+    const box = stageRef.current?.getBoundingClientRect();
+    if (box && box.width > 0 && layoutRef.current.width > 0) {
+      viewRef.current = clampView(viewRef.current, layoutRef.current, box);
+    }
     const { x, y, k } = viewRef.current;
     if (worldRef.current) worldRef.current.style.transform = `translate(${x}px, ${y}px) scale(${k})`;
     setZoom(k);
@@ -118,7 +125,10 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
     if (box.width < 40 || box.height < 40) return;
     const raw = Math.min((box.width - 60) / layout.width, (box.height - 170) / layout.height);
     const k = clampZoom(raw);
-    animateTo(k, (box.width - layout.width * k) / 2, 100 + (box.height - 170 - layout.height * k) / 2);
+    // When the map cannot actually fit — a phone hits the minimum zoom — centring
+    // would drop you in the middle of the timeline. Anchor to the start instead.
+    const x = raw < k ? EDGE_MARGIN : (box.width - layout.width * k) / 2;
+    animateTo(k, x, 100 + (box.height - 170 - layout.height * k) / 2);
   }, [animateTo, layout.width, layout.height]);
 
   const focusNode = useCallback((id: string) => {
@@ -212,11 +222,21 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
       const next = glideStep(velocity!);
       if (!next) { glideRef.current = null; return; }
       velocity = next;
-      viewRef.current = {
+      const box = stageRef.current?.getBoundingClientRect();
+      const proposed = {
         ...viewRef.current,
         x: viewRef.current.x + next.vx,
         y: viewRef.current.y + next.vy,
       };
+      if (box) {
+        // Kill the component that is pushing into a wall, so the glide dies at
+        // the edge instead of grinding against it.
+        const pinned = isPinned(proposed, layoutRef.current, box);
+        if (pinned.x) velocity.vx = 0;
+        if (pinned.y) velocity.vy = 0;
+        if (!velocity.vx && !velocity.vy) { glideRef.current = null; applyView(); return; }
+      }
+      viewRef.current = proposed;
       applyView();
       glideRef.current = requestAnimationFrame(step);
     };
@@ -376,6 +396,12 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [applyView, close, fit, full, toggleFull]);
+
+  useEffect(() => {
+    const onResize = () => applyView();
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, [applyView]);
 
   useEffect(() => {
     const timer = window.setTimeout(() => setHintVisible(false), 7000);

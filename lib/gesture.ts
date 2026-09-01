@@ -71,3 +71,38 @@ export function centroid(points: { x: number; y: number }[]) {
   const [a, b] = points;
   return { midX, midY, distance: b ? Math.hypot(b.x - a.x, b.y - a.y) : 0 };
 }
+
+export interface Size {
+  width: number;
+  height: number;
+}
+
+/** How far past an edge the canvas may be dragged before it stops. */
+export const EDGE_MARGIN = 24;
+
+/**
+ * Keeps the canvas from being dragged off into empty space. When an axis of the
+ * scaled world is smaller than the viewport it is centred on that axis instead,
+ * so a small map cannot be shoved into a corner.
+ */
+export function clampView(view: View, world: Size, box: Size, margin = EDGE_MARGIN): View {
+  const axis = (value: number, scaled: number, viewport: number) => {
+    if (!Number.isFinite(value)) return 0;
+    if (scaled <= viewport) return (viewport - scaled) / 2;
+    return Math.min(margin, Math.max(viewport - scaled - margin, value));
+  };
+  return {
+    k: view.k,
+    x: axis(view.x, world.width * view.k, box.width),
+    y: axis(view.y, world.height * view.k, box.height),
+  };
+}
+
+/** True when the view is already pinned against an edge on that axis. */
+export function isPinned(view: View, world: Size, box: Size, margin = EDGE_MARGIN) {
+  const clamped = clampView(view, world, box, margin);
+  return {
+    x: Math.abs(clamped.x - view.x) > 0.01,
+    y: Math.abs(clamped.y - view.y) > 0.01,
+  };
+}

@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {
   MIN_ZOOM, MAX_ZOOM, clampZoom, zoomAround, pinchZoom,
   flickVelocity, glideStep, centroid, FLICK_WINDOW_MS, MIN_FLICK_SPEED,
+  clampView, isPinned, EDGE_MARGIN,
 } from '../lib/gesture.ts';
 
 test('zoom stays inside the usable range', () => {
@@ -109,4 +110,77 @@ test('centroid of two pointers sits between them with their spread', () => {
   assert.equal(midX, 30);
   assert.equal(midY, 40);
   assert.equal(distance, 100);
+});
+
+// ---------------------------------------------------------------- edges
+
+test('you cannot drag past the left edge into empty space', () => {
+  const world = { width: 6000, height: 2000 };
+  const box = { width: 800, height: 600 };
+  const dragged = clampView({ k: 1, x: 5000, y: 0 }, world, box);
+  assert.ok(dragged.x <= EDGE_MARGIN, `x should stop near 0, got ${dragged.x}`);
+});
+
+test('you cannot drag past the right edge either', () => {
+  const world = { width: 6000, height: 2000 };
+  const box = { width: 800, height: 600 };
+  const dragged = clampView({ k: 1, x: -99999, y: 0 }, world, box);
+  assert.ok(dragged.x >= box.width - world.width - EDGE_MARGIN, `x overshot: ${dragged.x}`);
+});
+
+test('the clamp scales with the zoom level', () => {
+  const world = { width: 6000, height: 2000 };
+  const box = { width: 800, height: 600 };
+  const zoomedOut = clampView({ k: 0.2, x: -99999, y: 0 }, world, box);
+  const zoomedIn = clampView({ k: 1, x: -99999, y: 0 }, world, box);
+  assert.ok(zoomedOut.x > zoomedIn.x, 'a smaller canvas should stop sooner');
+  assert.ok(zoomedOut.x >= box.width - world.width * 0.2 - EDGE_MARGIN);
+});
+
+test('a canvas smaller than the viewport is centred, not shoved into a corner', () => {
+  const world = { width: 400, height: 300 };
+  const box = { width: 800, height: 600 };
+  for (const attempt of [-5000, -1, 0, 42, 5000]) {
+    const view = clampView({ k: 1, x: attempt, y: attempt }, world, box);
+    assert.equal(view.x, 200);
+    assert.equal(view.y, 150);
+  }
+});
+
+test('clamping never changes the zoom level', () => {
+  const view = clampView({ k: 0.37, x: -99999, y: 99999 }, { width: 6000, height: 2000 }, { width: 800, height: 600 });
+  assert.equal(view.k, 0.37);
+});
+
+test('a view already inside the bounds is left untouched', () => {
+  const world = { width: 6000, height: 2000 };
+  const box = { width: 800, height: 600 };
+  const view = { k: 1, x: -2000, y: -500 };
+  assert.deepEqual(clampView(view, world, box), view);
+});
+
+test('non-finite coordinates are neutralised instead of propagating', () => {
+  const view = clampView({ k: 1, x: NaN, y: Infinity }, { width: 6000, height: 2000 }, { width: 800, height: 600 });
+  assert.ok(Number.isFinite(view.x) && Number.isFinite(view.y));
+});
+
+test('isPinned reports which axis is against a wall', () => {
+  const world = { width: 6000, height: 2000 };
+  const box = { width: 800, height: 600 };
+  assert.deepEqual(isPinned({ k: 1, x: 9000, y: -400 }, world, box), { x: true, y: false });
+  assert.deepEqual(isPinned({ k: 1, x: -2000, y: -400 }, world, box), { x: false, y: false });
+});
+
+test('a glide aimed at the wall is stopped by the clamp', () => {
+  const world = { width: 6000, height: 2000 };
+  const box = { width: 800, height: 600 };
+  let view = { k: 1, x: -100, y: -400 };
+  let velocity = { vx: 60, vy: 0 };
+  for (let i = 0; i < 200; i++) {
+    const next = glideStep(velocity);
+    if (!next) break;
+    velocity = next;
+    view = clampView({ ...view, x: view.x + next.vx, y: view.y + next.vy }, world, box);
+  }
+  assert.ok(view.x <= EDGE_MARGIN, `glide escaped the canvas: ${view.x}`);
 });
