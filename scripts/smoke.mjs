@@ -59,6 +59,13 @@ for (const path of ['/about', '/sources', '/privacy', '/contact']) {
   await check(`${path} renders`, () => expectOk(path));
 }
 
+await check('the contact page exposes a working mailto address', async () => {
+  const body = await expectOk('/contact');
+  const match = body.match(/mailto:([^"'<>]+)/);
+  if (!match) throw new Error('no mailto link on /contact');
+  if (!/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i.test(match[1])) throw new Error(`bad address: ${match[1]}`);
+});
+
 await check('every entry page is reachable and carries its own content', async () => {
   const sample = universe.entries;
   const results = [];

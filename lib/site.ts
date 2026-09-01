@@ -3,6 +3,7 @@ export const SITE = {
   domain: 'geektimelines.com',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://geektimelines.com',
   tagline: 'Story maps for fictional universes',
+  email: 'contactrundev@gmail.com',
   description:
     'Interactive, source-checked story maps for fictional universes. Every in-universe year and every connection is traced to a published source.',
   tmdbAttribution:

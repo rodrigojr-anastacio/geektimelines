@@ -26,7 +26,7 @@ export default function ContactPage() {
 
       <h2>Email</h2>
       <p>
-        <a href="mailto:hello@geektimelines.com">hello@geektimelines.com</a>
+        <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
       </p>
 
       <h2>Rights holders</h2>
