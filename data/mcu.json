@@ -1,0 +1,1370 @@
+{
+  "universe": {
+    "id": "mcu",
+    "name": "Marvel Cinematic Universe",
+    "short": "MCU"
+  },
+  "tracks": [
+    {
+      "id": "shield",
+      "name": "Origins & S.H.I.E.L.D."
+    },
+    {
+      "id": "avg",
+      "name": "Avengers · main spine"
+    },
+    {
+      "id": "cosmic",
+      "name": "Cosmic"
+    },
+    {
+      "id": "mystic",
+      "name": "Mystic & Multiverse"
+    },
+    {
+      "id": "street",
+      "name": "Street level & New Gen"
+    },
+    {
+      "id": "wakanda",
+      "name": "Wakanda & Other Worlds"
+    }
+  ],
+  "entries": [
+    {
+      "id": "eow",
+      "slug": "eyes-of-wakanda",
+      "title": "Eyes of Wakanda",
+      "inUniverseYear": 1260,
+      "inUniverseLabel": "from 1260 BC",
+      "releaseDate": "2025-08-01",
+      "track": "wakanda",
+      "type": "anim",
+      "phase": 5,
+      "confidence": "ok",
+      "summary": "An animated anthology about the War Dogs — Wakandan agents sent abroad to recover vibranium across millennia. It is the earliest-set entry on the official Disney+ timeline."
+    },
+    {
+      "id": "cap1",
+      "slug": "captain-america-the-first-avenger",
+      "title": "Captain America: The First Avenger",
+      "inUniverseYear": 1943,
+      "inUniverseLabel": "1943–1945",
+      "releaseDate": "2011-07-22",
+      "track": "shield",
+      "type": "film",
+      "phase": 1,
+      "confidence": "ok",
+      "summary": "Steve Rogers is transformed by the super-soldier serum and fights Red Skull and HYDRA, who use the Tesseract as a power source. It ends with Steve frozen in the Arctic and waking up 70 years later."
+    },
+    {
+      "id": "osac",
+      "slug": "one-shot-agent-carter",
+      "title": "One-Shot: Agent Carter",
+      "inUniverseYear": 1946,
+      "inUniverseLabel": "1946",
+      "releaseDate": "2013-10-04",
+      "track": "shield",
+      "type": "oneshot",
+      "phase": 2,
+      "confidence": "ok",
+      "summary": "A year after Steve’s crash, Peggy Carter runs an SSR mission alone and is invited by Howard Stark to lead the new S.H.I.E.L.D."
+    },
+    {
+      "id": "ac",
+      "slug": "agent-carter-s1-s2",
+      "title": "Agent Carter (S1–S2)",
+      "inUniverseYear": 1946,
+      "inUniverseLabel": "1946–1947",
+      "releaseDate": "2015-01",
+      "track": "shield",
+      "type": "series",
+      "phase": 2,
+      "confidence": "tv",
+      "summary": "Peggy works at the SSR after the war, covers Howard Stark’s operations with Edwin Jarvis, and helps found S.H.I.E.L.D."
+    },
+    {
+      "id": "cm",
+      "slug": "captain-marvel",
+      "title": "Captain Marvel",
+      "inUniverseYear": 1989,
+      "inUniverseLabel": "1989–1995",
+      "releaseDate": "2019-03-06",
+      "track": "cosmic",
+      "type": "film",
+      "phase": 3,
+      "confidence": "ok",
+      "summary": "Vers/Carol Danvers learns she is human, that the Kree manipulated her, and that the Skrulls are refugees. Fury loses an eye and keeps her pager; the Avengers Initiative is named after her call sign."
+    },
+    {
+      "id": "im",
+      "slug": "iron-man",
+      "title": "Iron Man",
+      "inUniverseYear": 2008,
+      "inUniverseLabel": "2008",
+      "releaseDate": "2008-04-30",
+      "track": "shield",
+      "type": "film",
+      "phase": 1,
+      "confidence": "ok",
+      "summary": "Kidnapped in Afghanistan with shrapnel near his heart, Tony Stark builds the first armor, kills Obadiah Stane and publicly claims the identity. In the post-credits scene Nick Fury pitches the Avengers Initiative."
+    },
+    {
+      "id": "hulk",
+      "slug": "the-incredible-hulk",
+      "title": "The Incredible Hulk",
+      "inUniverseYear": 2010,
+      "inUniverseLabel": "2010",
+      "releaseDate": "2008-06-12",
+      "track": "shield",
+      "type": "film",
+      "phase": 1,
+      "confidence": "ok",
+      "summary": "Bruce Banner runs from General Ross and from Emil Blonsky, who becomes the Abomination in Harlem. Samuel Sterns is contaminated by Banner’s blood. Stark appears at the end talking about \"a team\"."
+    },
+    {
+      "id": "im2",
+      "slug": "iron-man-2",
+      "title": "Iron Man 2",
+      "inUniverseYear": 2010,
+      "inUniverseLabel": "2010",
+      "releaseDate": "2010-04-28",
+      "track": "shield",
+      "type": "film",
+      "phase": 1,
+      "confidence": "ok",
+      "summary": "Tony faces palladium poisoning, Ivan Vanko and Justin Hammer. Natasha Romanoff debuts and Rhodey becomes War Machine; the post-credits scene reveals Mjolnir in New Mexico."
+    },
+    {
+      "id": "thor",
+      "slug": "thor",
+      "title": "Thor",
+      "inUniverseYear": 2010,
+      "inUniverseLabel": "2010",
+      "releaseDate": "2011-04-21",
+      "track": "cosmic",
+      "type": "film",
+      "phase": 1,
+      "confidence": "ok",
+      "summary": "Thor is banished to Earth and stripped of his power while Loki discovers his Jotun origin and seizes Asgard. In the post-credits scene Fury shows the Tesseract to Erik Selvig under Loki’s influence."
+    },
+    {
+      "id": "cons",
+      "slug": "one-shot-the-consultant",
+      "title": "One-Shot: The Consultant",
+      "inUniverseYear": 2010,
+      "inUniverseLabel": "2010",
+      "releaseDate": "2011-09-13",
+      "track": "shield",
+      "type": "oneshot",
+      "phase": 1,
+      "confidence": "ok",
+      "summary": "Coulson and Sitwell explain how S.H.I.E.L.D. blocked Blonsky’s release by sending Tony Stark to annoy General Ross into refusing."
+    },
+    {
+      "id": "hammer",
+      "slug": "one-shot-a-funny-thing-happened",
+      "title": "One-Shot: A Funny Thing Happened…",
+      "inUniverseYear": 2010,
+      "inUniverseLabel": "2010",
+      "releaseDate": "2011-10-25",
+      "track": "shield",
+      "type": "oneshot",
+      "phase": 1,
+      "confidence": "ok",
+      "summary": "A short following Coulson on his way to the Mjolnir crater, during the same period as Thor."
+    },
+    {
+      "id": "avengers",
+      "slug": "the-avengers",
+      "title": "The Avengers",
+      "inUniverseYear": 2012,
+      "inUniverseLabel": "2012",
+      "releaseDate": "2012-04-25",
+      "track": "avg",
+      "type": "film",
+      "phase": 1,
+      "confidence": "ok",
+      "summary": "Loki steals the Tesseract and opens a Chitauri portal over New York. Fury assembles Stark, Rogers, Thor, Banner, Natasha and Clint; the Battle of New York becomes the founding event of the hero era. Thanos is revealed as the backer."
+    },
+    {
+      "id": "item47",
+      "slug": "one-shot-item-47",
+      "title": "One-Shot: Item 47",
+      "inUniverseYear": 2012,
+      "inUniverseLabel": "2012",
+      "releaseDate": "2012-08-29",
+      "track": "shield",
+      "type": "oneshot",
+      "phase": 1,
+      "confidence": "ok",
+      "summary": "A couple uses a Chitauri weapon left behind by the Battle of New York; S.H.I.E.L.D. recovers the gun and recruits them both."
+    },
+    {
+      "id": "im3",
+      "slug": "iron-man-3",
+      "title": "Iron Man 3",
+      "inUniverseYear": 2013,
+      "inUniverseLabel": "2013",
+      "releaseDate": "2013-04-18",
+      "track": "shield",
+      "type": "film",
+      "phase": 2,
+      "confidence": "ok",
+      "summary": "Tony lives with post-traumatic stress from the Battle of New York. Aldrich Killian and Extremis hide behind a fabricated \"Mandarin\"; in the end Tony destroys his armors and removes the shrapnel."
+    },
+    {
+      "id": "tdw",
+      "slug": "thor-the-dark-world",
+      "title": "Thor: The Dark World",
+      "inUniverseYear": 2013,
+      "inUniverseLabel": "2013",
+      "releaseDate": "2013-10-30",
+      "track": "cosmic",
+      "type": "film",
+      "phase": 2,
+      "confidence": "ok",
+      "summary": "Jane Foster hosts the Aether (the Reality Stone) and Malekith wants it for the Convergence. Loki fakes his death and takes the throne disguised as Odin; the Aether is handed to the Collector."
+    },
+    {
+      "id": "allhail",
+      "slug": "one-shot-all-hail-the-king",
+      "title": "One-Shot: All Hail the King",
+      "inUniverseYear": 2013,
+      "inUniverseLabel": "2013–2014",
+      "releaseDate": "2014-02-04",
+      "track": "shield",
+      "type": "oneshot",
+      "phase": 2,
+      "confidence": "ok",
+      "summary": "Trevor Slattery is interviewed in prison and abducted by the Ten Rings, revealing that a real Mandarin exists."
+    },
+    {
+      "id": "ws",
+      "slug": "captain-america-the-winter-soldier",
+      "title": "Captain America: The Winter Soldier",
+      "inUniverseYear": 2014,
+      "inUniverseLabel": "2014",
+      "releaseDate": "2014-03-20",
+      "track": "shield",
+      "type": "film",
+      "phase": 2,
+      "confidence": "ok",
+      "summary": "HYDRA is exposed as having grown inside S.H.I.E.L.D. since its founding; Project Insight is destroyed and the agency dismantled. Bucky Barnes returns as the Winter Soldier."
+    },
+    {
+      "id": "gotg",
+      "slug": "guardians-of-the-galaxy",
+      "title": "Guardians of the Galaxy",
+      "inUniverseYear": 2014,
+      "inUniverseLabel": "2014",
+      "releaseDate": "2014-07-30",
+      "track": "cosmic",
+      "type": "film",
+      "phase": 2,
+      "confidence": "ok",
+      "summary": "Peter Quill and an unlikely crew stop Ronan from using the Power Stone against Xandar. The Stone is left with the Nova Corps and the group becomes the Guardians."
+    },
+    {
+      "id": "gotg2",
+      "slug": "guardians-of-the-galaxy-vol-2",
+      "title": "Guardians of the Galaxy Vol. 2",
+      "inUniverseYear": 2014,
+      "inUniverseLabel": "2014",
+      "releaseDate": "2017-04-25",
+      "track": "cosmic",
+      "type": "film",
+      "phase": 2,
+      "confidence": "ok",
+      "summary": "A few months later Quill meets his father, the Celestial Ego, and kills him with Yondu’s sacrifice. Mantis and Nebula join the crew; the Sovereign create Adam Warlock."
+    },
+    {
+      "id": "aou",
+      "slug": "avengers-age-of-ultron",
+      "title": "Avengers: Age of Ultron",
+      "inUniverseYear": 2015,
+      "inUniverseLabel": "2015",
+      "releaseDate": "2015-04-22",
+      "track": "avg",
+      "type": "film",
+      "phase": 2,
+      "confidence": "ok",
+      "summary": "The AI Ultron is born from the Mind Stone in Loki’s scepter and tries to wipe out humanity in Sokovia. Vision is created, Wanda and Pietro Maximoff arrive and Pietro dies. Thanos picks up the Gauntlet."
+    },
+    {
+      "id": "antman",
+      "slug": "ant-man",
+      "title": "Ant-Man",
+      "inUniverseYear": 2015,
+      "inUniverseLabel": "2015",
+      "releaseDate": "2015-07-14",
+      "track": "street",
+      "type": "film",
+      "phase": 2,
+      "confidence": "ok",
+      "summary": "Scott Lang inherits Hank Pym’s suit and stops Darren Cross from selling the Yellowjacket tech. First trip into the Quantum Realm — and the first return from it."
+    },
+    {
+      "id": "cw",
+      "slug": "captain-america-civil-war",
+      "title": "Captain America: Civil War",
+      "inUniverseYear": 2016,
+      "inUniverseLabel": "2016",
+      "releaseDate": "2016-04-27",
+      "track": "shield",
+      "type": "film",
+      "phase": 3,
+      "confidence": "ok",
+      "summary": "The Sokovia Accords split the Avengers in two, and Zemo uses Bucky’s past to break Tony and Steve apart. Black Panther and the MCU Spider-Man debut."
+    },
+    {
+      "id": "bw",
+      "slug": "black-widow",
+      "title": "Black Widow",
+      "inUniverseYear": 2016,
+      "inUniverseLabel": "2016",
+      "releaseDate": "2021-07-07",
+      "track": "shield",
+      "type": "film",
+      "phase": 4,
+      "confidence": "ok",
+      "summary": "A fugitive after the Accords, Natasha returns to her Red Room past, brings down Dreykov and frees the Widows alongside Yelena Belova, Melina and Alexei. The official chronology places it between Civil War and Infinity War."
+    },
+    {
+      "id": "bp",
+      "slug": "black-panther",
+      "title": "Black Panther",
+      "inUniverseYear": 2016,
+      "inUniverseLabel": "2016",
+      "releaseDate": "2018-02-13",
+      "track": "wakanda",
+      "type": "film",
+      "phase": 3,
+      "confidence": "ok",
+      "summary": "T’Challa takes the throne of Wakanda and is challenged by Killmonger, a cousin raised in the United States. In the end Wakanda decides to share its technology with the world."
+    },
+    {
+      "id": "hc",
+      "slug": "spider-man-homecoming",
+      "title": "Spider-Man: Homecoming",
+      "inUniverseYear": 2016,
+      "inUniverseLabel": "2016",
+      "releaseDate": "2017-07-05",
+      "track": "street",
+      "type": "film",
+      "phase": 3,
+      "confidence": "ok",
+      "summary": "Peter Parker tries to prove himself to Tony Stark while Adrian Toomes becomes the Vulture by recycling Battle of New York salvage. Famous friction point: the film says \"8 years\" since 2012, which contradicts the official chronology."
+    },
+    {
+      "id": "ds",
+      "slug": "doctor-strange",
+      "title": "Doctor Strange",
+      "inUniverseYear": 2016,
+      "inUniverseLabel": "2016–2017",
+      "releaseDate": "2016-10-25",
+      "track": "mystic",
+      "type": "film",
+      "phase": 3,
+      "confidence": "ok",
+      "summary": "A neurosurgeon loses the use of his hands, finds Kamar-Taj, and beats Kaecilius and Dormammu using the Time Stone. Wong and Mordo enter the picture and Strange takes the New York Sanctum."
+    },
+    {
+      "id": "rag",
+      "slug": "thor-ragnarok",
+      "title": "Thor: Ragnarok",
+      "inUniverseYear": 2017,
+      "inUniverseLabel": "2017",
+      "releaseDate": "2017-10-02",
+      "track": "cosmic",
+      "type": "film",
+      "phase": 3,
+      "confidence": "ok",
+      "summary": "Hela destroys Mjolnir and Asgard; Thor and Hulk escape Sakaar with Valkyrie and Loki. Asgard is sacrificed to defeat Hela and the survivors leave on a ship — intercepted by Thanos."
+    },
+    {
+      "id": "amw",
+      "slug": "ant-man-and-the-wasp",
+      "title": "Ant-Man and the Wasp",
+      "inUniverseYear": 2018,
+      "inUniverseLabel": "2018",
+      "releaseDate": "2018-07-04",
+      "track": "street",
+      "type": "film",
+      "phase": 3,
+      "confidence": "ok",
+      "summary": "Scott, Hope and Hank rescue Janet van Dyne from the Quantum Realm while dealing with Ava Starr (Ghost). In the post-credits scene the Snap erases the Pym family, stranding Scott in the Quantum Realm."
+    },
+    {
+      "id": "iw",
+      "slug": "avengers-infinity-war",
+      "title": "Avengers: Infinity War",
+      "inUniverseYear": 2018,
+      "inUniverseLabel": "2018",
+      "releaseDate": "2018-04-25",
+      "track": "avg",
+      "type": "film",
+      "phase": 3,
+      "confidence": "ok",
+      "summary": "Thanos gathers all six Infinity Stones, kills Gamora and Vision, and the Snap erases half of all life in the universe. Fury triggers Carol’s pager as he fades."
+    },
+    {
+      "id": "endgame",
+      "slug": "avengers-endgame",
+      "title": "Avengers: Endgame",
+      "inUniverseYear": 2018,
+      "inUniverseLabel": "2018 → 2023",
+      "releaseDate": "2019-04-24",
+      "track": "avg",
+      "type": "film",
+      "phase": 3,
+      "confidence": "ok",
+      "summary": "Five years after the Snap the Quantum Realm makes the Time Heist possible. Hulk undoes the Snap, Tony Stark dies defeating Thanos and Steve returns the Stones — but the time travel creates branches, including the escape of the 2012 Loki."
+    },
+    {
+      "id": "loki1",
+      "slug": "loki-s1",
+      "title": "Loki (S1)",
+      "inUniverseYear": 2023,
+      "inUniverseLabel": "outside of time",
+      "releaseDate": "2021-06",
+      "track": "mystic",
+      "type": "series",
+      "phase": 4,
+      "confidence": "ok",
+      "summary": "The 2012 Loki is captured by the TVA (Time Variance Authority). With Sylvie he reaches the Citadel at the End of Time; killing He Who Remains releases the branching multiverse."
+    },
+    {
+      "id": "wv",
+      "slug": "wandavision",
+      "title": "WandaVision",
+      "inUniverseYear": 2023,
+      "inUniverseLabel": "2023",
+      "releaseDate": "2021-01-15",
+      "track": "mystic",
+      "type": "series",
+      "phase": 4,
+      "confidence": "ok",
+      "summary": "Weeks after Endgame, Wanda builds the Westview reality rather than face her grief. Agatha Harkness names her the Scarlet Witch; White Vision is created and Wanda keeps the Darkhold."
+    },
+    {
+      "id": "whatif",
+      "slug": "what-if-s1-s3",
+      "title": "What If…? (S1–S3)",
+      "inUniverseYear": 2023,
+      "inUniverseLabel": "alternate universes",
+      "releaseDate": "2021-08",
+      "track": "mystic",
+      "type": "anim",
+      "phase": 4,
+      "confidence": "alt",
+      "summary": "An anthology in which the Watcher observes realities that diverged from the main timeline. Each episode is its own universe rather than the Sacred Timeline, though the Guardians of the Multiverse carry across seasons."
+    },
+    {
+      "id": "loki2",
+      "slug": "loki-s2",
+      "title": "Loki (S2)",
+      "inUniverseYear": 2023,
+      "inUniverseLabel": "outside of time",
+      "releaseDate": "2023-10",
+      "track": "mystic",
+      "type": "series",
+      "phase": 5,
+      "confidence": "ok",
+      "summary": "The TVA collapses as timelines multiply. Loki takes on the role of holding the branching timelines together, becoming the axis that keeps them alive."
+    },
+    {
+      "id": "tfatws",
+      "slug": "the-falcon-and-the-winter-soldier",
+      "title": "The Falcon and the Winter Soldier",
+      "inUniverseYear": 2024,
+      "inUniverseLabel": "2023–2024 ≈",
+      "releaseDate": "2021-03-19",
+      "track": "shield",
+      "type": "series",
+      "phase": 4,
+      "confidence": "approx",
+      "summary": "Six months after Endgame: Sam gives up the shield, John Walker is appointed and stripped of the title, and the Flag Smashers react to the chaos of half the population returning. Sam takes up the Captain America mantle."
+    },
+    {
+      "id": "shang",
+      "slug": "shang-chi-and-the-legend-of-the-ten-rings",
+      "title": "Shang-Chi and the Legend of the Ten Rings",
+      "inUniverseYear": 2024,
+      "inUniverseLabel": "2024",
+      "releaseDate": "2021-09-01",
+      "track": "street",
+      "type": "film",
+      "phase": 4,
+      "confidence": "ok",
+      "summary": "Shang-Chi confronts his father Xu Wenwu, millennia-old leader of the Ten Rings, and the Dweller-in-Darkness in Ta Lo. In the post-credits scene Wong, Banner and Carol find the rings predate any record."
+    },
+    {
+      "id": "ffh",
+      "slug": "spider-man-far-from-home",
+      "title": "Spider-Man: Far From Home",
+      "inUniverseYear": 2024,
+      "inUniverseLabel": "2024",
+      "releaseDate": "2019-06-28",
+      "track": "street",
+      "type": "film",
+      "phase": 3,
+      "confidence": "ok",
+      "summary": "Eight months after Endgame, Peter grieves Stark and is played by Quentin Beck/Mysterio, who fakes threats with holograms. In the end Peter’s identity is exposed to the world."
+    },
+    {
+      "id": "eternals",
+      "slug": "eternals",
+      "title": "Eternals",
+      "inUniverseYear": 2024,
+      "inUniverseLabel": "2024",
+      "releaseDate": "2021-11-03",
+      "track": "cosmic",
+      "type": "film",
+      "phase": 4,
+      "confidence": "ok",
+      "summary": "Eternals created by Arishem have lived on Earth for thousands of years to contain the Deviants — and learn their real purpose is to allow the Emergence of the Celestial Tiamut. They stop the birth and Tiamut’s body is left petrified in the ocean."
+    },
+    {
+      "id": "hawkeye",
+      "slug": "hawkeye",
+      "title": "Hawkeye",
+      "inUniverseYear": 2024,
+      "inUniverseLabel": "Christmas 2024 ≈",
+      "releaseDate": "2021-11-24",
+      "track": "street",
+      "type": "series",
+      "phase": 4,
+      "confidence": "approx",
+      "summary": "Clint Barton tries to bury the Ronin trail and ends up training Kate Bishop. Yelena Belova, Maya Lopez and Wilson Fisk/Kingpin come into play."
+    },
+    {
+      "id": "msm",
+      "slug": "ms-marvel",
+      "title": "Ms. Marvel",
+      "inUniverseYear": 2024,
+      "inUniverseLabel": "2024 ≈",
+      "releaseDate": "2022-06-08",
+      "track": "street",
+      "type": "series",
+      "phase": 4,
+      "confidence": "approx",
+      "summary": "Kamala Khan activates a Noor bangle linked to the Clandestines and the Djinn, tied to the history of the Partition of India. In the finale a mutation in her DNA is revealed."
+    },
+    {
+      "id": "mk",
+      "slug": "moon-knight",
+      "title": "Moon Knight",
+      "inUniverseYear": 2024,
+      "inUniverseLabel": "2024 ≈",
+      "releaseDate": "2022-03-30",
+      "track": "mystic",
+      "type": "series",
+      "phase": 4,
+      "confidence": "approx",
+      "summary": "Marc Spector and Steven Grant share one body in service of the Egyptian god Khonshu, against Arthur Harrow and Ammit. Layla becomes the Scarlet Scarab and a third alter, Jake Lockley, is revealed."
+    },
+    {
+      "id": "nwh",
+      "slug": "spider-man-no-way-home",
+      "title": "Spider-Man: No Way Home",
+      "inUniverseYear": 2024,
+      "inUniverseLabel": "2024",
+      "releaseDate": "2021-12-15",
+      "track": "street",
+      "type": "film",
+      "phase": 3,
+      "confidence": "ok",
+      "summary": "A botched spell by Strange pulls in villains and two other Spider-Men from neighbouring universes. May dies; to close the rift, the entire world forgets who Peter Parker is."
+    },
+    {
+      "id": "mom",
+      "slug": "doctor-strange-in-the-multiverse-of-madness",
+      "title": "Doctor Strange in the Multiverse of Madness",
+      "inUniverseYear": 2024,
+      "inUniverseLabel": "2024",
+      "releaseDate": "2022-05-04",
+      "track": "mystic",
+      "type": "film",
+      "phase": 4,
+      "confidence": "ok",
+      "summary": "Corrupted by the Darkhold, Wanda hunts America Chavez to take her power to travel between universes. Strange meets the Illuminati of Earth-838 and learns what an incursion is."
+    },
+    {
+      "id": "dpw",
+      "slug": "deadpool-and-wolverine",
+      "title": "Deadpool & Wolverine",
+      "inUniverseYear": 2024,
+      "inUniverseLabel": "2024",
+      "releaseDate": "2024-07-24",
+      "track": "mystic",
+      "type": "film",
+      "phase": 5,
+      "confidence": "ok",
+      "summary": "The TVA recruits Wade Wilson when his timeline starts to die without its anchor being. With a Logan from another reality he faces Cassandra Nova in the Void — the film formally stitches the Fox library into the MCU multiverse."
+    },
+    {
+      "id": "shulk",
+      "slug": "she-hulk-attorney-at-law",
+      "title": "She-Hulk: Attorney at Law",
+      "inUniverseYear": 2024,
+      "inUniverseLabel": "2024 ≈",
+      "releaseDate": "2022-08-18",
+      "track": "street",
+      "type": "series",
+      "phase": 4,
+      "confidence": "approx",
+      "summary": "Jennifer Walters gains her cousin Bruce’s powers and practises law for superhuman clients. Abomination and Titania return, Skaar is introduced, and the show plays with the fourth wall."
+    },
+    {
+      "id": "wbn",
+      "slug": "werewolf-by-night",
+      "title": "Werewolf by Night",
+      "inUniverseYear": 2024,
+      "inUniverseLabel": "2024 ≈",
+      "releaseDate": "2022-09-25",
+      "track": "mystic",
+      "type": "special",
+      "phase": 4,
+      "confidence": "approx",
+      "summary": "A black-and-white special: monster hunters compete for the Bloodstone and Jack Russell reveals his werewolf nature, siding with Elsa Bloodstone and Man-Thing."
+    },
+    {
+      "id": "wf",
+      "slug": "black-panther-wakanda-forever",
+      "title": "Black Panther: Wakanda Forever",
+      "inUniverseYear": 2025,
+      "inUniverseLabel": "2025",
+      "releaseDate": "2022-11-09",
+      "track": "wakanda",
+      "type": "film",
+      "phase": 4,
+      "confidence": "ok",
+      "summary": "Wakanda mourns T’Challa while facing Namor and the underwater nation of Talokan. Shuri takes up the Black Panther mantle; Riri Williams enters the story."
+    },
+    {
+      "id": "lt",
+      "slug": "thor-love-and-thunder",
+      "title": "Thor: Love and Thunder",
+      "inUniverseYear": 2025,
+      "inUniverseLabel": "2025",
+      "releaseDate": "2022-07-06",
+      "track": "cosmic",
+      "type": "film",
+      "phase": 4,
+      "confidence": "ok",
+      "summary": "Gorr the God Butcher uses the Necrosword to kill gods. Jane Foster wields the reforged Mjolnir as the Mighty Thor and dies; Thor adopts Gorr’s daughter, Love."
+    },
+    {
+      "id": "ghs",
+      "slug": "the-guardians-of-the-galaxy-holiday-special",
+      "title": "The Guardians of the Galaxy Holiday Special",
+      "inUniverseYear": 2025,
+      "inUniverseLabel": "2025",
+      "releaseDate": "2022-11-24",
+      "track": "cosmic",
+      "type": "special",
+      "phase": 4,
+      "confidence": "ok",
+      "summary": "Mantis and Drax kidnap Kevin Bacon as a Christmas present for Quill. The Guardians now live on Knowhere, bought from the Collector; Mantis reveals she is Quill’s half-sister."
+    },
+    {
+      "id": "marvels",
+      "slug": "the-marvels",
+      "title": "The Marvels",
+      "inUniverseYear": 2025,
+      "inUniverseLabel": "2025",
+      "releaseDate": "2023-11-08",
+      "track": "cosmic",
+      "type": "film",
+      "phase": 5,
+      "confidence": "ok",
+      "summary": "Carol Danvers, Kamala Khan and Monica Rambeau have their powers entangled and face Dar-Benn, who tears holes in space to save Hala. In the end Monica crosses into a reality with mutants."
+    },
+    {
+      "id": "quant",
+      "slug": "ant-man-and-the-wasp-quantumania",
+      "title": "Ant-Man and the Wasp: Quantumania",
+      "inUniverseYear": 2025,
+      "inUniverseLabel": "2025",
+      "releaseDate": "2023-02-15",
+      "track": "street",
+      "type": "film",
+      "phase": 5,
+      "confidence": "ok",
+      "summary": "The Lang family is pulled into the Quantum Realm and finds Kang the Conqueror exiled there. Cassie and Hope help stop him; in the extra scenes a Council of Kangs gathers over the multiverse threat."
+    },
+    {
+      "id": "si",
+      "slug": "secret-invasion",
+      "title": "Secret Invasion",
+      "inUniverseYear": 2026,
+      "inUniverseLabel": "2025–2026 ≈",
+      "releaseDate": "2023-06-21",
+      "track": "shield",
+      "type": "series",
+      "phase": 5,
+      "confidence": "approx",
+      "summary": "Skrulls led by Gravik, tired of waiting for a home, infiltrate governments to provoke a war. Fury and Talos push back; G’iah ends up the most powerful being on the planet."
+    },
+    {
+      "id": "gotg3",
+      "slug": "guardians-of-the-galaxy-vol-3",
+      "title": "Guardians of the Galaxy Vol. 3",
+      "inUniverseYear": 2026,
+      "inUniverseLabel": "2026",
+      "releaseDate": "2023-05-03",
+      "track": "cosmic",
+      "type": "film",
+      "phase": 5,
+      "confidence": "ok",
+      "summary": "Rocket’s origin as a test subject of the High Evolutionary drives the final rescue. The original team disbands and a new roster stays on Knowhere with Rocket in charge."
+    },
+    {
+      "id": "echo",
+      "slug": "echo",
+      "title": "Echo",
+      "inUniverseYear": 2026,
+      "inUniverseLabel": "2026 ≈",
+      "releaseDate": "2024-01-09",
+      "track": "street",
+      "type": "series",
+      "phase": 5,
+      "confidence": "approx",
+      "summary": "Maya Lopez returns to Oklahoma and to her Choctaw roots while breaking away from Wilson Fisk, her crime-boss uncle. Matt Murdock and the Kingpin carry over from the earlier street-level shows."
+    },
+    {
+      "id": "agatha",
+      "slug": "agatha-all-along",
+      "title": "Agatha All Along",
+      "inUniverseYear": 2026,
+      "inUniverseLabel": "2026 ≈",
+      "releaseDate": "2024-09-18",
+      "track": "mystic",
+      "type": "series",
+      "phase": 5,
+      "confidence": "approx",
+      "summary": "Powerless after Westview, Agatha Harkness walks the Witches’ Road with a teenager who turns out to be Billy Maximoff. Rio Vidal is introduced as Death."
+    },
+    {
+      "id": "ironheart",
+      "slug": "ironheart",
+      "title": "Ironheart",
+      "inUniverseYear": 2026,
+      "inUniverseLabel": "2026 ≈",
+      "releaseDate": "2025-06-24",
+      "track": "street",
+      "type": "series",
+      "phase": 5,
+      "confidence": "approx",
+      "summary": "Riri Williams builds armor in Chicago and gets entangled with Parker Robbins/The Hood, setting technology against magic."
+    },
+    {
+      "id": "ddba",
+      "slug": "daredevil-born-again-s1",
+      "title": "Daredevil: Born Again (S1)",
+      "inUniverseYear": 2026,
+      "inUniverseLabel": "2026 ≈",
+      "releaseDate": "2025-03",
+      "track": "street",
+      "type": "series",
+      "phase": 5,
+      "confidence": "approx",
+      "summary": "Matt Murdock returns to the courtroom and to the mask while Wilson Fisk is elected mayor of New York, turning their feud into a fight for the city."
+    },
+    {
+      "id": "zomb",
+      "slug": "marvel-zombies",
+      "title": "Marvel Zombies",
+      "inUniverseYear": 2026,
+      "inUniverseLabel": "alternate universe",
+      "releaseDate": "2025-09-24",
+      "track": "mystic",
+      "type": "anim",
+      "phase": 5,
+      "confidence": "alt",
+      "summary": "A spin-off of What If…?: a reality where a quantum virus turns heroes into zombies and the survivors try to contain the outbreak."
+    },
+    {
+      "id": "bnw",
+      "slug": "captain-america-brave-new-world",
+      "title": "Captain America: Brave New World",
+      "inUniverseYear": 2027,
+      "inUniverseLabel": "2027",
+      "releaseDate": "2025-02-12",
+      "track": "shield",
+      "type": "film",
+      "phase": 5,
+      "confidence": "ok",
+      "summary": "Sam Wilson is already Captain America when Thaddeus Ross becomes President. The fight over adamantium taken from the Celestial Tiamut and the return of Samuel Sterns/The Leader pull threads from The Incredible Hulk and Eternals."
+    },
+    {
+      "id": "thunder",
+      "slug": "thunderbolts",
+      "title": "Thunderbolts*",
+      "inUniverseYear": 2027,
+      "inUniverseLabel": "2027",
+      "releaseDate": "2025-04-30",
+      "track": "shield",
+      "type": "film",
+      "phase": 5,
+      "confidence": "ok",
+      "summary": "Valentina Allegra de Fontaine throws Yelena, Bucky, John Walker, Ghost and Red Guardian together as a disposable team, and the Sentry project gets away from her through Bob. The team is re-branded to the public as the \"New Avengers\"."
+    },
+    {
+      "id": "wman",
+      "slug": "wonder-man",
+      "title": "Wonder Man",
+      "inUniverseYear": 2027,
+      "inUniverseLabel": "2026–2027 ≈",
+      "releaseDate": "2026-01-27",
+      "track": "mystic",
+      "type": "series",
+      "phase": 6,
+      "confidence": "approx",
+      "summary": "A series centred on Simon Williams inside the Hollywood machine, picking up the character name-dropped in Guardians Vol. 2 and She-Hulk. It closes the complete timeline published by Disney+."
+    },
+    {
+      "id": "ff4",
+      "slug": "the-fantastic-four-first-steps",
+      "title": "The Fantastic Four: First Steps",
+      "inUniverseYear": 2027,
+      "inUniverseLabel": "Earth-828 · retro-futuristic 1960s",
+      "releaseDate": "2025-07-23",
+      "track": "wakanda",
+      "type": "film",
+      "phase": 6,
+      "confidence": "alt",
+      "summary": "Reed Richards, Sue Storm, Johnny Storm and Ben Grimm are already public heroes when Galactus and the Silver Surfer threaten the planet. It takes place in its own universe, not on the MCU’s main Earth."
+    },
+    {
+      "id": "bnd",
+      "slug": "spider-man-brand-new-day",
+      "title": "Spider-Man: Brand New Day",
+      "inUniverseYear": 2027,
+      "inUniverseLabel": "TBA",
+      "releaseDate": "2026-07-29",
+      "track": "street",
+      "type": "film",
+      "phase": 6,
+      "confidence": "pending",
+      "summary": null
+    },
+    {
+      "id": "vq",
+      "slug": "visionquest",
+      "title": "VisionQuest",
+      "inUniverseYear": 2027,
+      "inUniverseLabel": "TBA",
+      "releaseDate": "2026-10-14",
+      "track": "mystic",
+      "type": "series",
+      "phase": 6,
+      "confidence": "future",
+      "summary": null
+    },
+    {
+      "id": "ddba2",
+      "slug": "daredevil-born-again-s2",
+      "title": "Daredevil: Born Again (S2)",
+      "inUniverseYear": 2027,
+      "inUniverseLabel": "TBA",
+      "releaseDate": "2026",
+      "track": "street",
+      "type": "series",
+      "phase": 6,
+      "confidence": "future",
+      "summary": null
+    },
+    {
+      "id": "doom",
+      "slug": "avengers-doomsday",
+      "title": "Avengers: Doomsday",
+      "inUniverseYear": 2028,
+      "inUniverseLabel": "TBA",
+      "releaseDate": "2026-12-16",
+      "track": "avg",
+      "type": "film",
+      "phase": 6,
+      "confidence": "future",
+      "summary": null
+    },
+    {
+      "id": "sw",
+      "slug": "avengers-secret-wars",
+      "title": "Avengers: Secret Wars",
+      "inUniverseYear": 2029,
+      "inUniverseLabel": "TBA",
+      "releaseDate": "2027-12-15",
+      "track": "avg",
+      "type": "film",
+      "phase": 6,
+      "confidence": "future",
+      "summary": null
+    }
+  ],
+  "connections": [
+    {
+      "from": "cap1",
+      "to": "osac",
+      "kind": "seq",
+      "note": "Peggy picks the mission back up a year after Steve’s crash"
+    },
+    {
+      "from": "osac",
+      "to": "ac",
+      "kind": "seq",
+      "note": "Direct continuation into the founding of S.H.I.E.L.D."
+    },
+    {
+      "from": "cap1",
+      "to": "avengers",
+      "kind": "setup",
+      "note": "Steve is found in the ice and revived in the present"
+    },
+    {
+      "from": "cap1",
+      "to": "ws",
+      "kind": "char",
+      "note": "Bucky Barnes returns as the Winter Soldier; Peggy reappears"
+    },
+    {
+      "from": "cm",
+      "to": "iw",
+      "kind": "setup",
+      "note": "The pager Fury triggers during the Snap is Carol’s"
+    },
+    {
+      "from": "cm",
+      "to": "endgame",
+      "kind": "char",
+      "note": "Carol answers the call and joins the final battle"
+    },
+    {
+      "from": "cm",
+      "to": "marvels",
+      "kind": "seq",
+      "note": "Direct continuation of Carol Danvers’ story"
+    },
+    {
+      "from": "im",
+      "to": "im2",
+      "kind": "seq",
+      "note": "Direct continuation of Tony Stark"
+    },
+    {
+      "from": "im",
+      "to": "avengers",
+      "kind": "setup",
+      "note": "Post-credits scene: Fury pitches the Avengers Initiative"
+    },
+    {
+      "from": "im2",
+      "to": "avengers",
+      "kind": "setup",
+      "note": "Natasha and S.H.I.E.L.D. set up the team; Mjolnir in the post-credits"
+    },
+    {
+      "from": "hulk",
+      "to": "avengers",
+      "kind": "setup",
+      "note": "Stark approaches Ross about \"a team\""
+    },
+    {
+      "from": "thor",
+      "to": "avengers",
+      "kind": "setup",
+      "note": "Loki and the Tesseract are left in play in the post-credits"
+    },
+    {
+      "from": "thor",
+      "to": "tdw",
+      "kind": "seq",
+      "note": "Direct continuation of Thor and Loki"
+    },
+    {
+      "from": "cons",
+      "to": "hulk",
+      "kind": "char",
+      "note": "The one-shot explains how Blonsky’s release was blocked"
+    },
+    {
+      "from": "hammer",
+      "to": "thor",
+      "kind": "char",
+      "note": "Coulson en route to the Mjolnir crater"
+    },
+    {
+      "from": "avengers",
+      "to": "item47",
+      "kind": "seq",
+      "note": "Material fallout from the Battle of New York"
+    },
+    {
+      "from": "avengers",
+      "to": "im3",
+      "kind": "seq",
+      "note": "The trauma of the Battle of New York drives the film"
+    },
+    {
+      "from": "avengers",
+      "to": "aou",
+      "kind": "seq",
+      "note": "Loki’s scepter is what creates Ultron"
+    },
+    {
+      "from": "avengers",
+      "to": "ws",
+      "kind": "char",
+      "note": "The post-New York S.H.I.E.L.D. is taken apart from inside"
+    },
+    {
+      "from": "tdw",
+      "to": "gotg",
+      "kind": "setup",
+      "note": "The Aether is handed to the Collector on Knowhere"
+    },
+    {
+      "from": "gotg",
+      "to": "gotg2",
+      "kind": "seq",
+      "note": "Direct continuation of the Guardians"
+    },
+    {
+      "from": "gotg2",
+      "to": "iw",
+      "kind": "char",
+      "note": "The Guardians cross paths with Thor and Thanos"
+    },
+    {
+      "from": "ws",
+      "to": "cw",
+      "kind": "seq",
+      "note": "Direct continuation of Steve and Bucky"
+    },
+    {
+      "from": "aou",
+      "to": "cw",
+      "kind": "seq",
+      "note": "Sokovia is what produces the Accords"
+    },
+    {
+      "from": "aou",
+      "to": "rag",
+      "kind": "setup",
+      "note": "Thor’s vision of Ragnarök is planted here"
+    },
+    {
+      "from": "antman",
+      "to": "cw",
+      "kind": "char",
+      "note": "Scott Lang is recruited by Falcon"
+    },
+    {
+      "from": "antman",
+      "to": "amw",
+      "kind": "seq",
+      "note": "Direct continuation of Scott and Hope"
+    },
+    {
+      "from": "cw",
+      "to": "bw",
+      "kind": "seq",
+      "note": "Natasha goes on the run after the Accords"
+    },
+    {
+      "from": "cw",
+      "to": "bp",
+      "kind": "seq",
+      "note": "T’Challa returns to Wakanda to take the throne"
+    },
+    {
+      "from": "cw",
+      "to": "hc",
+      "kind": "seq",
+      "note": "Peter goes back to Queens after the fight in Germany"
+    },
+    {
+      "from": "cw",
+      "to": "iw",
+      "kind": "seq",
+      "note": "A fractured team faces Thanos without being whole"
+    },
+    {
+      "from": "bp",
+      "to": "wf",
+      "kind": "seq",
+      "note": "Direct continuation of Wakanda"
+    },
+    {
+      "from": "bp",
+      "to": "eow",
+      "kind": "char",
+      "note": "Ancestral past of the Wakandan War Dogs"
+    },
+    {
+      "from": "hc",
+      "to": "ffh",
+      "kind": "seq",
+      "note": "Direct continuation of Peter Parker"
+    },
+    {
+      "from": "ds",
+      "to": "iw",
+      "kind": "char",
+      "note": "Strange is the keeper of the Time Stone"
+    },
+    {
+      "from": "ds",
+      "to": "mom",
+      "kind": "seq",
+      "note": "Direct continuation of Stephen Strange"
+    },
+    {
+      "from": "ds",
+      "to": "shang",
+      "kind": "char",
+      "note": "Wong appears in the post-credits with Banner and Carol"
+    },
+    {
+      "from": "rag",
+      "to": "iw",
+      "kind": "seq",
+      "note": "The Asgardian ship is intercepted in the opening scene"
+    },
+    {
+      "from": "amw",
+      "to": "endgame",
+      "kind": "setup",
+      "note": "The Quantum Realm becomes the key to time travel"
+    },
+    {
+      "from": "iw",
+      "to": "endgame",
+      "kind": "seq",
+      "note": "Direct continuation of the Snap"
+    },
+    {
+      "from": "endgame",
+      "to": "wv",
+      "kind": "seq",
+      "note": "Wanda grieving after Vision’s death"
+    },
+    {
+      "from": "endgame",
+      "to": "tfatws",
+      "kind": "seq",
+      "note": "The unstable world left by half the population returning"
+    },
+    {
+      "from": "endgame",
+      "to": "ffh",
+      "kind": "seq",
+      "note": "Peter dealing with Stark’s death"
+    },
+    {
+      "from": "endgame",
+      "to": "loki1",
+      "kind": "branch",
+      "note": "The 2012 Loki escapes with the Tesseract and is seized by the TVA"
+    },
+    {
+      "from": "loki1",
+      "to": "loki2",
+      "kind": "seq",
+      "note": "Direct continuation"
+    },
+    {
+      "from": "loki1",
+      "to": "whatif",
+      "kind": "branch",
+      "note": "He Who Remains’ death opens the branching realities"
+    },
+    {
+      "from": "loki2",
+      "to": "dpw",
+      "kind": "setup",
+      "note": "The TVA now polices dying timelines"
+    },
+    {
+      "from": "wv",
+      "to": "mom",
+      "kind": "seq",
+      "note": "Wanda and the Darkhold carry on from here"
+    },
+    {
+      "from": "wv",
+      "to": "agatha",
+      "kind": "seq",
+      "note": "Agatha after Westview"
+    },
+    {
+      "from": "wv",
+      "to": "vq",
+      "kind": "inf",
+      "note": "Announced follow-up to White Vision"
+    },
+    {
+      "from": "ffh",
+      "to": "nwh",
+      "kind": "seq",
+      "note": "Direct continuation: the identity leak"
+    },
+    {
+      "from": "nwh",
+      "to": "mom",
+      "kind": "seq",
+      "note": "The spell cracks the multiverse open for Strange"
+    },
+    {
+      "from": "bw",
+      "to": "hawkeye",
+      "kind": "char",
+      "note": "Yelena hunts Clint over Natasha’s death"
+    },
+    {
+      "from": "bw",
+      "to": "thunder",
+      "kind": "char",
+      "note": "Yelena, Red Guardian and Ghost land on the new team"
+    },
+    {
+      "from": "hawkeye",
+      "to": "echo",
+      "kind": "seq",
+      "note": "Maya Lopez breaks with the Kingpin"
+    },
+    {
+      "from": "echo",
+      "to": "ddba",
+      "kind": "char",
+      "note": "Wilson Fisk and Matt Murdock carry across both shows"
+    },
+    {
+      "from": "shulk",
+      "to": "ddba",
+      "kind": "char",
+      "note": "Matt Murdock appears first in Jennifer’s series"
+    },
+    {
+      "from": "wf",
+      "to": "ironheart",
+      "kind": "char",
+      "note": "Riri Williams debuts in Wakanda Forever"
+    },
+    {
+      "from": "msm",
+      "to": "marvels",
+      "kind": "seq",
+      "note": "Kamala Khan joins the trio"
+    },
+    {
+      "from": "wv",
+      "to": "marvels",
+      "kind": "char",
+      "note": "Monica Rambeau gains her powers in WandaVision"
+    },
+    {
+      "from": "gotg2",
+      "to": "gotg3",
+      "kind": "seq",
+      "note": "Adam Warlock and Rocket’s past come due"
+    },
+    {
+      "from": "ghs",
+      "to": "gotg3",
+      "kind": "seq",
+      "note": "Direct continuation on Knowhere"
+    },
+    {
+      "from": "gotg2",
+      "to": "wman",
+      "kind": "char",
+      "note": "Simon Williams is name-dropped in the Vol. 2 credits"
+    },
+    {
+      "from": "amw",
+      "to": "quant",
+      "kind": "seq",
+      "note": "Direct continuation of the Lang family"
+    },
+    {
+      "from": "hulk",
+      "to": "bnw",
+      "kind": "char",
+      "note": "Samuel Sterns/The Leader and Thaddeus Ross come from here"
+    },
+    {
+      "from": "eternals",
+      "to": "bnw",
+      "kind": "setup",
+      "note": "The body of the Celestial Tiamut becomes the adamantium source"
+    },
+    {
+      "from": "tfatws",
+      "to": "bnw",
+      "kind": "seq",
+      "note": "Sam Wilson is already Captain America"
+    },
+    {
+      "from": "si",
+      "to": "bnw",
+      "kind": "char",
+      "note": "Ross reaches the presidency in the invasion’s aftermath"
+    },
+    {
+      "from": "nwh",
+      "to": "bnd",
+      "kind": "seq",
+      "note": "Announced continuation of Peter Parker"
+    },
+    {
+      "from": "ddba",
+      "to": "ddba2",
+      "kind": "seq",
+      "note": "Direct continuation"
+    },
+    {
+      "from": "whatif",
+      "to": "zomb",
+      "kind": "branch",
+      "note": "Direct spin-off of the zombie episode"
+    },
+    {
+      "from": "quant",
+      "to": "doom",
+      "kind": "inf",
+      "note": "The Council of Kangs was planted as the multiverse threat"
+    },
+    {
+      "from": "thunder",
+      "to": "doom",
+      "kind": "inf",
+      "note": "The \"New Avengers\" point straight at the next crossover"
+    },
+    {
+      "from": "mom",
+      "to": "doom",
+      "kind": "inf",
+      "note": "Incursions between universes as the announced mechanic"
+    },
+    {
+      "from": "ff4",
+      "to": "doom",
+      "kind": "inf",
+      "note": "Announced crossover between Earth-828 and the MCU"
+    },
+    {
+      "from": "dpw",
+      "to": "doom",
+      "kind": "inf",
+      "note": "The post-TVA multiverse opens the road to the crossover"
+    },
+    {
+      "from": "doom",
+      "to": "sw",
+      "kind": "seq",
+      "note": "Announced direct continuation"
+    }
+  ]
+}

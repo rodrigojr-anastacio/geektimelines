@@ -1,0 +1,675 @@
+{
+  "source": "TMDB",
+  "entries": {
+    "eow": {
+      "id": "eow",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 241388,
+      "tmdbTitle": "Eyes of Wakanda",
+      "tmdbDate": "2025-08-01",
+      "posterPath": "/yuOfb1MgnaGPa4guzV0n1IFYVGN.jpg",
+      "backdropPath": "/cWO5NDkKqpOuwxu4vFc4PtL8aNF.jpg"
+    },
+    "cap1": {
+      "id": "cap1",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 1771,
+      "tmdbTitle": "Captain America: The First Avenger",
+      "tmdbDate": "2011-07-22",
+      "posterPath": "/vSNxAJTlD0r02V9sPYpOjqDZXUK.jpg",
+      "backdropPath": "/yFuKvT4Vm3sKHdFY4eG6I4ldAnn.jpg"
+    },
+    "osac": {
+      "id": "osac",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 211387,
+      "tmdbTitle": "Marvel One-Shot: Agent Carter",
+      "tmdbDate": "2013-10-04",
+      "posterPath": "/4vFKKWPvCVDJTOWiwReBfpAMScP.jpg",
+      "backdropPath": "/kv8KDbi2I4F4MNBbBMCR4LDqP6H.jpg"
+    },
+    "ac": {
+      "id": "ac",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 61550,
+      "tmdbTitle": "Marvel's Agent Carter",
+      "tmdbDate": "2015-01-06",
+      "posterPath": "/fe79VYyLp5ZBstpJ4oukpuUT3B.jpg",
+      "backdropPath": "/MaQ7hbNsiJ30p14UgRdEnXDGMH.jpg"
+    },
+    "cm": {
+      "id": "cm",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 299537,
+      "tmdbTitle": "Captain Marvel",
+      "tmdbDate": "2019-03-06",
+      "posterPath": "/AtsgWhDnHTq68L0lLsUrCnM7TjG.jpg",
+      "backdropPath": "/qAzYK4YPSWDc7aa4R43LcwRIAyb.jpg"
+    },
+    "im": {
+      "id": "im",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 1726,
+      "tmdbTitle": "Iron Man",
+      "tmdbDate": "2008-04-30",
+      "posterPath": "/78lPtwv72eTNqFW9COBYI0dWDJa.jpg",
+      "backdropPath": "/cKvDv2LpwVEqbdXWoQl4XgGN6le.jpg"
+    },
+    "hulk": {
+      "id": "hulk",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 1724,
+      "tmdbTitle": "The Incredible Hulk",
+      "tmdbDate": "2008-06-12",
+      "posterPath": "/gKzYx79y0AQTL4UAk1cBQJ3nvrm.jpg",
+      "backdropPath": "/jPu8yiadqgzwFPGKJmGo637ASVP.jpg"
+    },
+    "im2": {
+      "id": "im2",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 10138,
+      "tmdbTitle": "Iron Man 2",
+      "tmdbDate": "2010-04-28",
+      "posterPath": "/6WBeq4fCfn7AN0o21W9qNcRF2l9.jpg",
+      "backdropPath": "/7lmBufEG7P7Y1HClYK3gCxYrkgS.jpg"
+    },
+    "thor": {
+      "id": "thor",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 10195,
+      "tmdbTitle": "Thor",
+      "tmdbDate": "2011-04-21",
+      "posterPath": "/prSfAi1xGrhLQNxVSUFh61xQ4Qy.jpg",
+      "backdropPath": "/cDJ61O1STtbWNBwefuqVrRe3d7l.jpg"
+    },
+    "cons": {
+      "id": "cons",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 76122,
+      "tmdbTitle": "Marvel One-Shot: The Consultant",
+      "tmdbDate": "2011-09-13",
+      "posterPath": "/xqNLXUUvBnfVk6m3QFGGU0Grgs7.jpg",
+      "backdropPath": "/r1Q3jyOpfbF3VDU52w8RzkTPbfe.jpg"
+    },
+    "hammer": {
+      "id": "hammer",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 76535,
+      "tmdbTitle": "Marvel One-Shot: A Funny Thing Happened on the Way to Thor's Hammer",
+      "tmdbDate": "2011-10-25",
+      "posterPath": "/njrOqsmFH4pxBrhcoslqLfw2OGk.jpg",
+      "backdropPath": "/yuIsNfHZTn3nkSsatzM0298wA67.jpg"
+    },
+    "avengers": {
+      "id": "avengers",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 24428,
+      "tmdbTitle": "The Avengers",
+      "tmdbDate": "2012-04-25",
+      "posterPath": "/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg",
+      "backdropPath": "/gHLs7Fy3DzLmLsD4lmfqL55KGcl.jpg"
+    },
+    "item47": {
+      "id": "item47",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 119569,
+      "tmdbTitle": "Marvel One-Shot: Item 47",
+      "tmdbDate": "2012-08-29",
+      "posterPath": "/hnSxG8clwLuAXEkp9emc8HCUcHD.jpg",
+      "backdropPath": "/pC36ONAaKMXStlvutYFcAbMemCM.jpg"
+    },
+    "im3": {
+      "id": "im3",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 68721,
+      "tmdbTitle": "Iron Man 3",
+      "tmdbDate": "2013-04-18",
+      "posterPath": "/qhPtAc1TKbMPqNvcdXSOn9Bn7hZ.jpg",
+      "backdropPath": "/iVped1djsF0tvGkvnHbzsE3ZPTF.jpg"
+    },
+    "tdw": {
+      "id": "tdw",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 76338,
+      "tmdbTitle": "Thor: The Dark World",
+      "tmdbDate": "2013-10-30",
+      "posterPath": "/wp6OxE4poJ4G7c0U2ZIXasTSMR7.jpg",
+      "backdropPath": "/5QEOy0QEpad9QsXeMxuGHPXMale.jpg"
+    },
+    "allhail": {
+      "id": "allhail",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 253980,
+      "tmdbTitle": "Marvel One-Shot: All Hail the King",
+      "tmdbDate": "2014-02-04",
+      "posterPath": "/y0QYZPWgeGKOvyrzi6Oz3aJPxJa.jpg",
+      "backdropPath": "/yoigAFjhEhJM6O6hQT9TiKH6EL7.jpg"
+    },
+    "ws": {
+      "id": "ws",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 100402,
+      "tmdbTitle": "Captain America: The Winter Soldier",
+      "tmdbDate": "2014-03-20",
+      "posterPath": "/tVFRpFw3xTedgPGqxW0AOI8Qhh0.jpg",
+      "backdropPath": "/1RWLMyC9KcFfcaoViMiJGSSZzzr.jpg"
+    },
+    "gotg": {
+      "id": "gotg",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 118340,
+      "tmdbTitle": "Guardians of the Galaxy",
+      "tmdbDate": "2014-07-30",
+      "posterPath": "/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg",
+      "backdropPath": "/uLtVbjvS1O7gXL8lUOwsFOH4man.jpg"
+    },
+    "gotg2": {
+      "id": "gotg2",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 283995,
+      "tmdbTitle": "Guardians of the Galaxy Vol. 2",
+      "tmdbDate": "2017-04-25",
+      "posterPath": "/y4MBh0EjBlMuOzv9axM4qJlmhzz.jpg",
+      "backdropPath": "/bW93ycPSSi3Hxx1NvlMX5qm2mQu.jpg"
+    },
+    "aou": {
+      "id": "aou",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 99861,
+      "tmdbTitle": "Avengers: Age of Ultron",
+      "tmdbDate": "2015-04-22",
+      "posterPath": "/4ssDuvEDkSArWEdyBl2X5EHvYKU.jpg",
+      "backdropPath": "/kIBK5SKwgqIIuRKhhWrJn3XkbPq.jpg"
+    },
+    "antman": {
+      "id": "antman",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 102899,
+      "tmdbTitle": "Ant-Man",
+      "tmdbDate": "2015-07-14",
+      "posterPath": "/rQRnQfUl3kfp78nCWq8Ks04vnq1.jpg",
+      "backdropPath": "/1K3JmSNUN8OpjYsCjc0Hy0SYxAb.jpg"
+    },
+    "cw": {
+      "id": "cw",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 271110,
+      "tmdbTitle": "Captain America: Civil War",
+      "tmdbDate": "2016-04-27",
+      "posterPath": "/rAGiXaUfPzY7CDEyNKUofk3Kw2e.jpg",
+      "backdropPath": "/wdwcOBMkt3zmPQuEMxB3FUtMio2.jpg"
+    },
+    "bw": {
+      "id": "bw",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 497698,
+      "tmdbTitle": "Black Widow",
+      "tmdbDate": "2021-07-07",
+      "posterPath": "/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg",
+      "backdropPath": "/keIxh0wPr2Ymj0Btjh4gW7JJ89e.jpg"
+    },
+    "bp": {
+      "id": "bp",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 284054,
+      "tmdbTitle": "Black Panther",
+      "tmdbDate": "2018-02-13",
+      "posterPath": "/uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+      "backdropPath": "/b6ZJZHUdMEFECvGiDpJjlfUWela.jpg"
+    },
+    "hc": {
+      "id": "hc",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 315635,
+      "tmdbTitle": "Spider-Man: Homecoming",
+      "tmdbDate": "2017-07-05",
+      "posterPath": "/c24sv2weTHPsmDa7jEMN0m2P3RT.jpg",
+      "backdropPath": "/fn4n6uOYcB6Uh89nbNPoU2w80RV.jpg"
+    },
+    "ds": {
+      "id": "ds",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 284052,
+      "tmdbTitle": "Doctor Strange",
+      "tmdbDate": "2016-10-25",
+      "posterPath": "/uGBVj3bEbCoZbDjjl9wTxcygko1.jpg",
+      "backdropPath": "/kkoiH8ZWxJ9WSAjOadGtuHUQxbm.jpg"
+    },
+    "rag": {
+      "id": "rag",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 284053,
+      "tmdbTitle": "Thor: Ragnarok",
+      "tmdbDate": "2017-10-02",
+      "posterPath": "/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg",
+      "backdropPath": "/vLmHH8jAy8Jq8uBsLucd3592WGh.jpg"
+    },
+    "amw": {
+      "id": "amw",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 363088,
+      "tmdbTitle": "Ant-Man and the Wasp",
+      "tmdbDate": "2018-07-04",
+      "posterPath": "/cFQEO687n1K6umXbInzocxcnAQz.jpg",
+      "backdropPath": "/iYdgEUE2W2aJkgqfSjf1x3gFfuV.jpg"
+    },
+    "iw": {
+      "id": "iw",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 299536,
+      "tmdbTitle": "Avengers: Infinity War",
+      "tmdbDate": "2018-04-25",
+      "posterPath": "/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+      "backdropPath": "/mDfJG3LC3Dqb67AZ52x3Z0jU0uB.jpg"
+    },
+    "endgame": {
+      "id": "endgame",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 299534,
+      "tmdbTitle": "Avengers: Endgame",
+      "tmdbDate": "2019-04-24",
+      "posterPath": "/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg",
+      "backdropPath": "/2xfV5Zdq4kCsFVReRXJKnJaUFCD.jpg"
+    },
+    "loki1": {
+      "id": "loki1",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 84958,
+      "tmdbTitle": "Loki",
+      "tmdbDate": "2021-06-09",
+      "posterPath": "/kEl2t3OhXc3Zb9FBh1AuYzRTgZp.jpg",
+      "backdropPath": "/q3jHCb4dMfYF6ojikKuHd6LscxC.jpg"
+    },
+    "wv": {
+      "id": "wv",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 85271,
+      "tmdbTitle": "WandaVision",
+      "tmdbDate": "2021-01-15",
+      "posterPath": "/ijWWwINc8h71NQ8j1LTJMFSj5wr.jpg",
+      "backdropPath": "/lOr9NKxh4vMweufMOUDJjJhCRHW.jpg"
+    },
+    "whatif": {
+      "id": "whatif",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 91363,
+      "tmdbTitle": "What If...?",
+      "tmdbDate": "2021-08-11",
+      "posterPath": "/zaqfFDUrSfIljdD0OBxSjcutX8n.jpg",
+      "backdropPath": "/jnzoh5qoxRLFRIQAxnl6D3RStPC.jpg"
+    },
+    "loki2": {
+      "id": "loki2",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 84958,
+      "tmdbTitle": "Loki",
+      "tmdbDate": "2021-06-09",
+      "posterPath": "/kEl2t3OhXc3Zb9FBh1AuYzRTgZp.jpg",
+      "backdropPath": "/q3jHCb4dMfYF6ojikKuHd6LscxC.jpg"
+    },
+    "tfatws": {
+      "id": "tfatws",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 88396,
+      "tmdbTitle": "The Falcon and the Winter Soldier",
+      "tmdbDate": "2021-03-19",
+      "posterPath": "/6kbAMLteGO8yyewYau6bJ683sw7.jpg",
+      "backdropPath": "/aTjbqMONy77fHJrIYu14g1F0d5h.jpg"
+    },
+    "shang": {
+      "id": "shang",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 566525,
+      "tmdbTitle": "Shang-Chi and the Legend of the Ten Rings",
+      "tmdbDate": "2021-09-01",
+      "posterPath": "/9f2Q0U3IOsLgrI2HkvldwSABZy5.jpg",
+      "backdropPath": "/r7K6Xt0RX4Mw0cAbZVw5cyb1Tux.jpg"
+    },
+    "ffh": {
+      "id": "ffh",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 429617,
+      "tmdbTitle": "Spider-Man: Far From Home",
+      "tmdbDate": "2019-06-28",
+      "posterPath": "/4q2NNj4S5dG2RLF9CpXsej7yXl.jpg",
+      "backdropPath": "/vamhMTvh9m9zFHDoR0v1nRtf6T4.jpg"
+    },
+    "eternals": {
+      "id": "eternals",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 524434,
+      "tmdbTitle": "Eternals",
+      "tmdbDate": "2021-11-03",
+      "posterPath": "/lFByFSLV5WDJEv3KabbdAF959F2.jpg",
+      "backdropPath": "/c6H7Z4u73ir3cIoCteuhJh7UCAR.jpg"
+    },
+    "hawkeye": {
+      "id": "hawkeye",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 88329,
+      "tmdbTitle": "Hawkeye",
+      "tmdbDate": "2021-11-24",
+      "posterPath": "/ct5pNE5dDHryHLDnxyZPYcqO1sz.jpg",
+      "backdropPath": "/9QNv2Al3GfCND8BwuLmu2GwVht7.jpg"
+    },
+    "msm": {
+      "id": "msm",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 92782,
+      "tmdbTitle": "Ms. Marvel",
+      "tmdbDate": "2022-06-08",
+      "posterPath": "/3HWWh92kZbD7odwJX7nKmXNZsYo.jpg",
+      "backdropPath": "/mfcLUWASJghU8MTNK38eYktfE83.jpg"
+    },
+    "mk": {
+      "id": "mk",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 92749,
+      "tmdbTitle": "Moon Knight",
+      "tmdbDate": "2022-03-30",
+      "posterPath": "/x6FsYvt33846IQnDSFxla9j0RX8.jpg",
+      "backdropPath": "/1uegR4uAxRxiMyX4nQnpzbXhrTw.jpg"
+    },
+    "nwh": {
+      "id": "nwh",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 634649,
+      "tmdbTitle": "Spider-Man: No Way Home",
+      "tmdbDate": "2021-12-15",
+      "posterPath": "/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
+      "backdropPath": "/uyrOU4BDm2kbVxFsMiDFIHDhc4d.jpg"
+    },
+    "mom": {
+      "id": "mom",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 453395,
+      "tmdbTitle": "Doctor Strange in the Multiverse of Madness",
+      "tmdbDate": "2022-05-04",
+      "posterPath": "/ddJcSKbcp4rKZTmuyWaMhuwcfMz.jpg",
+      "backdropPath": "/lv3TXqhpaIxkclIHbhN2MRMOemQ.jpg"
+    },
+    "dpw": {
+      "id": "dpw",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 533535,
+      "tmdbTitle": "Deadpool & Wolverine",
+      "tmdbDate": "2024-07-24",
+      "posterPath": "/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg",
+      "backdropPath": "/by8z9Fe8y7p4jo2YlW2SZDnptyT.jpg"
+    },
+    "shulk": {
+      "id": "shulk",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 92783,
+      "tmdbTitle": "She-Hulk: Attorney at Law",
+      "tmdbDate": "2022-08-18",
+      "posterPath": "/5xz2orV8f0usyrfGNshcoXHmiaV.jpg",
+      "backdropPath": "/eljErfkQUcFUgQkI4I1soZcH8MW.jpg"
+    },
+    "wbn": {
+      "id": "wbn",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 894205,
+      "tmdbTitle": "Werewolf by Night",
+      "tmdbDate": "2022-09-25",
+      "posterPath": "/mvIvNKRIJPPS7WSFarFhOAGIVnU.jpg",
+      "backdropPath": "/pfAZP7JvTTxqgq7n6A1OYgkAdEW.jpg"
+    },
+    "wf": {
+      "id": "wf",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 505642,
+      "tmdbTitle": "Black Panther: Wakanda Forever",
+      "tmdbDate": "2022-11-09",
+      "posterPath": "/sv1xJUazXeYqALzczSZ3O6nkH75.jpg",
+      "backdropPath": "/83H0C66AcvkwpG2738VCTHMY9uv.jpg"
+    },
+    "lt": {
+      "id": "lt",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 616037,
+      "tmdbTitle": "Thor: Love and Thunder",
+      "tmdbDate": "2022-07-06",
+      "posterPath": "/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg",
+      "backdropPath": "/jsoz1HlxczSuTx0mDl2h0lxy36l.jpg"
+    },
+    "ghs": {
+      "id": "ghs",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 774752,
+      "tmdbTitle": "The Guardians of the Galaxy Holiday Special",
+      "tmdbDate": "2022-11-24",
+      "posterPath": "/8dqXyslZ2hv49Oiob9UjlGSHSTR.jpg",
+      "backdropPath": "/rfnmMYuZ6EKOBvQLp2wqP21v7sI.jpg"
+    },
+    "marvels": {
+      "id": "marvels",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 609681,
+      "tmdbTitle": "The Marvels",
+      "tmdbDate": "2023-11-08",
+      "posterPath": "/9GBhzXMFjgcZ3FdR9w3bUMMTps5.jpg",
+      "backdropPath": "/feSiISwgEpVzR1v3zv2n2AU4ANJ.jpg"
+    },
+    "quant": {
+      "id": "quant",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 640146,
+      "tmdbTitle": "Ant-Man and the Wasp: Quantumania",
+      "tmdbDate": "2023-02-15",
+      "posterPath": "/qnqGbB22YJ7dSs4o6M7exTpNxPz.jpg",
+      "backdropPath": "/m8JTwHFwX7I7JY5fPe4SjqejWag.jpg"
+    },
+    "si": {
+      "id": "si",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 114472,
+      "tmdbTitle": "Secret Invasion",
+      "tmdbDate": "2023-06-21",
+      "posterPath": "/3rINdUPSy9AklJg74jWHOyUXuZd.jpg",
+      "backdropPath": "/6mOK9j99OFlxGc3ird2jWUeUha9.jpg"
+    },
+    "gotg3": {
+      "id": "gotg3",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 447365,
+      "tmdbTitle": "Guardians of the Galaxy Vol. 3",
+      "tmdbDate": "2023-05-03",
+      "posterPath": "/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg",
+      "backdropPath": "/5YZbUmjbMa3ClvSW1Wj3D6XGolb.jpg"
+    },
+    "echo": {
+      "id": "echo",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 122226,
+      "tmdbTitle": "Echo",
+      "tmdbDate": "2024-01-09",
+      "posterPath": "/vFyJH630cF68LohVYjQW49074Sy.jpg",
+      "backdropPath": "/u3ySnWqSjM3jedYgJZTR7RWRDDm.jpg"
+    },
+    "agatha": {
+      "id": "agatha",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 138501,
+      "tmdbTitle": "Agatha All Along",
+      "tmdbDate": "2024-09-18",
+      "posterPath": "/mGsxKwXUjojitRv2E9qMTbxbBRd.jpg",
+      "backdropPath": "/tYLXJW1sZQU09VWY1BhSVPKGIwc.jpg"
+    },
+    "ironheart": {
+      "id": "ironheart",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 114471,
+      "tmdbTitle": "Ironheart",
+      "tmdbDate": "2025-06-24",
+      "posterPath": "/dOh6MJpdlQhYpLBhzhNQeYGKTZ5.jpg",
+      "backdropPath": "/vno2LrEQr3lTOk3U1G1ihZsy64b.jpg"
+    },
+    "ddba": {
+      "id": "ddba",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 202555,
+      "tmdbTitle": "Daredevil: Born Again",
+      "tmdbDate": "2025-03-04",
+      "posterPath": "/xDUoAsU8lQHOOoRkFiBuarmACDN.jpg",
+      "backdropPath": "/m291MEBjhuRqb0nh9ojnm9gzScq.jpg"
+    },
+    "zomb": {
+      "id": "zomb",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 138505,
+      "tmdbTitle": "Marvel Zombies",
+      "tmdbDate": "2025-09-24",
+      "posterPath": "/mwKj9ERGFXsWot0nXgQ5yMQf9I7.jpg",
+      "backdropPath": "/lxQMxqao3vs2ehxESrkQU6acU86.jpg"
+    },
+    "bnw": {
+      "id": "bnw",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 822119,
+      "tmdbTitle": "Captain America: Brave New World",
+      "tmdbDate": "2025-02-12",
+      "posterPath": "/pzIddUEMWhWzfvLI3TwxUG2wGoi.jpg",
+      "backdropPath": "/ce3prrjh9ZehEl5JinNqr4jIeaB.jpg"
+    },
+    "thunder": {
+      "id": "thunder",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 986056,
+      "tmdbTitle": "Thunderbolts*",
+      "tmdbDate": "2025-04-30",
+      "posterPath": "/hqcexYHbiTBfDIdDWxrxPtVndBX.jpg",
+      "backdropPath": "/rthMuZfFv4fqEU4JVbgSW9wQ8rs.jpg"
+    },
+    "wman": {
+      "id": "wman",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 198178,
+      "tmdbTitle": "Wonder Man",
+      "tmdbDate": "2026-01-27",
+      "posterPath": "/6yy9nQlFt2l6UVWzrfhszFCaZ5C.jpg",
+      "backdropPath": "/ldz9THIHaV4orMsUrPT1nlQF51T.jpg"
+    },
+    "ff4": {
+      "id": "ff4",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 617126,
+      "tmdbTitle": "The Fantastic 4: First Steps",
+      "tmdbDate": "2025-07-23",
+      "posterPath": "/nf5qaSEvyYSNeFH0YhSs5EsBLX9.jpg",
+      "backdropPath": "/s94NjfKkcSczZ1FembwmQZwsuwY.jpg"
+    },
+    "bnd": {
+      "id": "bnd",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 969681,
+      "tmdbTitle": "Spider-Man: Brand New Day",
+      "tmdbDate": "2026-07-29",
+      "posterPath": "/bjiS5ipwxb9JFy3XRRN4OAilSeX.jpg",
+      "backdropPath": "/7iwUUcKURMT7aKfCwMy6YnGtchD.jpg"
+    },
+    "vq": {
+      "id": "vq",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 213375,
+      "tmdbTitle": "VisionQuest",
+      "tmdbDate": "2026-10-14",
+      "posterPath": "/xK27l5uwaVyZSlENWnmLlWwDQNS.jpg",
+      "backdropPath": "/v50p9hearMiu6BlYfp4O7FACmXl.jpg"
+    },
+    "ddba2": {
+      "id": "ddba2",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 318417,
+      "tmdbTitle": "Daredevil: Born Again Official Podcast",
+      "tmdbDate": "2026-03-17",
+      "posterPath": "/pXr32DqmkiEJTQbpf9u6JRgPPzB.jpg",
+      "backdropPath": "/yea7VjmPCNuGI0WyfbeTgPVJVUs.jpg"
+    },
+    "doom": {
+      "id": "doom",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 1003596,
+      "tmdbTitle": "Avengers: Doomsday",
+      "tmdbDate": "2026-12-16",
+      "posterPath": "/jzPwsojjFStf5lR5Nm07w2hH56G.jpg",
+      "backdropPath": "/s4v0UX1anfXm0UvloLsTTJ4v222.jpg"
+    },
+    "sw": {
+      "id": "sw",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 1003598,
+      "tmdbTitle": "Avengers: Secret Wars",
+      "tmdbDate": "2027-12-15",
+      "posterPath": "/f0YBuh4hyiAheXhh4JnJWoKi9g5.jpg",
+      "backdropPath": "/rytc6Lf4447C0CDncwFa4gxe0vY.jpg"
+    }
+  }
+}

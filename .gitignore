@@ -9,3 +9,7 @@ out/
 *.log
 public/posters/
 .vercel
+/.next/
+/out/
+next-env.d.ts
+tsconfig.tsbuildinfo
