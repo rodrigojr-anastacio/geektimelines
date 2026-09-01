@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
   bySlug, byId, entries, linksFor, posterUrl, formatRelease,
-  TYPE_LABEL, KIND_LABEL, CONFIDENCE_NOTE, tracks,
+  TYPE_LABEL, KIND_LABEL, CONFIDENCE_NOTE, CONTEXT_LABEL, tracks,
 } from '@/lib/data';
 import { SITE } from '@/lib/site';
 import styles from './entry.module.css';
@@ -71,6 +71,11 @@ export default async function EntryPage({ params }: { params: Promise<{ slug: st
 
         {entry.summary ? (
           <p className={styles.summary}>{entry.summary}</p>
+        ) : entry.context && entry.contextSource ? (
+          <div className={styles.context}>
+            <span className={styles.contextLabel}>{CONTEXT_LABEL[entry.contextSource]}</span>
+            <p className={styles.summary}>{entry.context}</p>
+          </div>
         ) : (
           <p className={styles.summary} style={{ color: 'var(--ink-45)' }}>
             No verified summary is available for this title yet. Nothing was written here so this page
@@ -123,7 +128,7 @@ export default async function EntryPage({ params }: { params: Promise<{ slug: st
 
         <p className={styles.method}>
           Placement and dates follow the sources listed in the{' '}
-          <Link href="/sources">method page</Link>. {SITE.tmdbAttribution}
+          <Link href="/sources">method page</Link>.
         </p>
       </article>
     </main>

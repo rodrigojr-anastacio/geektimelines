@@ -42,7 +42,9 @@
       "type": "anim",
       "phase": 5,
       "confidence": "ok",
-      "summary": "An animated anthology about the War Dogs — Wakandan agents sent abroad to recover vibranium across millennia. It is the earliest-set entry on the official Disney+ timeline."
+      "summary": "An animated anthology about the War Dogs — Wakandan agents sent abroad to recover vibranium across millennia. It is the earliest-set entry on the official Disney+ timeline.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "cap1",
@@ -55,7 +57,9 @@
       "type": "film",
       "phase": 1,
       "confidence": "ok",
-      "summary": "Steve Rogers is transformed by the super-soldier serum and fights Red Skull and HYDRA, who use the Tesseract as a power source. It ends with Steve frozen in the Arctic and waking up 70 years later."
+      "summary": "Steve Rogers is transformed by the super-soldier serum and fights Red Skull and HYDRA, who use the Tesseract as a power source. It ends with Steve frozen in the Arctic and waking up 70 years later.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "osac",
@@ -68,7 +72,9 @@
       "type": "oneshot",
       "phase": 2,
       "confidence": "ok",
-      "summary": "A year after Steve’s crash, Peggy Carter runs an SSR mission alone and is invited by Howard Stark to lead the new S.H.I.E.L.D."
+      "summary": "A year after Steve’s crash, Peggy Carter runs an SSR mission alone and is invited by Howard Stark to lead the new S.H.I.E.L.D.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "ac",
@@ -81,7 +87,9 @@
       "type": "series",
       "phase": 2,
       "confidence": "tv",
-      "summary": "Peggy works at the SSR after the war, covers Howard Stark’s operations with Edwin Jarvis, and helps found S.H.I.E.L.D."
+      "summary": "Peggy works at the SSR after the war, covers Howard Stark’s operations with Edwin Jarvis, and helps found S.H.I.E.L.D.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "cm",
@@ -94,7 +102,9 @@
       "type": "film",
       "phase": 3,
       "confidence": "ok",
-      "summary": "Vers/Carol Danvers learns she is human, that the Kree manipulated her, and that the Skrulls are refugees. Fury loses an eye and keeps her pager; the Avengers Initiative is named after her call sign."
+      "summary": "Vers/Carol Danvers learns she is human, that the Kree manipulated her, and that the Skrulls are refugees. Fury loses an eye and keeps her pager; the Avengers Initiative is named after her call sign.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "im",
@@ -107,7 +117,9 @@
       "type": "film",
       "phase": 1,
       "confidence": "ok",
-      "summary": "Kidnapped in Afghanistan with shrapnel near his heart, Tony Stark builds the first armor, kills Obadiah Stane and publicly claims the identity. In the post-credits scene Nick Fury pitches the Avengers Initiative."
+      "summary": "Kidnapped in Afghanistan with shrapnel near his heart, Tony Stark builds the first armor, kills Obadiah Stane and publicly claims the identity. In the post-credits scene Nick Fury pitches the Avengers Initiative.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "hulk",
@@ -120,7 +132,9 @@
       "type": "film",
       "phase": 1,
       "confidence": "ok",
-      "summary": "Bruce Banner runs from General Ross and from Emil Blonsky, who becomes the Abomination in Harlem. Samuel Sterns is contaminated by Banner’s blood. Stark appears at the end talking about \"a team\"."
+      "summary": "Bruce Banner runs from General Ross and from Emil Blonsky, who becomes the Abomination in Harlem. Samuel Sterns is contaminated by Banner’s blood. Stark appears at the end talking about \"a team\".",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "im2",
@@ -133,7 +147,9 @@
       "type": "film",
       "phase": 1,
       "confidence": "ok",
-      "summary": "Tony faces palladium poisoning, Ivan Vanko and Justin Hammer. Natasha Romanoff debuts and Rhodey becomes War Machine; the post-credits scene reveals Mjolnir in New Mexico."
+      "summary": "Tony faces palladium poisoning, Ivan Vanko and Justin Hammer. Natasha Romanoff debuts and Rhodey becomes War Machine; the post-credits scene reveals Mjolnir in New Mexico.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "thor",
@@ -146,7 +162,9 @@
       "type": "film",
       "phase": 1,
       "confidence": "ok",
-      "summary": "Thor is banished to Earth and stripped of his power while Loki discovers his Jotun origin and seizes Asgard. In the post-credits scene Fury shows the Tesseract to Erik Selvig under Loki’s influence."
+      "summary": "Thor is banished to Earth and stripped of his power while Loki discovers his Jotun origin and seizes Asgard. In the post-credits scene Fury shows the Tesseract to Erik Selvig under Loki’s influence.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "cons",
@@ -159,7 +177,9 @@
       "type": "oneshot",
       "phase": 1,
       "confidence": "ok",
-      "summary": "Coulson and Sitwell explain how S.H.I.E.L.D. blocked Blonsky’s release by sending Tony Stark to annoy General Ross into refusing."
+      "summary": "Coulson and Sitwell explain how S.H.I.E.L.D. blocked Blonsky’s release by sending Tony Stark to annoy General Ross into refusing.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "hammer",
@@ -172,7 +192,9 @@
       "type": "oneshot",
       "phase": 1,
       "confidence": "ok",
-      "summary": "A short following Coulson on his way to the Mjolnir crater, during the same period as Thor."
+      "summary": "A short following Coulson on his way to the Mjolnir crater, during the same period as Thor.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "avengers",
@@ -185,7 +207,9 @@
       "type": "film",
       "phase": 1,
       "confidence": "ok",
-      "summary": "Loki steals the Tesseract and opens a Chitauri portal over New York. Fury assembles Stark, Rogers, Thor, Banner, Natasha and Clint; the Battle of New York becomes the founding event of the hero era. Thanos is revealed as the backer."
+      "summary": "Loki steals the Tesseract and opens a Chitauri portal over New York. Fury assembles Stark, Rogers, Thor, Banner, Natasha and Clint; the Battle of New York becomes the founding event of the hero era. Thanos is revealed as the backer.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "item47",
@@ -198,7 +222,9 @@
       "type": "oneshot",
       "phase": 1,
       "confidence": "ok",
-      "summary": "A couple uses a Chitauri weapon left behind by the Battle of New York; S.H.I.E.L.D. recovers the gun and recruits them both."
+      "summary": "A couple uses a Chitauri weapon left behind by the Battle of New York; S.H.I.E.L.D. recovers the gun and recruits them both.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "im3",
@@ -211,7 +237,9 @@
       "type": "film",
       "phase": 2,
       "confidence": "ok",
-      "summary": "Tony lives with post-traumatic stress from the Battle of New York. Aldrich Killian and Extremis hide behind a fabricated \"Mandarin\"; in the end Tony destroys his armors and removes the shrapnel."
+      "summary": "Tony lives with post-traumatic stress from the Battle of New York. Aldrich Killian and Extremis hide behind a fabricated \"Mandarin\"; in the end Tony destroys his armors and removes the shrapnel.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "tdw",
@@ -224,7 +252,9 @@
       "type": "film",
       "phase": 2,
       "confidence": "ok",
-      "summary": "Jane Foster hosts the Aether (the Reality Stone) and Malekith wants it for the Convergence. Loki fakes his death and takes the throne disguised as Odin; the Aether is handed to the Collector."
+      "summary": "Jane Foster hosts the Aether (the Reality Stone) and Malekith wants it for the Convergence. Loki fakes his death and takes the throne disguised as Odin; the Aether is handed to the Collector.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "allhail",
@@ -237,7 +267,9 @@
       "type": "oneshot",
       "phase": 2,
       "confidence": "ok",
-      "summary": "Trevor Slattery is interviewed in prison and abducted by the Ten Rings, revealing that a real Mandarin exists."
+      "summary": "Trevor Slattery is interviewed in prison and abducted by the Ten Rings, revealing that a real Mandarin exists.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "ws",
@@ -250,7 +282,9 @@
       "type": "film",
       "phase": 2,
       "confidence": "ok",
-      "summary": "HYDRA is exposed as having grown inside S.H.I.E.L.D. since its founding; Project Insight is destroyed and the agency dismantled. Bucky Barnes returns as the Winter Soldier."
+      "summary": "HYDRA is exposed as having grown inside S.H.I.E.L.D. since its founding; Project Insight is destroyed and the agency dismantled. Bucky Barnes returns as the Winter Soldier.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "gotg",
@@ -263,7 +297,9 @@
       "type": "film",
       "phase": 2,
       "confidence": "ok",
-      "summary": "Peter Quill and an unlikely crew stop Ronan from using the Power Stone against Xandar. The Stone is left with the Nova Corps and the group becomes the Guardians."
+      "summary": "Peter Quill and an unlikely crew stop Ronan from using the Power Stone against Xandar. The Stone is left with the Nova Corps and the group becomes the Guardians.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "gotg2",
@@ -276,7 +312,9 @@
       "type": "film",
       "phase": 2,
       "confidence": "ok",
-      "summary": "A few months later Quill meets his father, the Celestial Ego, and kills him with Yondu’s sacrifice. Mantis and Nebula join the crew; the Sovereign create Adam Warlock."
+      "summary": "A few months later Quill meets his father, the Celestial Ego, and kills him with Yondu’s sacrifice. Mantis and Nebula join the crew; the Sovereign create Adam Warlock.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "aou",
@@ -289,7 +327,9 @@
       "type": "film",
       "phase": 2,
       "confidence": "ok",
-      "summary": "The AI Ultron is born from the Mind Stone in Loki’s scepter and tries to wipe out humanity in Sokovia. Vision is created, Wanda and Pietro Maximoff arrive and Pietro dies. Thanos picks up the Gauntlet."
+      "summary": "The AI Ultron is born from the Mind Stone in Loki’s scepter and tries to wipe out humanity in Sokovia. Vision is created, Wanda and Pietro Maximoff arrive and Pietro dies. Thanos picks up the Gauntlet.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "antman",
@@ -302,7 +342,9 @@
       "type": "film",
       "phase": 2,
       "confidence": "ok",
-      "summary": "Scott Lang inherits Hank Pym’s suit and stops Darren Cross from selling the Yellowjacket tech. First trip into the Quantum Realm — and the first return from it."
+      "summary": "Scott Lang inherits Hank Pym’s suit and stops Darren Cross from selling the Yellowjacket tech. First trip into the Quantum Realm — and the first return from it.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "cw",
@@ -315,7 +357,9 @@
       "type": "film",
       "phase": 3,
       "confidence": "ok",
-      "summary": "The Sokovia Accords split the Avengers in two, and Zemo uses Bucky’s past to break Tony and Steve apart. Black Panther and the MCU Spider-Man debut."
+      "summary": "The Sokovia Accords split the Avengers in two, and Zemo uses Bucky’s past to break Tony and Steve apart. Black Panther and the MCU Spider-Man debut.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "bw",
@@ -328,7 +372,9 @@
       "type": "film",
       "phase": 4,
       "confidence": "ok",
-      "summary": "A fugitive after the Accords, Natasha returns to her Red Room past, brings down Dreykov and frees the Widows alongside Yelena Belova, Melina and Alexei. The official chronology places it between Civil War and Infinity War."
+      "summary": "A fugitive after the Accords, Natasha returns to her Red Room past, brings down Dreykov and frees the Widows alongside Yelena Belova, Melina and Alexei. The official chronology places it between Civil War and Infinity War.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "bp",
@@ -341,7 +387,9 @@
       "type": "film",
       "phase": 3,
       "confidence": "ok",
-      "summary": "T’Challa takes the throne of Wakanda and is challenged by Killmonger, a cousin raised in the United States. In the end Wakanda decides to share its technology with the world."
+      "summary": "T’Challa takes the throne of Wakanda and is challenged by Killmonger, a cousin raised in the United States. In the end Wakanda decides to share its technology with the world.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "hc",
@@ -354,7 +402,9 @@
       "type": "film",
       "phase": 3,
       "confidence": "ok",
-      "summary": "Peter Parker tries to prove himself to Tony Stark while Adrian Toomes becomes the Vulture by recycling Battle of New York salvage. Famous friction point: the film says \"8 years\" since 2012, which contradicts the official chronology."
+      "summary": "Peter Parker tries to prove himself to Tony Stark while Adrian Toomes becomes the Vulture by recycling Battle of New York salvage. Famous friction point: the film says \"8 years\" since 2012, which contradicts the official chronology.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "ds",
@@ -367,7 +417,9 @@
       "type": "film",
       "phase": 3,
       "confidence": "ok",
-      "summary": "A neurosurgeon loses the use of his hands, finds Kamar-Taj, and beats Kaecilius and Dormammu using the Time Stone. Wong and Mordo enter the picture and Strange takes the New York Sanctum."
+      "summary": "A neurosurgeon loses the use of his hands, finds Kamar-Taj, and beats Kaecilius and Dormammu using the Time Stone. Wong and Mordo enter the picture and Strange takes the New York Sanctum.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "rag",
@@ -380,7 +432,9 @@
       "type": "film",
       "phase": 3,
       "confidence": "ok",
-      "summary": "Hela destroys Mjolnir and Asgard; Thor and Hulk escape Sakaar with Valkyrie and Loki. Asgard is sacrificed to defeat Hela and the survivors leave on a ship — intercepted by Thanos."
+      "summary": "Hela destroys Mjolnir and Asgard; Thor and Hulk escape Sakaar with Valkyrie and Loki. Asgard is sacrificed to defeat Hela and the survivors leave on a ship — intercepted by Thanos.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "amw",
@@ -393,7 +447,9 @@
       "type": "film",
       "phase": 3,
       "confidence": "ok",
-      "summary": "Scott, Hope and Hank rescue Janet van Dyne from the Quantum Realm while dealing with Ava Starr (Ghost). In the post-credits scene the Snap erases the Pym family, stranding Scott in the Quantum Realm."
+      "summary": "Scott, Hope and Hank rescue Janet van Dyne from the Quantum Realm while dealing with Ava Starr (Ghost). In the post-credits scene the Snap erases the Pym family, stranding Scott in the Quantum Realm.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "iw",
@@ -406,7 +462,9 @@
       "type": "film",
       "phase": 3,
       "confidence": "ok",
-      "summary": "Thanos gathers all six Infinity Stones, kills Gamora and Vision, and the Snap erases half of all life in the universe. Fury triggers Carol’s pager as he fades."
+      "summary": "Thanos gathers all six Infinity Stones, kills Gamora and Vision, and the Snap erases half of all life in the universe. Fury triggers Carol’s pager as he fades.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "endgame",
@@ -419,7 +477,9 @@
       "type": "film",
       "phase": 3,
       "confidence": "ok",
-      "summary": "Five years after the Snap the Quantum Realm makes the Time Heist possible. Hulk undoes the Snap, Tony Stark dies defeating Thanos and Steve returns the Stones — but the time travel creates branches, including the escape of the 2012 Loki."
+      "summary": "Five years after the Snap the Quantum Realm makes the Time Heist possible. Hulk undoes the Snap, Tony Stark dies defeating Thanos and Steve returns the Stones — but the time travel creates branches, including the escape of the 2012 Loki.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "loki1",
@@ -432,7 +492,9 @@
       "type": "series",
       "phase": 4,
       "confidence": "ok",
-      "summary": "The 2012 Loki is captured by the TVA (Time Variance Authority). With Sylvie he reaches the Citadel at the End of Time; killing He Who Remains releases the branching multiverse."
+      "summary": "The 2012 Loki is captured by the TVA (Time Variance Authority). With Sylvie he reaches the Citadel at the End of Time; killing He Who Remains releases the branching multiverse.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "wv",
@@ -445,7 +507,9 @@
       "type": "series",
       "phase": 4,
       "confidence": "ok",
-      "summary": "Weeks after Endgame, Wanda builds the Westview reality rather than face her grief. Agatha Harkness names her the Scarlet Witch; White Vision is created and Wanda keeps the Darkhold."
+      "summary": "Weeks after Endgame, Wanda builds the Westview reality rather than face her grief. Agatha Harkness names her the Scarlet Witch; White Vision is created and Wanda keeps the Darkhold.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "whatif",
@@ -458,7 +522,9 @@
       "type": "anim",
       "phase": 4,
       "confidence": "alt",
-      "summary": "An anthology in which the Watcher observes realities that diverged from the main timeline. Each episode is its own universe rather than the Sacred Timeline, though the Guardians of the Multiverse carry across seasons."
+      "summary": "An anthology in which the Watcher observes realities that diverged from the main timeline. Each episode is its own universe rather than the Sacred Timeline, though the Guardians of the Multiverse carry across seasons.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "loki2",
@@ -471,7 +537,9 @@
       "type": "series",
       "phase": 5,
       "confidence": "ok",
-      "summary": "The TVA collapses as timelines multiply. Loki takes on the role of holding the branching timelines together, becoming the axis that keeps them alive."
+      "summary": "The TVA collapses as timelines multiply. Loki takes on the role of holding the branching timelines together, becoming the axis that keeps them alive.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "tfatws",
@@ -484,7 +552,9 @@
       "type": "series",
       "phase": 4,
       "confidence": "approx",
-      "summary": "Six months after Endgame: Sam gives up the shield, John Walker is appointed and stripped of the title, and the Flag Smashers react to the chaos of half the population returning. Sam takes up the Captain America mantle."
+      "summary": "Six months after Endgame: Sam gives up the shield, John Walker is appointed and stripped of the title, and the Flag Smashers react to the chaos of half the population returning. Sam takes up the Captain America mantle.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "shang",
@@ -497,7 +567,9 @@
       "type": "film",
       "phase": 4,
       "confidence": "ok",
-      "summary": "Shang-Chi confronts his father Xu Wenwu, millennia-old leader of the Ten Rings, and the Dweller-in-Darkness in Ta Lo. In the post-credits scene Wong, Banner and Carol find the rings predate any record."
+      "summary": "Shang-Chi confronts his father Xu Wenwu, millennia-old leader of the Ten Rings, and the Dweller-in-Darkness in Ta Lo. In the post-credits scene Wong, Banner and Carol find the rings predate any record.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "ffh",
@@ -510,7 +582,9 @@
       "type": "film",
       "phase": 3,
       "confidence": "ok",
-      "summary": "Eight months after Endgame, Peter grieves Stark and is played by Quentin Beck/Mysterio, who fakes threats with holograms. In the end Peter’s identity is exposed to the world."
+      "summary": "Eight months after Endgame, Peter grieves Stark and is played by Quentin Beck/Mysterio, who fakes threats with holograms. In the end Peter’s identity is exposed to the world.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "eternals",
@@ -523,7 +597,9 @@
       "type": "film",
       "phase": 4,
       "confidence": "ok",
-      "summary": "Eternals created by Arishem have lived on Earth for thousands of years to contain the Deviants — and learn their real purpose is to allow the Emergence of the Celestial Tiamut. They stop the birth and Tiamut’s body is left petrified in the ocean."
+      "summary": "Eternals created by Arishem have lived on Earth for thousands of years to contain the Deviants — and learn their real purpose is to allow the Emergence of the Celestial Tiamut. They stop the birth and Tiamut’s body is left petrified in the ocean.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "hawkeye",
@@ -536,7 +612,9 @@
       "type": "series",
       "phase": 4,
       "confidence": "approx",
-      "summary": "Clint Barton tries to bury the Ronin trail and ends up training Kate Bishop. Yelena Belova, Maya Lopez and Wilson Fisk/Kingpin come into play."
+      "summary": "Clint Barton tries to bury the Ronin trail and ends up training Kate Bishop. Yelena Belova, Maya Lopez and Wilson Fisk/Kingpin come into play.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "msm",
@@ -549,7 +627,9 @@
       "type": "series",
       "phase": 4,
       "confidence": "approx",
-      "summary": "Kamala Khan activates a Noor bangle linked to the Clandestines and the Djinn, tied to the history of the Partition of India. In the finale a mutation in her DNA is revealed."
+      "summary": "Kamala Khan activates a Noor bangle linked to the Clandestines and the Djinn, tied to the history of the Partition of India. In the finale a mutation in her DNA is revealed.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "mk",
@@ -562,7 +642,9 @@
       "type": "series",
       "phase": 4,
       "confidence": "approx",
-      "summary": "Marc Spector and Steven Grant share one body in service of the Egyptian god Khonshu, against Arthur Harrow and Ammit. Layla becomes the Scarlet Scarab and a third alter, Jake Lockley, is revealed."
+      "summary": "Marc Spector and Steven Grant share one body in service of the Egyptian god Khonshu, against Arthur Harrow and Ammit. Layla becomes the Scarlet Scarab and a third alter, Jake Lockley, is revealed.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "nwh",
@@ -575,7 +657,9 @@
       "type": "film",
       "phase": 3,
       "confidence": "ok",
-      "summary": "A botched spell by Strange pulls in villains and two other Spider-Men from neighbouring universes. May dies; to close the rift, the entire world forgets who Peter Parker is."
+      "summary": "A botched spell by Strange pulls in villains and two other Spider-Men from neighbouring universes. May dies; to close the rift, the entire world forgets who Peter Parker is.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "mom",
@@ -588,7 +672,9 @@
       "type": "film",
       "phase": 4,
       "confidence": "ok",
-      "summary": "Corrupted by the Darkhold, Wanda hunts America Chavez to take her power to travel between universes. Strange meets the Illuminati of Earth-838 and learns what an incursion is."
+      "summary": "Corrupted by the Darkhold, Wanda hunts America Chavez to take her power to travel between universes. Strange meets the Illuminati of Earth-838 and learns what an incursion is.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "dpw",
@@ -601,7 +687,9 @@
       "type": "film",
       "phase": 5,
       "confidence": "ok",
-      "summary": "The TVA recruits Wade Wilson when his timeline starts to die without its anchor being. With a Logan from another reality he faces Cassandra Nova in the Void — the film formally stitches the Fox library into the MCU multiverse."
+      "summary": "The TVA recruits Wade Wilson when his timeline starts to die without its anchor being. With a Logan from another reality he faces Cassandra Nova in the Void — the film formally stitches the Fox library into the MCU multiverse.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "shulk",
@@ -614,7 +702,9 @@
       "type": "series",
       "phase": 4,
       "confidence": "approx",
-      "summary": "Jennifer Walters gains her cousin Bruce’s powers and practises law for superhuman clients. Abomination and Titania return, Skaar is introduced, and the show plays with the fourth wall."
+      "summary": "Jennifer Walters gains her cousin Bruce’s powers and practises law for superhuman clients. Abomination and Titania return, Skaar is introduced, and the show plays with the fourth wall.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "wbn",
@@ -627,7 +717,9 @@
       "type": "special",
       "phase": 4,
       "confidence": "approx",
-      "summary": "A black-and-white special: monster hunters compete for the Bloodstone and Jack Russell reveals his werewolf nature, siding with Elsa Bloodstone and Man-Thing."
+      "summary": "A black-and-white special: monster hunters compete for the Bloodstone and Jack Russell reveals his werewolf nature, siding with Elsa Bloodstone and Man-Thing.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "wf",
@@ -640,7 +732,9 @@
       "type": "film",
       "phase": 4,
       "confidence": "ok",
-      "summary": "Wakanda mourns T’Challa while facing Namor and the underwater nation of Talokan. Shuri takes up the Black Panther mantle; Riri Williams enters the story."
+      "summary": "Wakanda mourns T’Challa while facing Namor and the underwater nation of Talokan. Shuri takes up the Black Panther mantle; Riri Williams enters the story.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "lt",
@@ -653,7 +747,9 @@
       "type": "film",
       "phase": 4,
       "confidence": "ok",
-      "summary": "Gorr the God Butcher uses the Necrosword to kill gods. Jane Foster wields the reforged Mjolnir as the Mighty Thor and dies; Thor adopts Gorr’s daughter, Love."
+      "summary": "Gorr the God Butcher uses the Necrosword to kill gods. Jane Foster wields the reforged Mjolnir as the Mighty Thor and dies; Thor adopts Gorr’s daughter, Love.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "ghs",
@@ -666,7 +762,9 @@
       "type": "special",
       "phase": 4,
       "confidence": "ok",
-      "summary": "Mantis and Drax kidnap Kevin Bacon as a Christmas present for Quill. The Guardians now live on Knowhere, bought from the Collector; Mantis reveals she is Quill’s half-sister."
+      "summary": "Mantis and Drax kidnap Kevin Bacon as a Christmas present for Quill. The Guardians now live on Knowhere, bought from the Collector; Mantis reveals she is Quill’s half-sister.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "marvels",
@@ -679,7 +777,9 @@
       "type": "film",
       "phase": 5,
       "confidence": "ok",
-      "summary": "Carol Danvers, Kamala Khan and Monica Rambeau have their powers entangled and face Dar-Benn, who tears holes in space to save Hala. In the end Monica crosses into a reality with mutants."
+      "summary": "Carol Danvers, Kamala Khan and Monica Rambeau have their powers entangled and face Dar-Benn, who tears holes in space to save Hala. In the end Monica crosses into a reality with mutants.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "quant",
@@ -692,7 +792,9 @@
       "type": "film",
       "phase": 5,
       "confidence": "ok",
-      "summary": "The Lang family is pulled into the Quantum Realm and finds Kang the Conqueror exiled there. Cassie and Hope help stop him; in the extra scenes a Council of Kangs gathers over the multiverse threat."
+      "summary": "The Lang family is pulled into the Quantum Realm and finds Kang the Conqueror exiled there. Cassie and Hope help stop him; in the extra scenes a Council of Kangs gathers over the multiverse threat.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "si",
@@ -705,7 +807,9 @@
       "type": "series",
       "phase": 5,
       "confidence": "approx",
-      "summary": "Skrulls led by Gravik, tired of waiting for a home, infiltrate governments to provoke a war. Fury and Talos push back; G’iah ends up the most powerful being on the planet."
+      "summary": "Skrulls led by Gravik, tired of waiting for a home, infiltrate governments to provoke a war. Fury and Talos push back; G’iah ends up the most powerful being on the planet.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "gotg3",
@@ -718,7 +822,9 @@
       "type": "film",
       "phase": 5,
       "confidence": "ok",
-      "summary": "Rocket’s origin as a test subject of the High Evolutionary drives the final rescue. The original team disbands and a new roster stays on Knowhere with Rocket in charge."
+      "summary": "Rocket’s origin as a test subject of the High Evolutionary drives the final rescue. The original team disbands and a new roster stays on Knowhere with Rocket in charge.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "echo",
@@ -731,7 +837,9 @@
       "type": "series",
       "phase": 5,
       "confidence": "approx",
-      "summary": "Maya Lopez returns to Oklahoma and to her Choctaw roots while breaking away from Wilson Fisk, her crime-boss uncle. Matt Murdock and the Kingpin carry over from the earlier street-level shows."
+      "summary": "Maya Lopez returns to Oklahoma and to her Choctaw roots while breaking away from Wilson Fisk, her crime-boss uncle. Matt Murdock and the Kingpin carry over from the earlier street-level shows.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "agatha",
@@ -744,7 +852,9 @@
       "type": "series",
       "phase": 5,
       "confidence": "approx",
-      "summary": "Powerless after Westview, Agatha Harkness walks the Witches’ Road with a teenager who turns out to be Billy Maximoff. Rio Vidal is introduced as Death."
+      "summary": "Powerless after Westview, Agatha Harkness walks the Witches’ Road with a teenager who turns out to be Billy Maximoff. Rio Vidal is introduced as Death.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "ironheart",
@@ -757,7 +867,9 @@
       "type": "series",
       "phase": 5,
       "confidence": "approx",
-      "summary": "Riri Williams builds armor in Chicago and gets entangled with Parker Robbins/The Hood, setting technology against magic."
+      "summary": "Riri Williams builds armor in Chicago and gets entangled with Parker Robbins/The Hood, setting technology against magic.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "ddba",
@@ -770,7 +882,9 @@
       "type": "series",
       "phase": 5,
       "confidence": "approx",
-      "summary": "Matt Murdock returns to the courtroom and to the mask while Wilson Fisk is elected mayor of New York, turning their feud into a fight for the city."
+      "summary": "Matt Murdock returns to the courtroom and to the mask while Wilson Fisk is elected mayor of New York, turning their feud into a fight for the city.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "zomb",
@@ -783,7 +897,9 @@
       "type": "anim",
       "phase": 5,
       "confidence": "alt",
-      "summary": "A spin-off of What If…?: a reality where a quantum virus turns heroes into zombies and the survivors try to contain the outbreak."
+      "summary": "A spin-off of What If…?: a reality where a quantum virus turns heroes into zombies and the survivors try to contain the outbreak.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "bnw",
@@ -796,7 +912,9 @@
       "type": "film",
       "phase": 5,
       "confidence": "ok",
-      "summary": "Sam Wilson is already Captain America when Thaddeus Ross becomes President. The fight over adamantium taken from the Celestial Tiamut and the return of Samuel Sterns/The Leader pull threads from The Incredible Hulk and Eternals."
+      "summary": "Sam Wilson is already Captain America when Thaddeus Ross becomes President. The fight over adamantium taken from the Celestial Tiamut and the return of Samuel Sterns/The Leader pull threads from The Incredible Hulk and Eternals.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "thunder",
@@ -809,7 +927,9 @@
       "type": "film",
       "phase": 5,
       "confidence": "ok",
-      "summary": "Valentina Allegra de Fontaine throws Yelena, Bucky, John Walker, Ghost and Red Guardian together as a disposable team, and the Sentry project gets away from her through Bob. The team is re-branded to the public as the \"New Avengers\"."
+      "summary": "Valentina Allegra de Fontaine throws Yelena, Bucky, John Walker, Ghost and Red Guardian together as a disposable team, and the Sentry project gets away from her through Bob. The team is re-branded to the public as the \"New Avengers\".",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "wman",
@@ -822,7 +942,9 @@
       "type": "series",
       "phase": 6,
       "confidence": "approx",
-      "summary": "A series centred on Simon Williams inside the Hollywood machine, picking up the character name-dropped in Guardians Vol. 2 and She-Hulk. It closes the complete timeline published by Disney+."
+      "summary": "A series centred on Simon Williams inside the Hollywood machine, picking up the character name-dropped in Guardians Vol. 2 and She-Hulk. It closes the complete timeline published by Disney+.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "ff4",
@@ -835,7 +957,9 @@
       "type": "film",
       "phase": 6,
       "confidence": "alt",
-      "summary": "Reed Richards, Sue Storm, Johnny Storm and Ben Grimm are already public heroes when Galactus and the Silver Surfer threaten the planet. It takes place in its own universe, not on the MCU’s main Earth."
+      "summary": "Reed Richards, Sue Storm, Johnny Storm and Ben Grimm are already public heroes when Galactus and the Silver Surfer threaten the planet. It takes place in its own universe, not on the MCU’s main Earth.",
+      "context": null,
+      "contextSource": null
     },
     {
       "id": "bnd",
@@ -843,12 +967,14 @@
       "title": "Spider-Man: Brand New Day",
       "inUniverseYear": 2027,
       "inUniverseLabel": "TBA",
-      "releaseDate": "2026-07-29",
+      "releaseDate": "2026-07-31",
       "track": "street",
       "type": "film",
       "phase": 6,
       "confidence": "pending",
-      "summary": null
+      "summary": null,
+      "context": "Directed by Destin Daniel Cretton, with Tom Holland and Zendaya returning alongside Sadie Sink, Jon Bernthal as the Punisher, Mark Ruffalo as Bruce Banner and Michael Mando. No verified account of the plot has been written here yet.",
+      "contextSource": "reported"
     },
     {
       "id": "vq",
@@ -861,7 +987,9 @@
       "type": "series",
       "phase": 6,
       "confidence": "future",
-      "summary": null
+      "summary": null,
+      "context": "Marvel's premise: Vision, rebooted and escaped from those who wanted to weaponise him, is in hiding and consults the AI personas inside his own programming — F.R.I.D.A.Y., E.D.I.T.H., J.A.R.V.I.S. and Ultron. A bounty on his head puts him on the run with Thomas Shepard, a boy who may be his son. Paul Bettany returns, with James Spader as Ultron; Terry Matalas showruns. It closes the arc begun in WandaVision and continued in Agatha All Along.",
+      "contextSource": "official"
     },
     {
       "id": "ddba2",
@@ -869,12 +997,14 @@
       "title": "Daredevil: Born Again (S2)",
       "inUniverseYear": 2027,
       "inUniverseLabel": "TBA",
-      "releaseDate": "2026",
+      "releaseDate": "2026-03-24",
       "track": "street",
       "type": "series",
       "phase": 6,
-      "confidence": "future",
-      "summary": null
+      "confidence": "pending",
+      "summary": null,
+      "context": "Charlie Cox and Vincent D'Onofrio return as Matt Murdock and Wilson Fisk, joined by Krysten Ritter reprising Jessica Jones and Matthew Lillard. No verified account of the season's events has been written here yet.",
+      "contextSource": "reported"
     },
     {
       "id": "doom",
@@ -887,7 +1017,9 @@
       "type": "film",
       "phase": 6,
       "confidence": "future",
-      "summary": null
+      "summary": null,
+      "context": "Marvel's own logline: heroes from three distinct universes are set on a deadly collision course against an existential threat. Directed by Joe and Anthony Russo, with Robert Downey Jr. as Doctor Doom and Chris Evans returning for the first time since Endgame.",
+      "contextSource": "official"
     },
     {
       "id": "sw",
@@ -900,7 +1032,9 @@
       "type": "film",
       "phase": 6,
       "confidence": "future",
-      "summary": null
+      "summary": null,
+      "context": "Announced as the direct follow-up to Doomsday, again directed by the Russo brothers, with Robert Downey Jr. continuing as Doctor Doom. No story details have been released.",
+      "contextSource": "reported"
     }
   ],
   "connections": [

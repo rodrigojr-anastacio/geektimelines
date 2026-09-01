@@ -96,8 +96,11 @@ await check('unreleased entries never render an invented summary', async () => {
   const unreleased = universe.entries.filter((e) => e.confidence === 'future');
   for (const entry of unreleased) {
     const { body } = await get(`/mcu/${entry.slug}`);
-    if (!body.includes('does not invent a plot')) {
-      throw new Error(`${entry.slug} does not show the "no verified summary" notice`);
+    const hasNotice = body.includes('does not invent a plot')
+      || body.includes('not a summary of the finished work')
+      || body.includes('not a plot summary');
+    if (!hasNotice) {
+      throw new Error(`${entry.slug} shows neither a caveat nor labelled context`);
     }
   }
 });
@@ -134,9 +137,32 @@ await check('security headers are set', async () => {
   }
 });
 
-await check('the TMDB attribution is present where artwork is used', async () => {
+await check('the TMDB attribution lives on the credits pages', async () => {
+  for (const path of ['/about', '/sources']) {
+    const body = await expectOk(path);
+    if (!body.includes('not endorsed or certified by TMDB')) {
+      throw new Error(`${path} is missing the TMDB attribution`);
+    }
+  }
+});
+
+await check('the footer does not carry the TMDB boilerplate', async () => {
   const body = await expectOk('/');
-  if (!body.includes('not endorsed or certified by TMDB')) throw new Error('missing TMDB attribution');
+  const footer = body.slice(body.lastIndexOf('<footer'));
+  if (footer.includes('not endorsed or certified by TMDB')) {
+    throw new Error('TMDB boilerplate is still in the footer');
+  }
+});
+
+await check('titles with no summary show context instead of a blank space', async () => {
+  const withContext = universe.entries.filter((e) => e.context);
+  if (!withContext.length) throw new Error('no entries carry context');
+  for (const entry of withContext) {
+    const { body } = await get(`/mcu/${entry.slug}`);
+    if (!body.includes('not a summary of the finished work') && !body.includes('not a plot summary')) {
+      throw new Error(`${entry.slug} does not label its context as unofficial`);
+    }
+  }
 });
 
 console.log(`\n${checks - failures}/${checks} checks passed`);

@@ -28,6 +28,13 @@ export const entrySchema = z.object({
   confidence: z.enum(CONFIDENCE),
   /** Null is meaningful: nothing verified was available, so nothing was written. */
   summary: z.string().nullable(),
+  /**
+   * Background for titles with no summary yet: a studio logline or reported
+   * production facts. Never the plot of a finished work, and always surfaced
+   * to the reader as non-canonical.
+   */
+  context: z.string().nullable().default(null),
+  contextSource: z.enum(['official', 'reported']).nullable().default(null),
 });
 
 export const connectionSchema = z.object({
@@ -59,6 +66,9 @@ export const universeSchema = z
       }
       if (entry.confidence === 'future' && entry.summary) {
         ctx.addIssue({ code: 'custom', message: `${entry.id} is marked unreleased but carries a summary` });
+      }
+      if (entry.context && !entry.contextSource) {
+        ctx.addIssue({ code: 'custom', message: `${entry.id} has context with no source label` });
       }
     }
     for (const link of data.connections) {

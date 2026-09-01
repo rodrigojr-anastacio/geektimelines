@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  const posters = Object.fromEntries(entries.map((entry) => [entry.id, posterUrl(entry.id, 'w185')]));
+  const posters = Object.fromEntries(entries.map((entry) => [entry.id, posterUrl(entry.id, 'w342')]));
 
   return (
     <main>

@@ -25,6 +25,10 @@ const KIND_STYLE: Record<Connection['kind'], { color: string; dash: string; widt
 const TYPE_LABEL: Record<Entry['type'], string> = {
   film: 'Film', series: 'Series', special: 'Special', oneshot: 'One-Shot', anim: 'Animation',
 };
+const CONTEXT_LABEL: Record<'official' | 'reported', string> = {
+  official: 'Studio premise — not a summary of the finished work',
+  reported: 'Reported production details — unofficial, not a plot summary',
+};
 const CONFIDENCE: Record<string, { mark: string; note: string }> = {
   approx: { mark: '≈', note: 'In-universe year not officially confirmed. The placement follows the consensus of chronology guides and the title’s own internal references.' },
   tv: { mark: '≈', note: 'A Marvel Television production. It appears in chronology guides, but its canon status inside Marvel Studios’ official timeline is debated.' },
@@ -56,6 +60,7 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
   const [full, setFull] = useState(false);
   const [pinged, setPinged] = useState<string | null>(null);
   const [hintVisible, setHintVisible] = useState(true);
+  const [legendOpen, setLegendOpen] = useState(true);
 
   const frameRef = useRef<HTMLDivElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
@@ -89,6 +94,10 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
   }, [entries, connections]);
 
   /** Writes the view out, but never past the edges of the canvas. */
+  const markMoving = useCallback((moving: boolean) => {
+    worldRef.current?.classList.toggle(styles.moving, moving);
+  }, []);
+
   const applyView = useCallback(() => {
     const box = stageRef.current?.getBoundingClientRect();
     if (box && box.width > 0 && layoutRef.current.width > 0) {
@@ -104,6 +113,7 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
     const t0 = performance.now();
     if (rafRef.current) cancelAnimationFrame(rafRef.current);
     if (glideRef.current) { cancelAnimationFrame(glideRef.current); glideRef.current = null; }
+    markMoving(true);
     const step = (now: number) => {
       const p = Math.min(1, (now - t0) / ms);
       const e = p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
@@ -114,9 +124,10 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
       };
       applyView();
       if (p < 1) rafRef.current = requestAnimationFrame(step);
+      else markMoving(false);
     };
     rafRef.current = requestAnimationFrame(step);
-  }, [applyView]);
+  }, [applyView, markMoving]);
 
   const frameBox = () => stageRef.current?.getBoundingClientRect() ?? new DOMRect(0, 0, 1000, 700);
 
@@ -194,8 +205,12 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
   useEffect(() => {
     const stage = stageRef.current;
     if (!stage) return;
+    let settle = 0;
     const onWheel = (event: WheelEvent) => {
       event.preventDefault();
+      markMoving(true);
+      window.clearTimeout(settle);
+      settle = window.setTimeout(() => markMoving(false), 180);
       const box = stage.getBoundingClientRect();
       const factor = Math.exp(-event.deltaY * (event.ctrlKey ? 0.01 : 0.0016));
       viewRef.current = zoomAround(
@@ -207,20 +222,24 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
       applyView();
     };
     stage.addEventListener('wheel', onWheel, { passive: false });
-    return () => stage.removeEventListener('wheel', onWheel);
-  }, [applyView]);
+    return () => {
+      stage.removeEventListener('wheel', onWheel);
+      window.clearTimeout(settle);
+    };
+  }, [applyView, markMoving]);
 
   const stopGlide = () => {
     if (glideRef.current) cancelAnimationFrame(glideRef.current);
     glideRef.current = null;
   };
 
+  /** Returns true when a glide actually started. */
   const startGlide = useCallback(() => {
     let velocity = flickVelocity(flickRef.current, performance.now());
-    if (!velocity) return;
+    if (!velocity) return false;
     const step = () => {
       const next = glideStep(velocity!);
-      if (!next) { glideRef.current = null; return; }
+      if (!next) { glideRef.current = null; markMoving(false); return; }
       velocity = next;
       const box = stageRef.current?.getBoundingClientRect();
       const proposed = {
@@ -234,14 +253,15 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
         const pinned = isPinned(proposed, layoutRef.current, box);
         if (pinned.x) velocity.vx = 0;
         if (pinned.y) velocity.vy = 0;
-        if (!velocity.vx && !velocity.vy) { glideRef.current = null; applyView(); return; }
+        if (!velocity.vx && !velocity.vy) { glideRef.current = null; applyView(); markMoving(false); return; }
       }
       viewRef.current = proposed;
       applyView();
       glideRef.current = requestAnimationFrame(step);
     };
     glideRef.current = requestAnimationFrame(step);
-  }, [applyView]);
+    return true;
+  }, [applyView, markMoving]);
 
   useEffect(() => {
     const centreOf = () => centroid([...pointersRef.current.values()]);
@@ -298,7 +318,9 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
         const wasPan = gestureRef.current?.kind === 'pan';
         gestureRef.current = null;
         stageRef.current?.classList.remove(styles.grabbing);
-        if (wasPan && movedRef.current) startGlide();
+        // The layer must be demoted whenever nothing is animating any more,
+        // otherwise it keeps a stale raster and the next zoom looks blurry.
+        if (!(wasPan && movedRef.current && startGlide())) markMoving(false);
         flickRef.current = [];
       } else {
         // A finger lifted mid-pinch: rebase the gesture on whatever is still down.
@@ -321,6 +343,7 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
     if (event.pointerType === 'mouse' && event.button !== 0) return;
     stopGlide();
     if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    markMoving(true);
     pointersRef.current.set(event.pointerId, { x: event.clientX, y: event.clientY });
     if (pointersRef.current.size === 1) movedRef.current = false;
     flickRef.current = [];
@@ -573,6 +596,7 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
                 key={phase}
                 data-on={phases.has(phase)}
                 title={`Toggle phase ${phase}`}
+                aria-label={`Toggle phase ${phase}`}
                 onClick={() =>
                   setPhases((current) => {
                     const next = new Set(current);
@@ -581,7 +605,7 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
                   })
                 }
               >
-                {phase}
+                P{phase}
               </button>
             ))}
           </div>
@@ -594,8 +618,16 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
           />
         </div>
 
-        <div className={`${styles.hud} ${styles.legend}`}>
-          <h4>Connections</h4>
+        <div className={`${styles.hud} ${styles.legend}`} data-collapsed={legendOpen ? 'false' : 'true'}>
+          <button
+            className={styles.legendHead}
+            onClick={() => setLegendOpen((open) => !open)}
+            aria-expanded={legendOpen}
+          >
+            <h4>Connections</h4>
+            <span className={styles.legendToggle}>{legendOpen ? '−' : '+'}</span>
+          </button>
+          {legendOpen && <div className={styles.legendBody}>
           {(Object.keys(KIND_LABEL) as Connection['kind'][]).map((kind) => (
             <button
               key={kind}
@@ -620,6 +652,7 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
               {KIND_LABEL[kind]}
             </button>
           ))}
+          </div>}
         </div>
 
         <div className={`${styles.hud} ${styles.zoombox}`}>
@@ -658,6 +691,11 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
                 </div>
                 {selectedEntry.summary ? (
                   <p className={styles.summary}>{selectedEntry.summary}</p>
+                ) : selectedEntry.context && selectedEntry.contextSource ? (
+                  <div className={styles.context}>
+                    <span className={styles.contextLabel}>{CONTEXT_LABEL[selectedEntry.contextSource]}</span>
+                    <p className={styles.summary}>{selectedEntry.context}</p>
+                  </div>
                 ) : (
                   <p className={styles.summary} style={{ color: 'var(--ink-45)' }}>
                     No verified summary yet. Nothing was written here so the map does not invent a story.

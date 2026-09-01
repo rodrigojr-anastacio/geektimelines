@@ -74,7 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </p>
               <p className="footer-fine">
                 Unofficial fan project. Marvel, MCU and all related titles are trademarks of Marvel /
-                The Walt Disney Company. No affiliation. {SITE.tmdbAttribution}
+                The Walt Disney Company. No affiliation.
               </p>
             </div>
             <div>

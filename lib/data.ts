@@ -77,6 +77,11 @@ export const CONFIDENCE_NOTE: Record<string, { mark: string; label: string; note
   },
 };
 
+export const CONTEXT_LABEL: Record<'official' | 'reported', string> = {
+  official: 'Studio premise — not a summary of the finished work',
+  reported: 'Reported production details — unofficial, not a plot summary',
+};
+
 const MONTHS = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 /** "2019-04-24" -> "Apr 2019"; "2026" -> "2026"; null -> "TBA". */

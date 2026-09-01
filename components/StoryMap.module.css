@@ -38,7 +38,11 @@
   overscroll-behavior: contain;
 }
 .stage.grabbing { cursor: grabbing; }
-.world { position: absolute; top: 0; left: 0; transform-origin: 0 0; will-change: transform; }
+.world { position: absolute; top: 0; left: 0; transform-origin: 0 0; }
+/* Promoting the layer keeps gestures smooth, but a promoted layer is rasterised
+   at the scale it was promoted at — so zooming stretches that bitmap and looks
+   blurry until it re-rasterises. Promote only while a gesture is running. */
+.world.moving { will-change: transform; }
 .edges { position: absolute; top: 0; left: 0; overflow: visible; pointer-events: none; transition: opacity .2s; }
 .edges path { fill: none; stroke-linecap: round; pointer-events: stroke; transition: opacity .18s, stroke-width .18s; }
 
@@ -170,9 +174,15 @@
 }
 .mapSearch:focus { border-color: var(--ink-45); }
 
-.legend { bottom: 14px; left: 14px; background: var(--surface); border: 1px solid var(--rule); padding: 11px 13px; }
+.legend { bottom: 14px; left: 14px; background: var(--surface); border: 1px solid var(--rule); padding: 9px 12px 11px; }
+.legendHead { display: flex; align-items: center; gap: 12px; width: 100%; background: none; border: 0;
+  padding: 0; cursor: pointer; font: inherit; }
 .legend h4 { font-family: var(--font-mono), monospace; font-size: 9px; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--ink-45); font-weight: 400; margin: 0 0 8px; }
+  text-transform: uppercase; color: var(--ink-45); font-weight: 400; margin: 0; flex: 1; text-align: left; }
+.legendToggle { font-family: var(--font-mono), monospace; font-size: 11px; color: var(--ink-25); line-height: 1; }
+.legendHead:hover .legendToggle, .legendHead:hover h4 { color: var(--ink); }
+.legendBody { margin-top: 8px; }
+.legend[data-collapsed='true'] { padding: 8px 12px; }
 .legendRow { display: flex; align-items: center; gap: 9px; font-size: 11.5px; color: var(--ink-70);
   background: none; border: 0; padding: 3px 0; cursor: pointer; font-family: inherit; width: 100%; }
 .legendRow[data-off='true'] { opacity: .3; }
@@ -212,6 +222,9 @@
   color: var(--ink-45); border: 1px solid var(--rule); padding: 3px 8px; }
 .summary { font-family: var(--font-display), Georgia, serif; font-size: 15px; line-height: 1.58;
   font-variation-settings: 'SOFT' 0, 'WONK' 0, 'opsz' 16; color: var(--ink-70); margin: 0; }
+.context { border-left: 2px solid var(--accent-soft); padding-left: 12px; margin: 0 0 4px; }
+.contextLabel { display: block; font-family: var(--font-mono), monospace; font-size: 8.5px;
+  letter-spacing: 0.11em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
 .caveat { clear: both; font-size: 12px; line-height: 1.5; color: var(--ink-45);
   border-left: 2px solid var(--rule); padding: 8px 0 8px 11px; margin: 16px 0 0; }
 .sectionLabel { display: flex; align-items: center; gap: 10px; margin: 26px 0 9px;

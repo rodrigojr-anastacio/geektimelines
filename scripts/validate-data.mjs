@@ -24,6 +24,12 @@ for (const entry of universe.entries) {
     problems.push(`${entry.id}: malformed releaseDate ${entry.releaseDate}`);
   }
   if (!posters.entries[entry.id]) problems.push(`${entry.id}: no TMDB match in posters.json`);
+  if (entry.context && !['official', 'reported'].includes(entry.contextSource)) {
+    problems.push(`${entry.id}: context without a valid source label`);
+  }
+  if (!entry.summary && !entry.context && entry.confidence !== 'future' && entry.confidence !== 'pending') {
+    problems.push(`${entry.id}: no summary and no context, but not flagged as pending/unreleased`);
+  }
 }
 
 for (const link of universe.connections) {
