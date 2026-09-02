@@ -47,7 +47,8 @@
       "contextSource": null,
       "inUniverseStart": -1260,
       "inUniverseEnd": -1260,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "cap1",
@@ -101,7 +102,8 @@
           "kind": "epilogue",
           "source": "Popverse MCU timeline"
         }
-      ]
+      ],
+      "offAxis": false
     },
     {
       "id": "osac",
@@ -119,7 +121,8 @@
       "contextSource": null,
       "inUniverseStart": 1946,
       "inUniverseEnd": 1946,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "ac",
@@ -137,7 +140,8 @@
       "contextSource": null,
       "inUniverseStart": 1946,
       "inUniverseEnd": 1947,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "cm",
@@ -170,7 +174,8 @@
           "kind": "main",
           "source": "Popverse MCU timeline"
         }
-      ]
+      ],
+      "offAxis": false
     },
     {
       "id": "im",
@@ -203,7 +208,8 @@
           "kind": "main",
           "source": "Popverse MCU timeline"
         }
-      ]
+      ],
+      "offAxis": false
     },
     {
       "id": "hulk",
@@ -236,7 +242,8 @@
           "kind": "main",
           "source": "Marvel official timeline (2023)"
         }
-      ]
+      ],
+      "offAxis": false
     },
     {
       "id": "im2",
@@ -269,7 +276,8 @@
           "kind": "main",
           "source": "Marvel official timeline (2023)"
         }
-      ]
+      ],
+      "offAxis": false
     },
     {
       "id": "thor",
@@ -302,7 +310,8 @@
           "kind": "main",
           "source": "Marvel official timeline (2023)"
         }
-      ]
+      ],
+      "offAxis": false
     },
     {
       "id": "cons",
@@ -320,7 +329,8 @@
       "contextSource": null,
       "inUniverseStart": 2010,
       "inUniverseEnd": 2010,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "hammer",
@@ -338,7 +348,8 @@
       "contextSource": null,
       "inUniverseStart": 2010,
       "inUniverseEnd": 2010,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "avengers",
@@ -356,7 +367,8 @@
       "contextSource": null,
       "inUniverseStart": 2012,
       "inUniverseEnd": 2012,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "item47",
@@ -374,7 +386,8 @@
       "contextSource": null,
       "inUniverseStart": 2012,
       "inUniverseEnd": 2012,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "im3",
@@ -407,7 +420,8 @@
           "kind": "main",
           "source": "Popverse MCU timeline"
         }
-      ]
+      ],
+      "offAxis": false
     },
     {
       "id": "tdw",
@@ -425,7 +439,8 @@
       "contextSource": null,
       "inUniverseStart": 2013,
       "inUniverseEnd": 2013,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "allhail",
@@ -443,7 +458,8 @@
       "contextSource": null,
       "inUniverseStart": 2013,
       "inUniverseEnd": 2014,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "ws",
@@ -469,7 +485,8 @@
           "kind": "main",
           "source": "Marvel official timeline (2023)"
         }
-      ]
+      ],
+      "offAxis": false
     },
     {
       "id": "gotg",
@@ -502,7 +519,8 @@
           "kind": "main",
           "source": "Marvel official timeline (2023)"
         }
-      ]
+      ],
+      "offAxis": false
     },
     {
       "id": "gotg2",
@@ -535,7 +553,8 @@
           "kind": "main",
           "source": "Marvel official timeline (2023)"
         }
-      ]
+      ],
+      "offAxis": false
     },
     {
       "id": "aou",
@@ -553,7 +572,8 @@
       "contextSource": null,
       "inUniverseStart": 2015,
       "inUniverseEnd": 2015,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "antman",
@@ -593,7 +613,8 @@
           "kind": "main",
           "source": "Marvel official timeline (2023)"
         }
-      ]
+      ],
+      "offAxis": false
     },
     {
       "id": "cw",
@@ -626,7 +647,8 @@
           "kind": "main",
           "source": "Marvel official timeline (2023)"
         }
-      ]
+      ],
+      "offAxis": false
     },
     {
       "id": "bw",
@@ -644,7 +666,8 @@
       "contextSource": null,
       "inUniverseStart": 2016,
       "inUniverseEnd": 2016,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "bp",
@@ -677,7 +700,8 @@
           "kind": "main",
           "source": "Marvel official timeline (2023)"
         }
-      ]
+      ],
+      "offAxis": false
     },
     {
       "id": "hc",
@@ -710,7 +734,8 @@
           "kind": "main",
           "source": "Marvel official timeline (2023)"
         }
-      ]
+      ],
+      "offAxis": false
     },
     {
       "id": "ds",
@@ -743,7 +768,8 @@
           "kind": "main",
           "source": "Popverse MCU timeline"
         }
-      ]
+      ],
+      "offAxis": false
     },
     {
       "id": "rag",
@@ -761,7 +787,8 @@
       "contextSource": null,
       "inUniverseStart": 2017,
       "inUniverseEnd": 2017,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "amw",
@@ -779,7 +806,8 @@
       "contextSource": null,
       "inUniverseStart": 2018,
       "inUniverseEnd": 2018,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "iw",
@@ -812,7 +840,8 @@
           "kind": "main",
           "source": "Marvel official timeline (2023)"
         }
-      ]
+      ],
+      "offAxis": false
     },
     {
       "id": "endgame",
@@ -880,7 +909,8 @@
           "kind": "main",
           "source": "Popverse MCU timeline"
         }
-      ]
+      ],
+      "offAxis": false
     },
     {
       "id": "loki1",
@@ -913,7 +943,8 @@
           "kind": "timeTravel",
           "source": "Popverse MCU timeline"
         }
-      ]
+      ],
+      "offAxis": true
     },
     {
       "id": "wv",
@@ -953,7 +984,8 @@
           "kind": "main",
           "source": "Marvel official timeline (2023)"
         }
-      ]
+      ],
+      "offAxis": false
     },
     {
       "id": "whatif",
@@ -971,7 +1003,8 @@
       "contextSource": null,
       "inUniverseStart": 2023,
       "inUniverseEnd": 2023,
-      "events": []
+      "events": [],
+      "offAxis": true
     },
     {
       "id": "loki2",
@@ -989,7 +1022,8 @@
       "contextSource": null,
       "inUniverseStart": 2026,
       "inUniverseEnd": 2026,
-      "events": []
+      "events": [],
+      "offAxis": true
     },
     {
       "id": "tfatws",
@@ -1007,7 +1041,8 @@
       "contextSource": null,
       "inUniverseStart": 2024,
       "inUniverseEnd": 2024,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "shang",
@@ -1047,7 +1082,8 @@
           "kind": "main",
           "source": "Marvel official timeline (2023)"
         }
-      ]
+      ],
+      "offAxis": false
     },
     {
       "id": "ffh",
@@ -1065,7 +1101,8 @@
       "contextSource": null,
       "inUniverseStart": 2024,
       "inUniverseEnd": 2024,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "eternals",
@@ -1126,7 +1163,8 @@
           "kind": "main",
           "source": "Marvel official timeline (2023)"
         }
-      ]
+      ],
+      "offAxis": false
     },
     {
       "id": "hawkeye",
@@ -1144,7 +1182,8 @@
       "contextSource": null,
       "inUniverseStart": 2024,
       "inUniverseEnd": 2024,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "msm",
@@ -1184,7 +1223,8 @@
           "kind": "main",
           "source": "Wikipedia MCU timeline"
         }
-      ]
+      ],
+      "offAxis": false
     },
     {
       "id": "mk",
@@ -1217,7 +1257,8 @@
           "kind": "main",
           "source": "Wikipedia MCU timeline"
         }
-      ]
+      ],
+      "offAxis": false
     },
     {
       "id": "nwh",
@@ -1235,7 +1276,8 @@
       "contextSource": null,
       "inUniverseStart": 2024,
       "inUniverseEnd": 2024,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "mom",
@@ -1253,14 +1295,15 @@
       "contextSource": null,
       "inUniverseStart": 2024,
       "inUniverseEnd": 2024,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "dpw",
       "slug": "deadpool-and-wolverine",
       "title": "Deadpool & Wolverine",
-      "inUniverseYear": 2026,
-      "inUniverseLabel": "2026 ≈ · Earth-10005 and the Void",
+      "inUniverseYear": 2024,
+      "inUniverseLabel": "2024 ≈ · Earth-10005 and the Void",
       "releaseDate": "2024-07-24",
       "track": "mystic",
       "type": "film",
@@ -1269,9 +1312,10 @@
       "summary": "The TVA recruits Wade Wilson when his timeline starts to die without its anchor being. With a Logan from another reality he faces Cassandra Nova in the Void — the film formally stitches the Fox library into the MCU multiverse.",
       "context": null,
       "contextSource": null,
-      "inUniverseStart": 2026,
-      "inUniverseEnd": 2026,
-      "events": []
+      "inUniverseStart": 2024,
+      "inUniverseEnd": 2024,
+      "events": [],
+      "offAxis": true
     },
     {
       "id": "shulk",
@@ -1289,7 +1333,8 @@
       "contextSource": null,
       "inUniverseStart": 2025,
       "inUniverseEnd": 2025,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "wbn",
@@ -1307,7 +1352,8 @@
       "contextSource": null,
       "inUniverseStart": 2025,
       "inUniverseEnd": 2025,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "wf",
@@ -1340,7 +1386,8 @@
           "kind": "main",
           "source": "Marvel official timeline (2023)"
         }
-      ]
+      ],
+      "offAxis": false
     },
     {
       "id": "lt",
@@ -1358,7 +1405,8 @@
       "contextSource": null,
       "inUniverseStart": 2025,
       "inUniverseEnd": 2025,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "ghs",
@@ -1376,7 +1424,8 @@
       "contextSource": null,
       "inUniverseStart": 2025,
       "inUniverseEnd": 2025,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "marvels",
@@ -1394,7 +1443,8 @@
       "contextSource": null,
       "inUniverseStart": 2026,
       "inUniverseEnd": 2026,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "quant",
@@ -1412,7 +1462,8 @@
       "contextSource": null,
       "inUniverseStart": 2026,
       "inUniverseEnd": 2026,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "si",
@@ -1430,7 +1481,8 @@
       "contextSource": null,
       "inUniverseStart": 2026,
       "inUniverseEnd": 2026,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "gotg3",
@@ -1448,7 +1500,8 @@
       "contextSource": null,
       "inUniverseStart": 2026,
       "inUniverseEnd": 2026,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "echo",
@@ -1466,7 +1519,8 @@
       "contextSource": null,
       "inUniverseStart": 2025,
       "inUniverseEnd": 2025,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "agatha",
@@ -1484,7 +1538,8 @@
       "contextSource": null,
       "inUniverseStart": 2026,
       "inUniverseEnd": 2026,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "ironheart",
@@ -1502,14 +1557,15 @@
       "contextSource": null,
       "inUniverseStart": 2025,
       "inUniverseEnd": 2025,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "ddba",
       "slug": "daredevil-born-again-s1",
       "title": "Daredevil: Born Again (S1)",
       "inUniverseYear": 2026,
-      "inUniverseLabel": "2026 ≈",
+      "inUniverseLabel": "2026–2027 ≈",
       "releaseDate": "2025-03",
       "track": "street",
       "type": "series",
@@ -1519,8 +1575,31 @@
       "context": null,
       "contextSource": null,
       "inUniverseStart": 2026,
-      "inUniverseEnd": 2026,
-      "events": []
+      "inUniverseEnd": 2027,
+      "events": [
+        {
+          "year": 2025,
+          "label": "Late 2025",
+          "what": "The prologue, before the year-long jump",
+          "kind": "flashback",
+          "source": "Wikipedia MCU timeline"
+        },
+        {
+          "year": 2026,
+          "label": "Late 2026",
+          "what": "Fisk takes office as mayor of New York",
+          "kind": "main",
+          "source": "Wikipedia MCU timeline"
+        },
+        {
+          "year": 2027,
+          "label": "Early 2027",
+          "what": "The season plays out and closes",
+          "kind": "main",
+          "source": "Wikipedia MCU timeline"
+        }
+      ],
+      "offAxis": false
     },
     {
       "id": "zomb",
@@ -1538,7 +1617,8 @@
       "contextSource": null,
       "inUniverseStart": 2023,
       "inUniverseEnd": 2023,
-      "events": []
+      "events": [],
+      "offAxis": true
     },
     {
       "id": "bnw",
@@ -1556,7 +1636,8 @@
       "contextSource": null,
       "inUniverseStart": 2027,
       "inUniverseEnd": 2027,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "thunder",
@@ -1574,7 +1655,8 @@
       "contextSource": null,
       "inUniverseStart": 2027,
       "inUniverseEnd": 2027,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "wman",
@@ -1592,7 +1674,8 @@
       "contextSource": null,
       "inUniverseStart": 2027,
       "inUniverseEnd": 2027,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "ff4",
@@ -1610,7 +1693,8 @@
       "contextSource": null,
       "inUniverseStart": 2027,
       "inUniverseEnd": 2027,
-      "events": []
+      "events": [],
+      "offAxis": true
     },
     {
       "id": "bnd",
@@ -1628,7 +1712,8 @@
       "contextSource": "reported",
       "inUniverseStart": 2028,
       "inUniverseEnd": 2028,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "vq",
@@ -1646,7 +1731,8 @@
       "contextSource": "official",
       "inUniverseStart": 2027,
       "inUniverseEnd": 2027,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "ddba2",
@@ -1664,7 +1750,8 @@
       "contextSource": "reported",
       "inUniverseStart": 2027,
       "inUniverseEnd": 2027,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "doom",
@@ -1682,7 +1769,8 @@
       "contextSource": "official",
       "inUniverseStart": 2028,
       "inUniverseEnd": 2028,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "sw",
@@ -1700,7 +1788,8 @@
       "contextSource": "reported",
       "inUniverseStart": 2029,
       "inUniverseEnd": 2029,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "groot",
@@ -1718,7 +1807,8 @@
       "contextSource": null,
       "inUniverseStart": 2014,
       "inUniverseEnd": 2014,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "punisher",
@@ -1736,7 +1826,8 @@
       "contextSource": null,
       "inUniverseStart": 2027,
       "inUniverseEnd": 2027,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "dd1",
@@ -1754,7 +1845,8 @@
       "contextSource": null,
       "inUniverseStart": 2015,
       "inUniverseEnd": 2015,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "jj1",
@@ -1772,7 +1864,8 @@
       "contextSource": null,
       "inUniverseStart": 2015,
       "inUniverseEnd": 2015,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "dd2",
@@ -1790,7 +1883,8 @@
       "contextSource": null,
       "inUniverseStart": 2015,
       "inUniverseEnd": 2015,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "lc1",
@@ -1808,7 +1902,8 @@
       "contextSource": null,
       "inUniverseStart": 2015,
       "inUniverseEnd": 2015,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "if1",
@@ -1826,7 +1921,8 @@
       "contextSource": null,
       "inUniverseStart": 2016,
       "inUniverseEnd": 2016,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "def",
@@ -1844,7 +1940,8 @@
       "contextSource": null,
       "inUniverseStart": 2016,
       "inUniverseEnd": 2016,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "pun1",
@@ -1862,7 +1959,8 @@
       "contextSource": null,
       "inUniverseStart": 2016,
       "inUniverseEnd": 2016,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "jj2",
@@ -1880,7 +1978,8 @@
       "contextSource": null,
       "inUniverseStart": 2017,
       "inUniverseEnd": 2017,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "lc2",
@@ -1898,7 +1997,8 @@
       "contextSource": null,
       "inUniverseStart": 2017,
       "inUniverseEnd": 2017,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "if2",
@@ -1916,7 +2016,8 @@
       "contextSource": null,
       "inUniverseStart": 2017,
       "inUniverseEnd": 2017,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "dd3",
@@ -1934,7 +2035,8 @@
       "contextSource": null,
       "inUniverseStart": 2017,
       "inUniverseEnd": 2017,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "pun2",
@@ -1952,7 +2054,8 @@
       "contextSource": null,
       "inUniverseStart": 2018,
       "inUniverseEnd": 2018,
-      "events": []
+      "events": [],
+      "offAxis": false
     },
     {
       "id": "jj3",
@@ -1970,7 +2073,8 @@
       "contextSource": null,
       "inUniverseStart": 2018,
       "inUniverseEnd": 2018,
-      "events": []
+      "events": [],
+      "offAxis": false
     }
   ],
   "connections": [

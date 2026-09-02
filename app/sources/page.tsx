@@ -73,6 +73,16 @@ export default function SourcesPage() {
         source does not get written down.
       </p>
 
+      <h2>Titles that sit off the year axis</h2>
+      <p>
+        Some stories do not happen in a year at all. <em>Loki</em> runs outside time at the TVA,{' '}
+        <em>What If…?</em> and <em>Marvel Zombies</em> are other universes, and{' '}
+        <em>Deadpool &amp; Wolverine</em> takes place largely on Earth-10005 and in the Void. Marvel&rsquo;s
+        official list still gives them a position, but it is a narrative position rather than a
+        chronological one. These are marked ✦ and their placement on the map is a reading convenience,
+        not a claim about when they happen.
+      </p>
+
       <h2>What is never invented</h2>
       <p>
         Summaries describe only what happens on screen. A title that has been announced but has no

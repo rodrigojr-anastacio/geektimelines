@@ -63,6 +63,13 @@ export const entrySchema = z.object({
    */
   inUniverseStart: z.number().int(),
   inUniverseEnd: z.number().int(),
+  /**
+   * True when the story does not sit on the main year axis at all: outside time
+   * at the TVA, or in another universe. Marvel's official list still orders
+   * these, but it orders them narratively, so their anchors must not be checked
+   * against that sequence.
+   */
+  offAxis: z.boolean().default(false),
   events: z.array(eventSchema).default([]),
 });
 

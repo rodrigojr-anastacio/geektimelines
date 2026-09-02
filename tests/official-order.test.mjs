@@ -27,9 +27,20 @@ test('every id in the official order exists in the dataset', () => {
   assert.deepEqual(missing, [], `unknown ids: ${missing.join(', ')}`);
 });
 
+test('titles that sit off the year axis are marked as such', () => {
+  // Marvel's list still orders these, but narratively: Deadpool & Wolverine is
+  // placed late because it is mostly in other timelines, not because it happens
+  // late. Checking their anchors against that sequence produced a real error.
+  const expected = ['dpw', 'ff4', 'loki1', 'loki2', 'whatif', 'zomb'];
+  const actual = universe.entries.filter((e) => e.offAxis).map((e) => e.id).sort();
+  assert.deepEqual(actual, expected, 'the set of off-axis titles changed');
+});
+
 test('our in-universe years reproduce Marvel’s official ordering', () => {
+  // Off-axis titles are exempt: see the test above.
   const rank = new Map(OFFICIAL_ORDER.map((id, i) => [id, i]));
-  const sorted = [...OFFICIAL_ORDER].sort((a, b) => {
+  const onAxis = OFFICIAL_ORDER.filter((id) => !byId.get(id).offAxis);
+  const sorted = [...onAxis].sort((a, b) => {
     const ya = byId.get(a).inUniverseStart;
     const yb = byId.get(b).inUniverseStart;
     return ya - yb || rank.get(a) - rank.get(b);
