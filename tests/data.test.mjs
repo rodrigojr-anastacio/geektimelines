@@ -92,12 +92,15 @@ test('The Consultant is an epilogue to The Incredible Hulk, not a setup for it',
   assert.equal(edge.to, 'cons');
 });
 
-test('Loki shows its causal anchor as well as sitting outside time', () => {
-  for (const id of ['loki1', 'loki2']) {
+test('both Loki seasons show a causal anchor as well as sitting outside time', () => {
+  // The two seasons do not share an anchor: S1 follows Endgame, S2 follows
+  // Quantumania, and Marvel's official order places S2 after The Marvels.
+  const anchors = { loki1: 2023, loki2: 2026 };
+  for (const [id, year] of Object.entries(anchors)) {
     const entry = universe.entries.find((e) => e.id === id);
     assert.match(entry.inUniverseLabel, /outside of time/i, `${id} lost the out-of-time note`);
-    assert.match(entry.inUniverseLabel, /2023/, `${id} hides the year it is anchored to`);
-    assert.equal(entry.inUniverseStart, 2023, `${id} is not anchored after Endgame`);
+    assert.match(entry.inUniverseLabel, new RegExp(String(year)), `${id} hides its anchor year`);
+    assert.equal(entry.inUniverseStart, year, `${id} is anchored to the wrong year`);
   }
 });
 

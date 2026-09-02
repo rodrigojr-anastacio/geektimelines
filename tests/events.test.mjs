@@ -13,6 +13,8 @@ const ALLOWED_SOURCES = new Set([
   'Shown on screen',
   'Popverse MCU timeline',
   'Marvel official timeline (2023)',
+  // Used where the official book cannot reach: it was published in October 2023.
+  'Wikipedia MCU timeline',
 ]);
 
 test('every entry declares a span', () => {

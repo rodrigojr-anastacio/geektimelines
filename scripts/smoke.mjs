@@ -242,7 +242,12 @@ await check('the time-travel entries surface every destination', async () => {
 
 await check('no event ever renders without provenance', async () => {
   const sources = new Set(universe.entries.flatMap((e) => e.events.map((v) => v.source)));
-  const allowed = ['Shown on screen', 'Popverse MCU timeline', 'Marvel official timeline (2023)'];
+  const allowed = [
+    'Shown on screen',
+    'Popverse MCU timeline',
+    'Marvel official timeline (2023)',
+    'Wikipedia MCU timeline',
+  ];
   for (const source of sources) {
     if (!allowed.includes(source)) throw new Error(`unvetted source in the data: ${source}`);
   }
