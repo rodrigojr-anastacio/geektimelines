@@ -670,6 +670,26 @@
       "tmdbDate": "2027-12-15",
       "posterPath": "/f0YBuh4hyiAheXhh4JnJWoKi9g5.jpg",
       "backdropPath": "/rytc6Lf4447C0CDncwFa4gxe0vY.jpg"
+    },
+    "groot": {
+      "id": "groot",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 232125,
+      "tmdbTitle": "I Am Groot",
+      "tmdbDate": "2022-08-10",
+      "posterPath": "/3QfQYECgu6DX5UUWCBvv1Fl0BAJ.jpg",
+      "backdropPath": "/bAnHzJ6AMhOhnV3C0kTxkpCqpgM.jpg"
+    },
+    "punisher": {
+      "id": "punisher",
+      "resolved": true,
+      "tmdbType": "movie",
+      "tmdbId": 1439930,
+      "tmdbTitle": "The Punisher: One Last Kill",
+      "tmdbDate": "2026-05-12",
+      "posterPath": "/qQclTgLMDvGBuUBFGHRipxkEwWR.jpg",
+      "backdropPath": "/qO55CD8tgVL1T4WKn6zYFFiD6lL.jpg"
     }
   }
 }

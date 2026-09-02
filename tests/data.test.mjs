@@ -79,3 +79,38 @@ test('the graph is connected enough to be worth drawing', () => {
   // Some entries legitimately stand alone, but most should be wired in.
   assert.ok(orphans.length < universe.entries.length * 0.25, `too many orphans: ${orphans.map((o) => o.id)}`);
 });
+
+// ---- regressions reported by readers ------------------------------------
+
+test('The Consultant is an epilogue to The Incredible Hulk, not a setup for it', () => {
+  const edges = universe.connections.filter((c) => c.from === 'cons' || c.to === 'cons');
+  assert.ok(edges.length > 0, 'The Consultant lost its connection');
+  const edge = edges.find((c) => c.from === 'hulk' || c.to === 'hulk');
+  assert.ok(edge, 'The Consultant is no longer linked to The Incredible Hulk');
+  assert.equal(edge.from, 'hulk', 'the arrow points backwards: the short happens after the film');
+  assert.equal(edge.to, 'cons');
+});
+
+test('Loki shows its causal anchor as well as sitting outside time', () => {
+  for (const id of ['loki1', 'loki2']) {
+    const entry = universe.entries.find((e) => e.id === id);
+    assert.match(entry.inUniverseLabel, /outside of time/i, `${id} lost the out-of-time note`);
+    assert.match(entry.inUniverseLabel, /2023/, `${id} hides the year it is anchored to`);
+    assert.equal(entry.inUniverseStart, 2023, `${id} is not anchored after Endgame`);
+  }
+});
+
+test('Loki lands after Endgame on the in-universe axis', () => {
+  const endgame = universe.entries.find((e) => e.id === 'endgame');
+  const loki = universe.entries.find((e) => e.id === 'loki1');
+  assert.ok(loki.inUniverseStart >= endgame.inUniverseEnd, 'Loki no longer follows the Time Heist');
+});
+
+test('the animated shorts and specials Marvel counts are present', () => {
+  for (const slug of ['i-am-groot', 'the-punisher-one-last-kill']) {
+    assert.ok(
+      universe.entries.some((e) => e.slug === slug),
+      `${slug} is missing from the timeline`,
+    );
+  }
+});

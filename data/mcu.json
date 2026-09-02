@@ -325,7 +325,7 @@
     {
       "id": "hammer",
       "slug": "one-shot-a-funny-thing-happened",
-      "title": "One-Shot: A Funny Thing Happened…",
+      "title": "One-Shot: A Funny Thing Happened on the Way to Thor’s Hammer",
       "inUniverseYear": 2010,
       "inUniverseLabel": "2010",
       "releaseDate": "2011-10-25",
@@ -887,7 +887,7 @@
       "slug": "loki-s1",
       "title": "Loki (S1)",
       "inUniverseYear": 2023,
-      "inUniverseLabel": "outside of time",
+      "inUniverseLabel": "2023 · outside of time",
       "releaseDate": "2021-06",
       "track": "mystic",
       "type": "series",
@@ -978,7 +978,7 @@
       "slug": "loki-s2",
       "title": "Loki (S2)",
       "inUniverseYear": 2023,
-      "inUniverseLabel": "outside of time",
+      "inUniverseLabel": "2023 · outside of time",
       "releaseDate": "2023-10",
       "track": "mystic",
       "type": "series",
@@ -1701,6 +1701,42 @@
       "inUniverseStart": 2029,
       "inUniverseEnd": 2029,
       "events": []
+    },
+    {
+      "id": "groot",
+      "slug": "i-am-groot",
+      "title": "I Am Groot (S1–S2)",
+      "inUniverseYear": 2014,
+      "inUniverseLabel": "2014",
+      "releaseDate": "2022-08-10",
+      "track": "cosmic",
+      "type": "anim",
+      "phase": 4,
+      "confidence": "ok",
+      "summary": "Animated shorts following Baby Groot aboard the Milano and around the galaxy. Marvel places them between the ending of Guardians of the Galaxy Vol. 2 and its post-credits scene, with the first short sitting right after the original film.",
+      "context": null,
+      "contextSource": null,
+      "inUniverseStart": 2014,
+      "inUniverseEnd": 2014,
+      "events": []
+    },
+    {
+      "id": "punisher",
+      "slug": "the-punisher-one-last-kill",
+      "title": "The Punisher: One Last Kill",
+      "inUniverseYear": 2026,
+      "inUniverseLabel": "2026 ≈",
+      "releaseDate": "2026-05-12",
+      "track": "street",
+      "type": "special",
+      "phase": 6,
+      "confidence": "approx",
+      "summary": "Frank Castle tries to live without the Punisher after years of vengeance, until circumstances force him back to his old methods. Jon Bernthal returns in a one-hour Marvel special.",
+      "context": null,
+      "contextSource": null,
+      "inUniverseStart": 2026,
+      "inUniverseEnd": 2026,
+      "events": []
     }
   ],
   "connections": [
@@ -1783,10 +1819,10 @@
       "note": "Direct continuation of Thor and Loki"
     },
     {
-      "from": "cons",
-      "to": "hulk",
-      "kind": "char",
-      "note": "The one-shot explains how Blonsky’s release was blocked"
+      "from": "hulk",
+      "to": "cons",
+      "kind": "seq",
+      "note": "The one-shot is the epilogue: how S.H.I.E.L.D. kept Blonsky locked up after Harlem"
     },
     {
       "from": "hammer",
@@ -2165,6 +2201,24 @@
       "to": "sw",
       "kind": "seq",
       "note": "Announced direct continuation"
+    },
+    {
+      "from": "gotg2",
+      "to": "groot",
+      "kind": "seq",
+      "note": "The shorts fill the gap between the film’s ending and its post-credits scene"
+    },
+    {
+      "from": "ddba",
+      "to": "punisher",
+      "kind": "char",
+      "note": "Frank Castle picks up after the first season of Born Again"
+    },
+    {
+      "from": "punisher",
+      "to": "bnd",
+      "kind": "inf",
+      "note": "Reported to set up Frank Castle’s part in Brand New Day"
     }
   ]
 }
