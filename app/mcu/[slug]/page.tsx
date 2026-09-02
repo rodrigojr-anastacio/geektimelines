@@ -6,7 +6,7 @@ import {
   TYPE_LABEL, KIND_LABEL, CONFIDENCE_NOTE, CONTEXT_LABEL, tracks,
 } from '@/lib/data';
 import { SITE } from '@/lib/site';
-import { EVENT_KIND_LABEL } from '@/lib/data';
+import { EVENT_KIND_LABEL, phaseLabel } from '@/lib/data';
 import { JsonLd, entryJsonLd, breadcrumbJsonLd } from '@/lib/structured-data';
 import styles from './entry.module.css';
 
@@ -62,7 +62,7 @@ export default async function EntryPage({ params }: { params: Promise<{ slug: st
             <img className={styles.poster} src={poster} alt={`${entry.title} poster`} width={200} height={300} />
           )}
           <div>
-            <span className="mono">Phase {entry.phase} · {TYPE_LABEL[entry.type]}</span>
+            <span className="mono">{phaseLabel(entry.phase)} · {TYPE_LABEL[entry.type]}</span>
             <h1 className={styles.title}>{entry.title}</h1>
             <dl className={styles.facts}>
               <div><dt>In-universe</dt><dd>{entry.inUniverseLabel}</dd></div>

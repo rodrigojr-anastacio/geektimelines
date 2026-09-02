@@ -77,6 +77,10 @@ export const CONFIDENCE_NOTE: Record<string, { mark: string; label: string; note
   },
 };
 
+/** Marvel Television titles sit on the official timeline but have no phase. */
+export const phaseLabel = (phase: number | null) =>
+  phase === null ? 'Marvel Television' : `Phase ${phase}`;
+
 export const EVENT_KIND_LABEL: Record<string, string> = {
   main: '',
   flashback: 'Flashback',
