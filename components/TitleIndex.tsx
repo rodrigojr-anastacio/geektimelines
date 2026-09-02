@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { Entry } from '@/lib/schema';
-import { formatRelease, TYPE_LABEL } from '@/lib/data';
+import { formatRelease, TYPE_LABEL, phaseLabel } from '@/lib/data';
 import styles from './TitleIndex.module.css';
 
 /**
@@ -12,11 +12,14 @@ export default function TitleIndex({ entries, heading = 'Every title on this map
   entries: Entry[];
   heading?: string;
 }) {
+  // Marvel Television titles have no phase, so they group under a key of their own.
   const byPhase = new Map<number, Entry[]>();
   for (const entry of [...entries].sort((a, b) => a.inUniverseYear - b.inUniverseYear)) {
-    if (!byPhase.has(entry.phase)) byPhase.set(entry.phase, []);
-    byPhase.get(entry.phase)!.push(entry);
+    const key = entry.phase ?? 0;
+    if (!byPhase.has(key)) byPhase.set(key, []);
+    byPhase.get(key)!.push(entry);
   }
+  const groups = [...byPhase.entries()].sort((a, b) => (a[0] || 99) - (b[0] || 99));
 
   return (
     <section className={styles.index}>
@@ -25,9 +28,9 @@ export default function TitleIndex({ entries, heading = 'Every title on this map
         The map is the quick way around. This is the same {entries.length} entries as a list, in
         in-universe order within each phase.
       </p>
-      {[...byPhase.entries()].map(([phase, list]) => (
+      {groups.map(([phase, list]) => (
         <div key={phase} className={styles.group}>
-          <h3 className={styles.phase}>Phase {phase}</h3>
+          <h3 className={styles.phase}>{phaseLabel(phase || null)}</h3>
           <ul className={styles.list}>
             {list.map((entry) => (
               <li key={entry.id}>

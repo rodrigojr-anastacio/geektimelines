@@ -6,6 +6,7 @@ import styles from './StoryMap.module.css';
 import { computeLayout, edgePath, NODE_H, NODE_W, type Mode } from '@/lib/layout';
 import { centroid, clampView, clampZoom, EDGE_MARGIN, flickVelocity, glideStep, isPinned, pinchZoom, zoomAround } from '@/lib/gesture';
 import type { Connection, Entry, Track } from '@/lib/schema';
+import { phaseLabel } from '@/lib/data';
 import { IconBack, IconChevron, IconClose, IconExitFull, IconFit, IconFull, IconMinus, IconPlus } from './icons';
 
 const KIND_LABEL: Record<Connection['kind'], string> = {
@@ -57,7 +58,8 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
   const [hovered, setHovered] = useState<string | null>(null);
   const [history, setHistory] = useState<string[]>([]);
   const [query, setQuery] = useState('');
-  const [phases, setPhases] = useState<Set<number>>(new Set([1, 2, 3, 4, 5, 6]));
+  // 0 stands for the Marvel Television titles, which have no phase of their own.
+  const [phases, setPhases] = useState<Set<number>>(new Set([0, 1, 2, 3, 4, 5, 6]));
   const [kinds, setKinds] = useState<Set<Connection['kind']>>(new Set(['seq', 'setup', 'char', 'branch', 'inf']));
   const [zoom, setZoom] = useState(0.62);
   const [full, setFull] = useState(false);
@@ -440,7 +442,7 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
   const normalizedQuery = query.trim().toLowerCase();
 
   const isDimmed = (entry: Entry) =>
-    !phases.has(entry.phase) ||
+    !phases.has(entry.phase ?? 0) ||
     (normalizedQuery.length > 0 && !entry.title.toLowerCase().includes(normalizedQuery)) ||
     (near ? !near.has(entry.id) : false);
 
@@ -499,8 +501,8 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
                 if (!from || !to) return null;
                 const style = KIND_STYLE[link.kind];
                 const live = kinds.has(link.kind)
-                  && phases.has(byId.get(link.from)!.phase)
-                  && phases.has(byId.get(link.to)!.phase);
+                  && phases.has(byId.get(link.from)!.phase ?? 0)
+                  && phases.has(byId.get(link.to)!.phase ?? 0);
                 const inFocus = !focus || link.from === focus || link.to === focus;
                 const opacity = !live ? 0 : inFocus ? (focus ? 0.95 : 0.42) : 0.05;
                 return (
@@ -567,7 +569,7 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
                       <span className={styles.posterFallback} aria-hidden="true">{entry.title.charAt(0)}</span>
                     )}
                     <span className={styles.nodeBody}>
-                      <span className={styles.nodeMeta}>Phase {entry.phase} · {TYPE_LABEL[entry.type]}</span>
+                      <span className={styles.nodeMeta}>{phaseLabel(entry.phase)} · {TYPE_LABEL[entry.type]}</span>
                       <span className={styles.nodeTitle} style={{ display: 'block' }}>{entry.title}</span>
                       <span className={styles.nodeYear}>
                         {mode === 'release' ? formatRelease(entry.releaseDate) : entry.inUniverseLabel}
@@ -594,12 +596,12 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
             ))}
           </div>
           <div className={styles.phaseBar}>
-            {[1, 2, 3, 4, 5, 6].map((phase) => (
+            {[1, 2, 3, 4, 5, 6, 0].map((phase) => (
               <button
                 key={phase}
                 data-on={phases.has(phase)}
-                title={`Toggle phase ${phase}`}
-                aria-label={`Toggle phase ${phase}`}
+                title={phase === 0 ? 'Toggle Marvel Television titles' : `Toggle phase ${phase}`}
+                aria-label={phase === 0 ? 'Toggle Marvel Television titles' : `Toggle phase ${phase}`}
                 onClick={() =>
                   setPhases((current) => {
                     const next = new Set(current);
@@ -608,7 +610,7 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
                   })
                 }
               >
-                P{phase}
+                {phase === 0 ? 'TV' : `P${phase}`}
               </button>
             ))}
           </div>
@@ -686,7 +688,7 @@ export default function StoryMap({ entries, tracks, connections, posters }: Stor
                   // eslint-disable-next-line @next/next/no-img-element
                   <img className={styles.drawerPoster} src={posters[selectedEntry.id]!} alt="" width={92} height={138} />
                 )}
-                <span className="mono">Phase {selectedEntry.phase} · {TYPE_LABEL[selectedEntry.type]}</span>
+                <span className="mono">{phaseLabel(selectedEntry.phase)} · {TYPE_LABEL[selectedEntry.type]}</span>
                 <h2 className={styles.drawerTitle}>{selectedEntry.title}</h2>
                 <div className={styles.pillRow}>
                   <span className={styles.pill}>{selectedEntry.inUniverseLabel}</span>

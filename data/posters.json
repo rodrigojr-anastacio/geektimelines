@@ -690,6 +690,136 @@
       "tmdbDate": "2026-05-12",
       "posterPath": "/qQclTgLMDvGBuUBFGHRipxkEwWR.jpg",
       "backdropPath": "/qO55CD8tgVL1T4WKn6zYFFiD6lL.jpg"
+    },
+    "dd1": {
+      "id": "dd1",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 61889,
+      "tmdbTitle": "Marvel's Daredevil",
+      "tmdbDate": "2015-04-10",
+      "posterPath": "/QWbPaDxiB6LW2LjASknzYBvjMj.jpg",
+      "backdropPath": "/pPALpad1Fh14g7ejyQjqKzlhrBw.jpg"
+    },
+    "jj1": {
+      "id": "jj1",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 38472,
+      "tmdbTitle": "Marvel's Jessica Jones",
+      "tmdbDate": "2015-11-20",
+      "posterPath": "/oxnWofiE9fHOgUfs9NJa6nG6NTR.jpg",
+      "backdropPath": "/fjEOQhzZk2Or7VYUBeMx5ZIwU95.jpg"
+    },
+    "dd2": {
+      "id": "dd2",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 202555,
+      "tmdbTitle": "Daredevil: Born Again",
+      "tmdbDate": "2025-03-04",
+      "posterPath": "/xDUoAsU8lQHOOoRkFiBuarmACDN.jpg",
+      "backdropPath": "/m291MEBjhuRqb0nh9ojnm9gzScq.jpg"
+    },
+    "lc1": {
+      "id": "lc1",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 62126,
+      "tmdbTitle": "Marvel's Luke Cage",
+      "tmdbDate": "2016-09-30",
+      "posterPath": "/yzM1hMB3PUJqbISX0f421b3xOjB.jpg",
+      "backdropPath": "/bJOmop22SGTHPo1tiuVAFf4U7B9.jpg"
+    },
+    "if1": {
+      "id": "if1",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 62127,
+      "tmdbTitle": "Marvel's Iron Fist",
+      "tmdbDate": "2017-03-17",
+      "posterPath": "/4l6KD9HhtD6nCDEfg10Lp6C6zah.jpg",
+      "backdropPath": "/cuckn6IFp9OKu9H8AgD0iEANxhc.jpg"
+    },
+    "def": {
+      "id": "def",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 62285,
+      "tmdbTitle": "Marvel's The Defenders",
+      "tmdbDate": "2017-08-18",
+      "posterPath": "/49XzINhH4LFsgz7cx6TOPcHUJUL.jpg",
+      "backdropPath": "/ycAWXhAhyaE7g3JBAaierK4LgNg.jpg"
+    },
+    "pun1": {
+      "id": "pun1",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 67178,
+      "tmdbTitle": "Marvel's The Punisher",
+      "tmdbDate": "2017-11-17",
+      "posterPath": "/tM6xqRKXoloH9UchaJEyyRE9O1w.jpg",
+      "backdropPath": "/jBGjbSDRxOEudW9rmQbWDzJUKq9.jpg"
+    },
+    "jj2": {
+      "id": "jj2",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 38472,
+      "tmdbTitle": "Marvel's Jessica Jones",
+      "tmdbDate": "2015-11-20",
+      "posterPath": "/oxnWofiE9fHOgUfs9NJa6nG6NTR.jpg",
+      "backdropPath": "/fjEOQhzZk2Or7VYUBeMx5ZIwU95.jpg"
+    },
+    "lc2": {
+      "id": "lc2",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 62126,
+      "tmdbTitle": "Marvel's Luke Cage",
+      "tmdbDate": "2016-09-30",
+      "posterPath": "/yzM1hMB3PUJqbISX0f421b3xOjB.jpg",
+      "backdropPath": "/bJOmop22SGTHPo1tiuVAFf4U7B9.jpg"
+    },
+    "if2": {
+      "id": "if2",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 62127,
+      "tmdbTitle": "Marvel's Iron Fist",
+      "tmdbDate": "2017-03-17",
+      "posterPath": "/4l6KD9HhtD6nCDEfg10Lp6C6zah.jpg",
+      "backdropPath": "/cuckn6IFp9OKu9H8AgD0iEANxhc.jpg"
+    },
+    "dd3": {
+      "id": "dd3",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 207555,
+      "tmdbTitle": "3-Day Dare*Devils",
+      "tmdbDate": "2018-02-26",
+      "posterPath": "/Af0nAOjCdeZ2I9g9134GQNNQRuH.jpg",
+      "backdropPath": "/yjgZJD45NIa9OltgyFWOEKxvyvI.jpg"
+    },
+    "pun2": {
+      "id": "pun2",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 67178,
+      "tmdbTitle": "Marvel's The Punisher",
+      "tmdbDate": "2017-11-17",
+      "posterPath": "/tM6xqRKXoloH9UchaJEyyRE9O1w.jpg",
+      "backdropPath": "/jBGjbSDRxOEudW9rmQbWDzJUKq9.jpg"
+    },
+    "jj3": {
+      "id": "jj3",
+      "resolved": true,
+      "tmdbType": "tv",
+      "tmdbId": 38472,
+      "tmdbTitle": "Marvel's Jessica Jones",
+      "tmdbDate": "2015-11-20",
+      "posterPath": "/oxnWofiE9fHOgUfs9NJa6nG6NTR.jpg",
+      "backdropPath": "/fjEOQhzZk2Or7VYUBeMx5ZIwU95.jpg"
     }
   }
 }

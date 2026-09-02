@@ -17,12 +17,29 @@ export default function SourcesPage() {
         rather than smoothed over.
       </p>
 
-      <h2>Order and dates</h2>
+      <h2>What is on this map, and why</h2>
       <p>
-        <strong>Chronological order</strong> follows the <em>MCU Complete Timeline</em> published by
-        Marvel / Disney+, which covers feature films, Disney+ seasons, Marvel Studios One-Shots,
-        specials and the animated titles Marvel currently counts.
+        <strong>Inclusion follows one list:</strong> the <em>MCU Complete Timeline</em> that Marvel
+        publishes on the Disney+ brand page, which breaks films and TV seasons out individually. If a
+        title is on that list it belongs here, and the order on the map is the order Marvel gives.
+        That means the Netflix run — <em>Daredevil</em>, <em>Jessica Jones</em>, <em>Luke Cage</em>,{' '}
+        <em>Iron Fist</em>, <em>The Defenders</em> and <em>The Punisher</em> — is part of this
+        timeline, because Marvel places it there.
       </p>
+      <p>
+        Four titles here go beyond that list, because it has not caught up with them yet:{' '}
+        <em>Spider-Man: Brand New Day</em>, <em>VisionQuest</em>, <em>Avengers: Doomsday</em> and{' '}
+        <em>Avengers: Secret Wars</em>. One title is here despite <em>not</em> being on it:{' '}
+        <em>Agent Carter</em>, which chronology guides commonly include and which is marked ≈ with that
+        caveat spelled out on its own page.
+      </p>
+      <p>
+        <strong>Marvel Television titles carry no phase.</strong> They sit on the official timeline but
+        were never part of Marvel Studios&rsquo; phase structure, so their cards say Marvel Television
+        rather than inventing a phase number for them.
+      </p>
+
+      <h2>Order and dates</h2>
       <p>
         <strong>In-universe years</strong> come from Marvel&rsquo;s own{' '}
         <em>The Marvel Cinematic Universe: An Official Timeline</em> (2023) or from dates stated on
@@ -84,7 +101,17 @@ export default function SourcesPage() {
         <li>ScreenRant — MCU chronological order with the years from Marvel&rsquo;s official 2023 timeline book</li>
         <li>Rotten Tomatoes Editorial and Vandal — chronological order, updated 2026</li>
         <li>GamesRadar / TechRadar — confirmed anchors (2012, 2018, 2023) and ambiguous placements</li>
-        <li>TMDB — release dates, titles and artwork</li>
+        <li>
+          Marvel / Disney+ — the <em>MCU Complete Timeline</em>, which decides what appears here at all
+        </li>
+        <li>TMDB — release dates, including per-season air dates, titles and artwork</li>
+        <li>
+          <a href="https://en.wikipedia.org/wiki/Marvel_Cinematic_Universe_timeline" rel="noreferrer noopener" target="_blank">
+            Wikipedia&rsquo;s MCU timeline
+          </a>{' '}
+          — in-universe years for the Marvel Television run, which Marvel&rsquo;s own list orders but
+          does not date. Those years are marked ≈ and cross-checked against the official ordering.
+        </li>
         <li>
           <a href="https://www.thepopverse.com/marvel-mcu-timeline-cinematic-universe-studios-order-phase-6-5-4-3-2-1-order" rel="noreferrer noopener" target="_blank">
             Popverse

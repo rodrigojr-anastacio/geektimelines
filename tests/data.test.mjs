@@ -54,8 +54,9 @@ test('release dates are well formed or explicitly null', () => {
   }
 });
 
-test('phases are within the six known phases', () => {
+test('phases are within the six known phases, or explicitly absent', () => {
   for (const entry of universe.entries) {
+    if (entry.phase === null) continue;
     assert.ok(entry.phase >= 1 && entry.phase <= 6, `${entry.id} has phase ${entry.phase}`);
   }
 });
@@ -111,6 +112,44 @@ test('the animated shorts and specials Marvel counts are present', () => {
     assert.ok(
       universe.entries.some((e) => e.slug === slug),
       `${slug} is missing from the timeline`,
+    );
+  }
+});
+
+test('every title on Marvel’s official Complete Timeline is present', () => {
+  // Transcribed from the MCU Complete Timeline Marvel publishes on the Disney+
+  // brand page. Anything on that list belongs on this map.
+  const official = [
+    'eow', 'cap1', 'osac', 'cm', 'im', 'im2', 'hulk', 'hammer', 'thor', 'cons',
+    'avengers', 'item47', 'tdw', 'im3', 'allhail', 'ws', 'gotg', 'gotg2', 'groot',
+    'dd1', 'jj1', 'aou', 'antman', 'dd2', 'lc1', 'if1', 'def', 'cw', 'bw', 'bp',
+    'hc', 'pun1', 'ds', 'jj2', 'lc2', 'if2', 'dd3', 'rag', 'pun2', 'jj3', 'amw',
+    'iw', 'endgame', 'loki1', 'whatif', 'zomb', 'wv', 'shang', 'tfatws', 'ffh',
+    'eternals', 'nwh', 'mom', 'hawkeye', 'mk', 'wf', 'echo', 'shulk', 'msm', 'lt',
+    'ironheart', 'wbn', 'ghs', 'quant', 'gotg3', 'si', 'marvels', 'loki2', 'dpw',
+    'agatha', 'ddba', 'bnw', 'thunder', 'ff4', 'wman', 'ddba2', 'punisher',
+  ];
+  const ids = new Set(universe.entries.map((e) => e.id));
+  const missing = official.filter((id) => !ids.has(id));
+  assert.deepEqual(missing, [], `missing from the official list: ${missing.join(', ')}`);
+});
+
+test('the Marvel Television run is here, since Marvel puts it on the timeline', () => {
+  const netflix = ['dd1', 'dd2', 'dd3', 'jj1', 'jj2', 'jj3', 'lc1', 'lc2', 'if1', 'if2', 'def', 'pun1', 'pun2'];
+  for (const id of netflix) {
+    const entry = universe.entries.find((e) => e.id === id);
+    assert.ok(entry, `${id} is missing`);
+    assert.equal(entry.phase, null, `${id} was given an invented phase`);
+    assert.equal(entry.confidence, 'approx', `${id} claims more certainty than the source supports`);
+  }
+});
+
+test('a phase is either one of the six or explicitly absent', () => {
+  for (const entry of universe.entries) {
+    if (entry.phase === null) continue;
+    assert.ok(
+      Number.isInteger(entry.phase) && entry.phase >= 1 && entry.phase <= 6,
+      `${entry.id} has phase ${entry.phase}`,
     );
   }
 });

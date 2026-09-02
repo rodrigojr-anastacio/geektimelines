@@ -17,6 +17,9 @@ for (const entry of universe.entries) {
   slugs.add(entry.slug);
   if (!/^[a-z0-9-]+$/.test(entry.slug)) problems.push(`bad slug: ${entry.slug}`);
   if (!trackIds.has(entry.track)) problems.push(`${entry.id}: unknown track ${entry.track}`);
+  if (entry.phase !== null && !(entry.phase >= 1 && entry.phase <= 6)) {
+    problems.push(`${entry.id}: phase ${entry.phase} is neither 1-6 nor null`);
+  }
   if (entry.confidence === 'future' && entry.summary) {
     problems.push(`${entry.id}: marked unreleased but has a summary`);
   }

@@ -40,7 +40,12 @@ export const entrySchema = z.object({
     .nullable(),
   track: z.string().min(1),
   type: z.enum(ENTRY_TYPES),
-  phase: z.number().int().min(1).max(6),
+  /**
+   * Marvel Studios phase. Null for Marvel Television titles, which sit on the
+   * official timeline but were never part of the phase structure — inventing a
+   * phase for them would be exactly the kind of guess this project refuses.
+   */
+  phase: z.number().int().min(1).max(6).nullable(),
   confidence: z.enum(CONFIDENCE),
   /** Null is meaningful: nothing verified was available, so nothing was written. */
   summary: z.string().nullable(),
