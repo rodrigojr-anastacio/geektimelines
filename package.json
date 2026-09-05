@@ -8,8 +8,8 @@
     "start": "next start",
     "posters": "node scripts/fetch-posters.mjs mcu",
     "posters:download": "node scripts/fetch-posters.mjs mcu --download",
-    "check": "tsc --noEmit && node scripts/validate-data.mjs",
-    "test": "node --test tests/"
+    "check": "tsc --noEmit && node scripts/validate-data.mjs && node --test \"tests/*.test.mjs\"",
+    "test": "node --test \"tests/*.test.mjs\""
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
