@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from '@vercel/analytics/react';
 import { Fraunces, IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google';
 import Link from 'next/link';
 import { SITE, UNIVERSES } from '@/lib/site';
@@ -95,6 +95,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </footer>
 
         <CookieNotice />
+        {/* The /react entry, not /next.
+            The Next-specific component mounted and created window.va, but never
+            appended its script tag, so nothing was ever measured and the Vercel
+            dashboard stayed on its "Get Started" screen. It reads a base path
+            from NEXT_PUBLIC_VERCEL_OBSERVABILITY_BASEPATH, which this project
+            does not have; the /react entry resolves the endpoint itself.
+
+            Note when debugging this: the served script refuses to send anything
+            when navigator.webdriver is set or the user agent says Headless, so
+            an automated check always sees zero beacons even when it is working.
+            Verifying needs a real visit. */}
         <Analytics />
       </body>
     </html>
